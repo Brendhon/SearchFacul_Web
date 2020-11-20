@@ -13,24 +13,14 @@ Este projeto tem como objetivo colocar em prática os conhecimentos adquiridos n
 
 As seguintes ferramentas foram utilizadas na construção do projeto:
 
- - **[Express](https://expressjs.com/pt-br/)**
- - **[CORS](https://expressjs.com/en/resources/middleware/cors.html)**
- - **[Nodemon](https://nodemon.io/)**
- - **[SQLite](https://github.com/mapbox/node-sqlite3)**
- - **[Knex.js](http://knexjs.org/)**
- - **[Celebrate](https://github.com/arb/celebrate)**
  - **[Jest](https://jestjs.io/)**
- - **[Cross-env](https://github.com/kentcdodds/cross-env)**
- - **[Jwt-Simple](https://github.com/hokaccha/node-jwt-simple)**
- - **[Dotenv](https://github.com/motdotla/dotenv)**
- - **[SuperTest](https://github.com/visionmedia/supertest)**
  - **[Travis CI](https://travis-ci.com/)**
- - **[Bcrypt](https://github.com/kelektiv/node.bcrypt.js/)**
-> Veja o arquivo  **[package.json](https://github.com/Brendhon/SearchFacul_API/blob/main/package.json)**
+ - **[React](https://pt-br.reactjs.org/)**
+
+> Veja o arquivo  **[package.json](https://github.com/Brendhon/SearchFacul_Web/blob/main/package.json)**
 
 ### Utilitários
-- Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**  → Extensions:  **[SQLite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)**
-- Teste de API:  **[Insomnia](https://insomnia.rest/)**
+- Editor:  **[Visual Studio Code](https://code.visualstudio.com/)**
 ---
 ## Como executar o projeto
 
@@ -40,15 +30,10 @@ Antes de começar, você vai precisar ter instalado em sua máquina as seguintes
 **[Git](https://git-scm.com)** e **[Node.js](https://nodejs.org/en/)**.<br> 
 Recomendações:
 * Um editor para trabalhar com o código como **[VSCode](https://code.visualstudio.com/)**
-* (Opcional) Crie um arquivo (.env) na raiz do projeto para que possa utilizar um segredo de sua escolha, o arquivo deve conter a seguinte variável:
-    ```
-    AUTH_SECRET=<SECRET>
-    ```
-    
 ```bash
 
 # Clone este repositório
-$ git clone https://github.com/Brendhon/SearchFacul_API.git
+$ git clone https://github.com/Brendhon/SearchFacul_Web.git
 
 # Acesse a pasta do projeto
 
@@ -56,14 +41,14 @@ $ git clone https://github.com/Brendhon/SearchFacul_API.git
 $ npm install
 
 ```
-#### ⚽ Rodando o servidor
+#### ⚽ Rodando no modo desenvolvedor
 
 ```bash
 
-# Execute a aplicação em modo de desenvolvimento
+# Execute a aplicação
 $ npm run dev
 
-# O servidor inciará na porta:3333
+# Iniciará na porta:3333
 
 ```
 
