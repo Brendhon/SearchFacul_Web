@@ -7,7 +7,7 @@ const Header = _ =>
 
         <div className="logo">
             <img className="mr-3" src={books} alt="Livros"></img>
-            <strong>Search Facul</strong>
+            <strong>Home</strong>
         </div>
 
         <div className="content">
