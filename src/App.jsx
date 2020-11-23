@@ -1,12 +1,11 @@
 import React from 'react'
-import Header from './components/Header'
+import Logon from './pages/Logon/Logon'
 import './App.css'
 
 function App() {
   return (
     <div className="main">
-      <Header />
-      <h1>Hello</h1>
+      <Logon />
     </div>
   )
 }
