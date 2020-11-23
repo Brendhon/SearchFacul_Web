@@ -2,8 +2,7 @@ import React from 'react'
 import './Header.css'
 import books from '../assets/img/books.svg'
 
-// eslint-disable-next-line
-export default _ =>
+const Header = _ =>
     <header className="header border-bottom">
 
         <div className="logo">
@@ -17,3 +16,5 @@ export default _ =>
         </div>
 
     </header>
+
+export default Header 
