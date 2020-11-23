@@ -12,7 +12,7 @@ const Header = _ =>
 
         <div className="content">
             <strong className="btn btn-primary mr-3">Login</strong>
-            <strong className="btn btn-secondary">Cadastre sua universidade</strong>
+            <strong className="btn btn-secondary">Cadastrar</strong>
         </div>
 
     </header>

@@ -14,7 +14,7 @@ const Logon = _ =>
                     <h1>Faça seu Logon</h1>
                     <input className="mb-2" placeholder="Email" type="email" />
                     <input placeholder="Senha" type="password" />
-                    <button type="submit">Entrar</button>
+                    <button className="button" type="submit">Entrar</button>
                 </form>
             </section>
 

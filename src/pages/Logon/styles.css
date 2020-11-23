@@ -30,23 +30,16 @@
     width: 35vw;
 }
 
-.content .form form button {
-    width: 100%;
-    height: 60px;
-    background: #00A5D8;
-    border: 0;
-    color: #fff;
-    font-weight: bold;
-    margin-top: 16px;
-    display: inline-block;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 60px;
-    border-radius: 8px;
-    transition: filter 0.2s;
-}
-
 .content .form form button:hover {
     filter: brightness(90%);
+}
+
+@media(max-width: 425px) {
+    .content img {
+        display: none;
+    }
+
+    .content .form form {
+        width: 90vw;
+    }
 }

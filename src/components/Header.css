@@ -23,5 +23,26 @@ header.header .logo img {
 
 header.header .logo strong {
     font-size: 1.2rem;
-    color: #2E333E;
+    color: var(--c-dark);
+}
+
+@media(max-width: 425px) {
+    header.header .logo img {
+        display: none;
+    }
+
+    header.header {
+        display: flex;
+    }
+
+    header.header .logo strong {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    header.header .content {
+        display: flex;
+        justify-content: center;
+    }
 }
