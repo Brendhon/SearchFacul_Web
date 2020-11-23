@@ -14,6 +14,7 @@ Este projeto tem como objetivo colocar em prática os conhecimentos adquiridos n
 As seguintes ferramentas foram utilizadas na construção do projeto:
 
  - **[React](https://pt-br.reactjs.org/)**
+ - **[Bootstrap](https://getbootstrap.com/)**
  - **[Jest](https://jestjs.io/)**
  - **[Travis CI](https://travis-ci.com/)**
 
