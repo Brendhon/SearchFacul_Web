@@ -15,6 +15,7 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 
  - **[React](https://pt-br.reactjs.org/)**
  - **[Bootstrap](https://getbootstrap.com/)**
+ - **[React Icons](https://react-icons.github.io/react-icons/)**
  - **[Jest](https://jestjs.io/)**
  - **[Travis CI](https://travis-ci.com/)**
 
