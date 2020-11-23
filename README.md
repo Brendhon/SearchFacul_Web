@@ -48,7 +48,7 @@ $ npm install
 # Execute a aplicação
 $ npm run dev
 
-# Iniciará na porta:3333
+# Iniciará na porta:3000
 
 ```
 
