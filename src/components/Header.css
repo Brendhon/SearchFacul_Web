@@ -1,7 +1,6 @@
 header.header {
     display: flex;
     justify-content: space-between;
-    background-color: #ffffff;
     padding: 15px;
 }
 
@@ -24,5 +23,5 @@ header.header .logo img {
 
 header.header .logo strong {
     font-size: 1.5rem;
-    color: #0374A1;
+    color: #2E333E;
 }

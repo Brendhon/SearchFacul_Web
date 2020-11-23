@@ -3,7 +3,7 @@ import './Header.css'
 import books from '../assets/img/books.svg'
 
 const Header = _ =>
-    <header className="header border-bottom">
+    <header className="header">
 
         <div className="logo">
             <img className="mr-3" src={books} alt="Livros"></img>
