@@ -1,0 +1,33 @@
+.card-container {
+    width: 25rem;
+    margin: 5px;
+}
+
+.card-container .ies{
+    height: 200px;
+    padding: 10px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.5rem;
+    overflow: hidden;
+    word-wrap: break-word;
+
+    background-color: var(--c-blue);
+    color: white;
+}
+
+.card-container .list {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid;
+    border-color: #D9E7E9;
+    padding: 15px 15px 0px 15px;
+}
+
+.card-container .list .list-item {
+    display: flex;
+    flex-direction: column;
+}
