@@ -22,8 +22,8 @@ const FormUniversity = props =>
                 <input className="site" placeholder="Site" type="url" />
 
                 <div className="radio">
-                    <input className="private" type="radio" id="Privada" name="gender" />Pública
-                    <input className="public" type="radio" id="Publica" name="gender" />Privada
+                    <input className="private" type="radio" value="public" name="category" />Pública
+                    <input className="public" type="radio" value="private" name="category" />Privada
                 </div>
 
                 <button className="button" type="submit">Enviar</button>
