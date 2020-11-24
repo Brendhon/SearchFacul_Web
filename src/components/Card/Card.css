@@ -1,22 +1,42 @@
 .card-container {
-    width: 23rem;
+    width: 19rem;
     margin: 5px;
+    background: #cad5e6;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; 
 }
 
 .card-container .ies{
-    height: 200px;
+    height: 150px;
     padding: 10px;
     display: flex;
 
     justify-content: center;
     align-items: center;
 
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     overflow: hidden;
     word-wrap: break-word;
 
-    background-color: var(--c-blue);
+    background-color: #1C468A;
+    border-top-left-radius: 8px; 
+    border-top-right-radius: 8px; 
     color: white;
+}
+
+.card-container .body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 15px 0px 15px;
+}
+
+.card-container .body .title{
+    font-size: 1.1rem;
+}
+
+.card-container .body .text{
+    font-size: 0.9rem;
 }
 
 .card-container .list {
@@ -30,4 +50,5 @@
 .card-container .list .list-item {
     display: flex;
     flex-direction: column;
+    font-size: 0.8rem;
 }

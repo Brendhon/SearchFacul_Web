@@ -2,12 +2,16 @@ import React from 'react'
 import './Card.css'
 
 const Card = _ =>
-    <div className="card card-container">
+
+    <div className="card-container">
 
         <strong className="ies">Instituto Nacional de Telecomunicações</strong>
-        <div className="card-body">
-            <h5 className="card-title"> Engenharia de computação</h5>
-            <p className="card-text">Some quick example text build on the card title and make up the bulk of the card's content.</p>
+
+        <div className="body">
+
+            <h5 className="title"> Engenharia de computação</h5>
+            <p className="text">Some quick example text build on the card title and make up the bulk of the card's content.</p>
+
         </div>
 
         <div className="list">
