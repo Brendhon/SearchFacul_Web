@@ -1,7 +1,15 @@
 .university-content {
-    display: grid;
-    justify-content: center;
+    display: flex;
     flex: 0.8;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #f0f0f6;
+    box-shadow: 0 0 100px rgba(0, 0, 0 , 0.1);
+    border-radius: 8px;
+    margin: 0 10%;
+    
 }
 
 .university-content h1 {
@@ -93,12 +101,16 @@
 }
 
 @media(max-width: 425px) {
+    
+    .university-content {
+        margin: 0 1%;
+    }
+
     .university-content .form form .radio {
         margin: 0;
     }
 
     .university-content .form form {
-        margin-left: 10px;
         width: 95vw;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
