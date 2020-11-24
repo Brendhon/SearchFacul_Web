@@ -1,0 +1,141 @@
+.register-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content {
+    display: grid;
+    justify-content: center;
+    flex: 0.8;
+}
+
+.content h1 {
+    display: flex;
+    justify-content: center;
+    margin: 32px;
+    font-size: 32px;
+    font-weight: 800;
+}
+
+.content .form form {
+    width: 60vw;
+    display: grid;
+    gap: 10px;
+    align-self: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "IES  IES  city city" 
+    "email email telephone telephone" 
+    "password password confirmPassword confirmPassword " 
+    "address address site site " 
+    "radio radio UF UF " 
+    "button button button button";
+}
+
+.content .form form .IES {
+    grid-area: IES;
+}
+
+.content .form form .telephone {
+    grid-area: telephone;
+}
+
+.content .form form .email {
+    grid-area: email;
+}
+
+.content .form form .UF {
+    grid-area: UF;
+}
+
+.content .form form .password {
+    grid-area: password;
+}
+
+.content .form form .city {
+    grid-area: city;
+}
+
+.content .form form .confirmPassword {
+    grid-area: confirmPassword;
+}
+
+.content .form form .address {
+    grid-area: address;
+}
+
+.content .form form .site {
+    grid-area: site;
+}
+
+.content .form form .radio {
+    grid-area: radio;
+    display: flex;
+    align-items: center;
+    margin-right: 50%;
+}
+
+.content .form form .radio .public {
+    height: 30px;
+}
+
+.content .form form .radio .private {
+    height: 30px;
+}
+
+.content .form form button {
+    grid-area: button;
+}
+
+.content .form form button:hover {
+    filter: brightness(90%);
+}
+
+@media(max-width: 1024px) {
+    .content .form form .radio {
+        margin-right: 20%;
+    }
+}
+
+@media(max-width: 425px) {
+    .content .form form .radio {
+        margin-right: 0%;
+    }
+
+    .content .form form {
+        margin-left: 10px;
+        width: 95vw;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        align-self: center;
+        grid-template-areas: 
+            "IES city" 
+            "email telephone" 
+            "password confirmPassword " 
+            "address site " 
+            "radio UF " 
+            "button button";
+    }
+    
+    .content .form form .radio .public {
+        height: 20px;
+    }
+    
+    .content .form form .radio .private {
+        height: 20px;
+    }
+}
+
+@media(max-width: 320px) {
+
+    .content .form form .radio .public {
+        height: 15px;
+    }
+    
+    .content .form form .radio .private {
+        height: 15px;
+    }
+}
