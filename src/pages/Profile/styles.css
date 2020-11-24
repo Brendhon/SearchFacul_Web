@@ -1,0 +1,12 @@
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.profile-container .content {
+    display: flex;
+    flex: 0.8;
+    align-items: center;
+    justify-content: center;
+}
