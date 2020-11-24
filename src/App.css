@@ -22,7 +22,7 @@ input, button, textarea {
     font-family: Nunito, sans-serif;
 }
 
-form input {
+form input, select {
     width: 100%;
     height: 60px;
     color: var(--c-dark);
@@ -33,6 +33,10 @@ form input {
 }
 
 form input:focus  {
+    border-color: var(--c-blue);
+}
+
+form select:focus  {
     border-color: var(--c-blue);
 }
 
