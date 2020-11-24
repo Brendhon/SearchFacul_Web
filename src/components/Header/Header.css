@@ -18,6 +18,12 @@ header.header .content {
     justify-content: flex-end;
 }
 
+header.header .content .logout{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
 header.header .logo img {
     width: 6ch;
 }
@@ -44,6 +50,6 @@ header.header .logo .home {
 
     header.header .content {
         display: flex;
-        justify-content: center;
     }
+
 }
