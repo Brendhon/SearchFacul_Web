@@ -1,5 +1,6 @@
 import React from 'react'
 import './Header.css'
+import { Link } from 'react-router-dom'
 import books from '../../assets/img/books.svg'
 
 const Header = _ =>
@@ -7,12 +8,12 @@ const Header = _ =>
 
         <div className="logo">
             <img className="mr-3" src={books} alt="Livros"></img>
-            <strong>Home</strong>
+            <Link to="/" className="home" >Home</Link>
         </div>
 
         <div className="content">
             <strong className="btn btn-primary mr-3">Login</strong>
-            <strong className="btn btn-secondary">Cadastrar</strong>
+            <Link to="/register" className="btn btn-secondary">Cadastrar</Link>
         </div>
 
     </header>

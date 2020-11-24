@@ -22,7 +22,7 @@ header.header .logo img {
     width: 6ch;
 }
 
-header.header .logo strong {
+header.header .logo .home {
     font-size: 1.2rem;
     color: var(--c-dark);
 }
