@@ -1,8 +1,6 @@
 import React from 'react'
 import './Card.css'
 
-import { FiClock, FiStar } from 'react-icons/fi';
-
 const Card = _ =>
     <div className="card card-container">
 
