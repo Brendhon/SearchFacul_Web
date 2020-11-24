@@ -5,9 +5,9 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import FormCourse from '../../components/Form/FormCourse'
 
-const Profile = _ =>
+const CreateCourse = _ =>
 
-    <div className='profile-container'>
+    <div className='create-course-container'>
 
         <Header />
         <FormCourse title="Cadastre um curso" />
@@ -16,4 +16,4 @@ const Profile = _ =>
     </div>
 
 
-export default Profile
+export default CreateCourse
