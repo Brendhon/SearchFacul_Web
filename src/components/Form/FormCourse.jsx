@@ -5,7 +5,7 @@ import student from '../../assets/img/students2.svg'
 
 const FormCourse = props =>
 
-    <div className='course-container'>
+    <div className='course-container box'>
 
         <h1>{props.title}</h1>
 

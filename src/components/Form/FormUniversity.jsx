@@ -3,7 +3,7 @@ import './FormUniversity.css'
 
 const FormUniversity = props =>
 
-    <div className='university-content'>
+    <div className='university-content box'>
 
         <h1>{props.title}</h1>
 

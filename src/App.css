@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-
 :root {
     --c-dark: #2E333E;
     --c-blue: #00A5D8;
@@ -9,10 +8,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
 
 /* Definindo a fonte padrão */
+
 body {
     font-family: Nunito, sans-serif;
     background-color: #d9e7e9;
@@ -32,11 +31,11 @@ form input, select {
     outline: none;
 }
 
-form input:focus  {
+form input:focus {
     border-color: var(--c-blue);
 }
 
-form select:focus  {
+form select:focus {
     border-color: var(--c-blue);
 }
 
@@ -52,7 +51,7 @@ form textarea {
     outline: none;
 }
 
-form textarea:focus  {
+form textarea:focus {
     border-color: var(--c-blue);
 }
 
@@ -71,4 +70,11 @@ form textarea:focus  {
     line-height: 60px;
     border-radius: 8px;
     transition: filter 0.2s;
+}
+
+.box {
+    background: #f0f0f6;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin: 0 10%;
 }
