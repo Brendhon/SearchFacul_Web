@@ -1,0 +1,110 @@
+.course-container {
+    display: flex;
+    flex: 0.8;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    
+    background: #f0f0f6;
+    box-shadow: 0 0 100px rgba(0, 0, 0 , 0.1);
+    border-radius: 8px;
+    margin: 0 10%;
+}
+
+.course-container h1 {
+    display: flex;
+    justify-content: center;
+    margin: 32px;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.course-container .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.course-container .container img{
+    align-content: center;
+    width:40%;
+}
+
+.course-container .form form {
+    width: 40vw;
+    display: grid;
+    gap: 10px;
+    align-self: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "name  name  duration duration" 
+    "description description description description" 
+    "select-titration select-titration select-modality select-modality" 
+    "button button button button";
+}
+
+.course-container .form form .name {
+    grid-area: name;
+}
+
+.course-container .form form .duration {
+    grid-area: duration;
+}
+
+.course-container .form form .select-titration {
+    grid-area: select-titration;
+}
+
+.course-container .form form .select-modality {
+    grid-area: select-modality;
+}
+
+.course-container .form form .description {
+    grid-area: description;
+}
+
+.course-container .form form .button {
+    grid-area: button;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 768px) {
+
+    .course-container .container img{
+        display: none;
+    }
+
+    .course-container .form form {
+        width: 100%;
+    }
+
+    .course-container { 
+        align-self: center;
+    }
+}
+
+
+@media(max-width: 425px) {
+
+    .course-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .course-container .form form {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "name" 
+        "duration" 
+        "description"
+        "description"
+        "select-titration" 
+        "select-modality" 
+        "button";
+    }
+}
+
+@media(max-width: 320px) {
+
+    .course-container h1 {
+        font-size: 1.2rem;
+    }
+}
