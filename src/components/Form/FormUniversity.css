@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     margin: 32px;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 800;
 }
 
@@ -106,6 +106,10 @@
         margin: 0 1%;
     }
 
+    .university-content h1 {
+        font-size: 1.5rem;
+    }
+
     .university-content .form form .radio {
         margin: 0;
     }
@@ -136,6 +140,11 @@
 }
 
 @media(max-width: 320px) {
+
+    .university-content h1 {
+        font-size: 1.2rem;
+    }
+
 
     .university-content .form form .radio .public {
         height: 15px;
