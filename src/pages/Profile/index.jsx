@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './styles.css'
 
 import Header from '../../components/Header/Header'
@@ -9,7 +10,14 @@ const Profile = _ =>
 
     <div className='profile-container'>
 
-        <Header />
+        <Header authenticated/>
+
+        <div className="container">
+            <span >Bem vindo, Inatel</span>
+            <Link className="btn btn-info" to="/course/create">Novo curso</Link>
+        </div>
+
+
         <Card />
         <Footer />
 
