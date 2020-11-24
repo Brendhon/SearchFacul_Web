@@ -9,7 +9,7 @@ const Register = _ =>
 
         <Header />
 
-        <div className='content'>
+        <div className='register-content'>
 
             <h1>Cadastre sua Universidade</h1>
 
