@@ -1,0 +1,12 @@
+footer.footer {
+    display: flex;
+    flex: 0.1;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding: 0px 0px 15px 15px;
+}
+
+footer.footer span {
+    color: var(--c-dark);
+    font-size: 14px;
+}

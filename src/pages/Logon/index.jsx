@@ -2,7 +2,8 @@ import React from 'react'
 import './styles.css'
 
 import Header from '../../components/Header'
-import logo from '../../assets/img/alternative.svg'
+import Footer from '../../components/Footer'
+import logo from '../../assets/img/logo2.svg'
 
 const Logon = _ =>
     <div className='logon-container'>
@@ -20,6 +21,7 @@ const Logon = _ =>
 
             <img src={logo} alt="logo"></img>
         </div>
+        <Footer/>
     </div>
 
 
