@@ -45,6 +45,11 @@ form textarea {
     border-radius: 8px;
     padding: 16px 24px;
     line-height: 24px;
+    outline: none;
+}
+
+form textarea:focus  {
+    border-color: var(--c-blue);
 }
 
 .button {
