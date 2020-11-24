@@ -1,6 +1,6 @@
 import React from 'react'
 import './Header.css'
-import books from '../assets/img/books.svg'
+import books from '../../assets/img/books.svg'
 
 const Header = _ =>
     <header className="header">
