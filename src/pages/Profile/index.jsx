@@ -10,15 +10,26 @@ const Profile = _ =>
 
     <div className='profile-container'>
 
-        <Header authenticated/>
+        <Header authenticated />
 
-        <div className="container">
-            <span >Bem vindo, Inatel</span>
-            <Link className="btn btn-info" to="/course/create">Novo curso</Link>
+        <div className="profile-main box">
+
+            <div className="profile-container-top">
+                <span >Bem vindo, Inatel</span>
+                <Link className="btn btn-info" to="/course/create">Novo curso</Link>
+            </div>
+
+            <div className="profile-container-card">
+                <div className="profile-list-card">
+                    <Card />
+                    <Card />
+                    <Card />
+                    <Card />
+                </div>
+            </div>
+
         </div>
 
-
-        <Card />
         <Footer />
 
     </div>
