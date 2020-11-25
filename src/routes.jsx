@@ -1,11 +1,13 @@
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
 import Logon from './pages/Logon'
 import Register from './pages/Register'
 import CreateCourse from './pages/CreateCourse'
 import Profile from './pages/Profile'
 
 const Routes = _ =>
+
     <BrowserRouter>
 
         <Switch>
@@ -16,7 +18,5 @@ const Routes = _ =>
         </Switch>
 
     </BrowserRouter>
-
-
 
 export default Routes
