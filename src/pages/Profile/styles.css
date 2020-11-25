@@ -50,6 +50,13 @@
     }
 }
 
+@media(max-width: 685px) {
+
+    .profile-container .profile-content .profile-content-top strong {
+        display: none;
+    }
+}
+
 @media(max-width: 425px) {
 
     .profile-container .profile-content .profile-card .profile-list-card {

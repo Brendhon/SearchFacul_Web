@@ -23,6 +23,9 @@ const Profile = _ =>
             <div className="profile-card">
                 <div className="profile-list-card">
                     <Card authenticated />
+                    <Card authenticated />
+                    <Card />
+                    <Card authenticated />
 
                 </div>
             </div>
