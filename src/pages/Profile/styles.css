@@ -36,10 +36,24 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
+@media(max-width: 1328px) {
+
+    .profile-container .profile-content .profile-card .profile-list-card {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 @media(max-width: 1024px) {
 
     .profile-container .profile-content .profile-card .profile-list-card {
         grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media(max-width: 1000px) {
+
+    .profile-container .profile-content .profile-card .profile-list-card {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -51,6 +65,10 @@
 }
 
 @media(max-width: 685px) {
+
+    .profile-container .profile-content .profile-card .profile-list-card {
+        grid-template-columns: 1fr;
+    }
 
     .profile-container .profile-content .profile-content-top strong {
         display: none;
