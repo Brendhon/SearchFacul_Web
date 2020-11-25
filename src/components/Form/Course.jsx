@@ -1,50 +1,33 @@
 import React from 'react'
 import './Course.css'
 
-import student from '../../assets/img/students2.svg'
-
 const FormCourse = props =>
 
-    <div className='course-container box'>
+    <section className="course-container">
 
-        <h1>{props.title}</h1>
+        <form>
 
-        <div className='container'>
+            <input className="name" placeholder="Nome do curso" />
+            <input className="duration" placeholder="Duração (anos)" />
 
-            <img src={student} alt="student"></img>
+            <textarea className="description" placeholder="Descrição" />
 
-            <section className="form">
+            <select className="select-titration" name="titration">
+                <option value="">Selecione a titulação</option>
+                <option value="bacharelado">Bacharelado</option>
+                <option value="licenciatura">Licenciatura</option>
+            </select>
 
-                <form>
+            <select className="select-modality" name="modality">
+                <option value="">Selecione a modalidade</option>
+                <option value="presencial">Presencial</option>
+                <option value="online">Online</option>
+            </select>
 
-                    <input className="name" placeholder="Nome do curso" />
-                    <input className="duration" placeholder="Duração (anos)" />
-                    
-                    <textarea className="description" placeholder="Descrição" />
+            <button className="button" type="submit">Enviar</button>
 
-                    <select className="select-titration" name="titration">
-                        <option value="">Selecione a titulação</option>
-                        <option value="bacharelado">Bacharelado</option>
-                        <option value="licenciatura">Licenciatura</option>
-                    </select>
+        </form>
 
-                    <select className="select-modality" name="modality">
-                        <option value="">Selecione a modalidade</option>
-                        <option value="presencial">Presencial</option>
-                        <option value="online">Online</option>
-                    </select>
-
-                    <button className="button" type="submit">Enviar</button>
-
-                </form>
-
-
-            </section>
-
-
-        </div>
-
-    </div>
-
+    </section>
 
 export default FormCourse

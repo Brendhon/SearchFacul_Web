@@ -1,90 +1,51 @@
-.course-container {
-    display: flex;
-    flex: 0.8;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.course-container h1 {
-    display: flex;
-    justify-content: center;
-    margin: 32px;
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-.course-container .container{
-    display: flex;
-    justify-content: space-between;
-}
-
-.course-container .container img{
-    align-content: center;
-    width:40%;
-}
-
-.course-container .form form {
-    width: 40vw;
+.course-container form {
+    width: 500px;
+    
     display: grid;
     gap: 10px;
-    align-self: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "name  name  duration duration" 
     "description description description description" 
     "select-titration select-titration select-modality select-modality" 
     "button button button button";
+    align-self: center;
 }
 
-.course-container .form form .name {
+.course-container form .name {
     grid-area: name;
 }
 
-.course-container .form form .duration {
+.course-container form .duration {
     grid-area: duration;
 }
 
-.course-container .form form .select-titration {
+.course-container form .select-titration {
     grid-area: select-titration;
 }
 
-.course-container .form form .select-modality {
+.course-container form .select-modality {
     grid-area: select-modality;
 }
 
-.course-container .form form .description {
+.course-container form .description {
     grid-area: description;
 }
 
-.course-container .form form .button {
+.course-container form .button {
     grid-area: button;
     margin-bottom: 10px;
 }
 
-@media(max-width: 768px) {
-
-    .course-container .container img{
-        display: none;
-    }
-
-    .course-container .form form {
-        width: 100%;
-    }
-
-    .course-container { 
-        align-self: center;
+@media(max-width: 550px) {
+    .course-container form {
+        width: 450px;
     }
 }
 
-
-@media(max-width: 425px) {
-
-    .course-container h1 {
-        font-size: 1.5rem;
-    }
-
-    .course-container .form form {
+@media(max-width: 480px) {
+    .course-container form {
+        width: 300px;
         grid-template-columns: 1fr;
         grid-template-areas: 
         "name" 
@@ -94,12 +55,5 @@
         "select-titration" 
         "select-modality" 
         "button";
-    }
-}
-
-@media(max-width: 320px) {
-
-    .course-container h1 {
-        font-size: 1.2rem;
     }
 }

@@ -5,13 +5,24 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import CourseForm from '../../components/Form/Course'
 
+import student from '../../assets/img/students2.svg'
+
 const CreateCourse = _ =>
 
     <div className='create-course-container'>
 
         <Header />
-        <CourseForm title="Cadastre um curso" />
-        <Footer/>
+
+        <div className="create-course-content box">
+            <h1>Cadastre um curso</h1>
+
+            <div className="create-course-data">
+                <img className="create-course-img" src={student} alt="student"></img>
+                <CourseForm title="Cadastre um curso" />
+            </div>
+        </div>
+
+        <Footer />
 
     </div>
 
