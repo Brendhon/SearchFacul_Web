@@ -1,24 +1,23 @@
 .card-container {
-    width: 19rem;
-    margin: 5px;
-    background: #cad5e6;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
+    width: 20vw;
+    background: #D7E4E6;
     border-radius: 8px; 
+    margin: 10px;
 }
 
 .card-container .ies{
-    height: 150px;
+    height: 15vw;
     padding: 10px;
     display: flex;
 
     justify-content: center;
     align-items: center;
 
-    font-size: 1.3rem;
+    font-size: 1.5vw;
     overflow: hidden;
     word-wrap: break-word;
 
-    background-color: #1C468A;
+    background-color: #138496;
     border-top-left-radius: 8px; 
     border-top-right-radius: 8px; 
     color: white;
@@ -32,23 +31,44 @@
 }
 
 .card-container .body .title{
-    font-size: 1.1rem;
+    font-size: 1.2vw;
 }
 
 .card-container .body .text{
-    font-size: 0.9rem;
+    font-size: 1vw;
 }
 
 .card-container .list {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid;
-    border-color: #D9E7E9;
+    border-color: #ffffff;
     padding: 15px 15px 0px 15px;
 }
 
 .card-container .list .list-item {
     display: flex;
     flex-direction: column;
-    font-size: 0.8rem;
+    font-size: 0.9vw;
+}
+
+@media(max-width: 1024px) {
+
+    .card-container {
+        width: 30vw;
+    }
+}
+
+@media(max-width: 425px) {
+
+    .card-container {
+        width: 60vw;
+    }
+}
+
+@media(max-width: 320px) {
+
+    .card-container {
+        width: 75vw;
+    }
 }
