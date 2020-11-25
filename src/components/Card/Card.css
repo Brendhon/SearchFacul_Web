@@ -28,6 +28,7 @@
     background: transparent;
     border: 0;
     color: white;
+    outline: none;
 }
 
 .card-container .card-top .card-top-authenticated .card-top-button:hover {
