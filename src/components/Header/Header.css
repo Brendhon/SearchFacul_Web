@@ -22,10 +22,17 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    margin-left: 10px;
+}
+
+.header-container .header-content .header-edit{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
 }
 
 .header-container .header-logo img {
-    width: 6ch;
+    width: 6vh;
 }
 
 .header-container .header-logo .header-home {

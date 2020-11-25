@@ -18,6 +18,7 @@ const Header = props =>
                 <Link to="/register" className="btn btn-secondary">Cadastrar</Link>
             </div> :
             <div className="header-content">
+                <Link to="/" className="btn btn-outline-secondary .header-edit">Edit</Link>
                 <Link to="/" className="btn btn-outline-danger header-logout">Logout</Link>
             </div>
         }
