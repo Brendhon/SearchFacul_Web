@@ -1,5 +1,5 @@
 import React from 'react'
-import './FormCourse.css'
+import './Course.css'
 
 import student from '../../assets/img/students2.svg'
 

@@ -3,3 +3,19 @@
     flex-direction: column;
     height: 100vh;
 }
+
+.register-container .register-content {
+    display: flex;
+    flex: 0.8;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container .register-content h1 {
+    display: flex;
+    justify-content: center;
+    margin: 32px;
+    font-size: 2rem;
+    font-weight: 800;
+}

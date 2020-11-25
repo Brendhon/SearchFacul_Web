@@ -1,21 +1,4 @@
-.university-content {
-    display: flex;
-    flex: 0.8;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-
-.university-content h1 {
-    display: flex;
-    justify-content: center;
-    margin: 32px;
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-.university-content .form form {
+.university-content form {
     width: 60vw;
     display: grid;
     gap: 10px;
@@ -30,67 +13,67 @@
     "button button button button";
 }
 
-.university-content .form form .IES {
+.university-content form .IES {
     grid-area: IES;
 }
 
-.university-content .form form .telephone {
+.university-content form .telephone {
     grid-area: telephone;
 }
 
-.university-content .form form .email {
+.university-content form .email {
     grid-area: email;
 }
 
-.university-content .form form .UF {
+.university-content form .UF {
     grid-area: UF;
 }
 
-.university-content .form form .password {
+.university-content form .password {
     grid-area: password;
 }
 
-.university-content .form form .city {
+.university-content form .city {
     grid-area: city;
 }
 
-.university-content .form form .confirmPassword {
+.university-content form .confirmPassword {
     grid-area: confirmPassword;
 }
 
-.university-content .form form .address {
+.university-content form .address {
     grid-area: address;
 }
 
-.university-content .form form .site {
+.university-content form .site {
     grid-area: site;
 }
 
-.university-content .form form button {
+.university-content form button {
     grid-area: button;
 }
 
-.university-content .form form .radio {
+.university-content form .radio {
     grid-area: radio;
     display: flex;
     align-items: center;
     margin-right: 50%;
 }
 
-.university-content .form form .radio .public {
+.university-content form .radio .public {
     height: 30px;
 }
 
-.university-content .form form .radio .private {
+.university-content form .radio .private {
     height: 30px;
 }
 
-.university-content .form form button:hover {
+.university-content form button:hover {
     filter: brightness(90%);
 }
 
 @media(max-width: 1024px) {
-    .university-content .form form .radio {
+    .university-content form .radio {
         margin-right: 20%;
     }
 }
@@ -105,11 +88,11 @@
         font-size: 1.5rem;
     }
 
-    .university-content .form form .radio {
+    .university-content form .radio {
         margin: 0;
     }
 
-    .university-content .form form {
+    .university-content form {
         width: 95vw;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
@@ -125,11 +108,11 @@
             "button button";
     }
     
-    .university-content .form form .radio .public {
+    .university-content form .radio .public {
         height: 20px;
     }
     
-    .university-content .form form .radio .private {
+    .university-content form .radio .private {
         height: 20px;
     }
 }
@@ -141,11 +124,11 @@
     }
 
 
-    .university-content .form form .radio .public {
+    .university-content form .radio .public {
         height: 15px;
     }
     
-    .university-content .form form .radio .private {
+    .university-content form .radio .private {
         height: 15px;
     }
 }

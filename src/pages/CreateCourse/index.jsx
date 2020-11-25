@@ -3,14 +3,14 @@ import './styles.css'
 
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import FormCourse from '../../components/Form/FormCourse'
+import CourseForm from '../../components/Form/Course'
 
 const CreateCourse = _ =>
 
     <div className='create-course-container'>
 
         <Header />
-        <FormCourse title="Cadastre um curso" />
+        <CourseForm title="Cadastre um curso" />
         <Footer/>
 
     </div>
