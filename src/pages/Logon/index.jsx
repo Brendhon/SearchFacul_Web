@@ -8,9 +8,9 @@ import logo from '../../assets/img/logo2.svg'
 const Logon = _ =>
     <div className='logon-container'>
         <Header />
-        <div className='content'>
+        <div className='logon-content'>
 
-            <section className="form">
+            <section className="logon-form">
                 <form>
                     <h1>Faça seu Logon</h1>
                     <input className="mb-2" placeholder="Email" type="email" />

@@ -4,42 +4,42 @@
     height: 100vh;
 }
 
-.content {
+.logon-content {
     display: flex;
     flex: 0.8;
     align-items: center;
     justify-content: center;
 }
 
-.content .form form {
+.logon-content .logon-form form {
     display: flex;
     flex-direction: column;
     width: 30vw;
 }
 
-.content .form form h1 {
+.logon-content .logon-form form h1 {
     margin-bottom: 32px;
     font-size: 32px;
     font-weight: 800;
 }
 
-.content img {
+.logon-content img {
     margin-left: 100px;
     margin-right: 0;
     padding-right: 0;
     width: 35vw;
 }
 
-.content .form form button:hover {
+.logon-content .logon-form form button:hover {
     filter: brightness(90%);
 }
 
 @media(max-width: 425px) {
-    .content img {
+    .logon-content img {
         display: none;
     }
 
-    .content .form form {
+    .logon-content .logon-form form {
         width: 90vw;
     }
 }
