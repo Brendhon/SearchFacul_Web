@@ -1,5 +1,5 @@
 .card-container {
-    width: 20vw;
+    width: 300px;
     margin: 10px;
 
     border-radius: 8px;
@@ -45,7 +45,7 @@
     font-size: 0.9rem;
 }
 
-.card-container .card-ies {
+.card-container .card-top .card-ies {
     display: flex;
     flex: 0.9;
     justify-content: center;
@@ -60,6 +60,7 @@
     flex-direction: column;
     justify-content: space-between;
 
+    height: 150px;
     padding: 15px 15px 0px 15px;
 }
 
@@ -69,11 +70,18 @@
 
 .card-container .card-content .card-content-text {
     font-size: 0.9rem;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
 }
 
-.card-container .card-list-data {
+.card-container .card-bottom {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 
     border-top: 1px solid;
     border-color: #ffffff;
@@ -81,76 +89,7 @@
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 
-    padding: 15px 15px 0px 15px;
-}
-
-.card-container .card-list-data .card-list-item {
-    display: flex;
-    flex-direction: column;
-    
-    font-size: 0.8rem;
-}
-
-@media(max-width: 1024px) {
-    .card-container {
-        width: 30vw;
-    }
-}
-
-@media(max-width: 768px) {
-    .card-container .card-top {
-        height: 20vw;
-    }
-    .card-container .card-content .card-content-title {
-        font-size: 0.9rem;
-    }
-    .card-container .card-content .card-content-text {
-        font-size: 0.7rem;
-    }
-    .card-container .card-list-data .card-list-item {
-        font-size: 0.6rem;
-    }
-}
-
-@media(max-width: 685px) {
-
-    .card-container {
-        width: 45vw;
-    }
-    .card-container .card-top {
-        height: 35vw;
-    }
-}
-
-@media(max-width: 460px) {
-    .card-container {
-        width: 40vw;
-    }
-    .card-container .card-top {
-        height: 30vw;
-    }
-    .card-container .card-ies {
-        font-size: 0.8rem;
-    }
-}
-
-@media(max-width: 425px) {
-    .card-container {
-        width: 60vw;
-    }
-    .card-container .card-top {
-        height: 30vw;
-    }
-    .card-container .card-ies {
-        font-size: 0.8rem;
-    }
-}
-
-@media(max-width: 320px) {
-    .card-container {
-        width: 75vw;
-    }
-    .card-container .card-top {
-        height: 35vw;
-    }
+    height: 50px;
+    padding: 15px;
+    font-size: 1rem;
 }

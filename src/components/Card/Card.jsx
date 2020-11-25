@@ -7,7 +7,7 @@ const Card = props =>
 
     <div className="card-container">
 
-        <div className="card-top">
+        <header className="card-top">
 
             {!props.authenticated ? <div style={{margin: 10}}/> :
 
@@ -21,28 +21,18 @@ const Card = props =>
                 <strong >Instituto Nacional de Telecomunicações</strong>
             </div>
 
-        </div>
+        </header>
 
         <div className="card-content">
 
             <h5 className="card-content-title"> Engenharia de computação</h5>
-            <p className="card-content-text">Some quick example text build on the card title and make up the bulk of the card's content.</p>
+            <p className="card-content-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo nulla, volutpat in sollicitudin vitae, sollicitudin eget risus. Nulla facilisi. Suspendisse congue, quam eu pharetra convallis, purus lacus malesuada purus, vitae blandit turpis nunc ac nisi. Suspendisse vitae iaculis orci, sed venenatis odio. Integer eget dui et felis ullamcorper laoreet. Integer egestas aliquam egestas. Etiam vitae eleifend metus. Nulla porta lorem eu diam lacinia, nec sollicitudin tellus sodales. Donec eros risus, ultrices eget urna in, gravida semper urna. Pellentesque eleifend mi at felis tempus rutrum. Nullam nulla felis, semper quis convallis elementum, finibus fringilla libero. Nunc sodales, massa id fermentum interdum, nibh tellus aliquam ligula, vel maximus lectus turpis vitae metus.</p>
 
         </div>
 
-        <div className="card-list-data">
-
-            <div className="card-list-item">
-                <p><strong>Titulação</strong>: Bacharelado</p>
-                <p><strong>Modalidade</strong>: Online</p>
-            </div>
-
-            <div className="card-list-item">
-                <p><strong>Duração</strong>: 5 anos</p>
-                <p><strong>Nota MEC</strong>: 5</p>
-            </div>
-
-        </div>
+        <footer className="card-bottom">
+            <a href="/profile">Saiba mais</a>
+        </footer>
 
     </div>
 
