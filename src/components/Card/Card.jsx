@@ -3,21 +3,41 @@ import './Card.css'
 
 import { FiTrash2, FiEdit } from 'react-icons/fi'
 import Alert from '@material-ui/lab/Alert'
+import Modal from '@material-ui/core/Modal'
+
+import CourseForm from '../Form/Course'
 
 const Card = props => {
 
+    // Declaração de estados
     const [visible, setVisible] = useState("alert-visible-false")
+    const [open, setOpen] = useState(false)
+
+    // Declaração de funções
+    const visibleTrue = _ => setVisible("alert-visible-true")
+    const visibleFalse = _ => setVisible("alert-visible-false")
+
+    const handleOpen = _ => setOpen(true)
+    const handleClose = _ => setOpen(false)
 
     return (
         <div className="card-container">
 
+            {/* Cabeçalho do Card */}
             <header className="card-top">
 
                 {!props.authenticated ? <div style={{ margin: 10 }} /> :
 
                     <div className="card-top-authenticated">
-                        <button className="card-top-button"><FiEdit /></button>
-                        <button className="card-top-button" onClick={() => setVisible("alert-visible-true")}><FiTrash2 /></button>
+
+                        <button className="card-top-button" onClick={handleOpen}>
+                            <FiEdit />
+                        </button>
+
+                        <button className="card-top-button" onClick={visibleTrue}>
+                            <FiTrash2 />
+                        </button>
+
                     </div>
                 }
 
@@ -27,6 +47,7 @@ const Card = props => {
 
             </header>
 
+            {/* Conteúdo do Cartão */}
             <div className="card-content">
 
                 <h5 className="card-content-title"> Engenharia de computação</h5>
@@ -34,13 +55,26 @@ const Card = props => {
 
             </div>
 
+            {/* Rodapé do Cartão */}
             <footer className="card-bottom">
+
                 <a href="/profile">Saiba mais</a>
+
             </footer>
 
+            {/* Componentes com posições não fixadas */}
             <div className={visible}>
-                <Alert onClose={() => setVisible("alert-visible-false")}>Sucesso ao deletar</Alert>
+                <Alert onClose={visibleFalse}>Sucesso ao deletar</Alert>
             </div>
+
+            <Modal open={open} onClose={handleClose}>
+
+                <div className="modal-box">
+                    <h1>Digite os novos dados</h1>
+                    <CourseForm />
+                </div>
+
+            </Modal>
 
         </div>
     )
