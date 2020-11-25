@@ -15,16 +15,15 @@ const Profile = _ =>
         <div className="profile-main box">
 
             <div className="profile-container-top">
-                <span >Bem vindo, Inatel</span>
+                <span>Bem vindo, Inatel</span>
+                <strong>Cursos cadastrados</strong>
                 <Link className="btn btn-info" to="/course/create">Novo curso</Link>
             </div>
 
             <div className="profile-container-card">
                 <div className="profile-list-card">
                     <Card />
-                    <Card />
-                    <Card />
-                    <Card />
+        
                 </div>
             </div>
 

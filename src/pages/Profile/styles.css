@@ -13,9 +13,17 @@
 .profile-container .profile-main .profile-container-top {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 1.3rem;
     color: var(--c-dark);
     padding: 15px 15px 0px 15px;
+}
+
+.profile-container .profile-main .profile-container-top strong {
+    display: flex;
+    justify-content: space-between;
+    font-size: 2rem;
+    color: var(--c-dark);
 }
 
 .profile-container .profile-main .profile-container-card {
@@ -46,5 +54,9 @@
 
     .profile-container .profile-main .profile-container-card .profile-list-card {
         grid-template-columns: 1fr;
+    }
+
+    .profile-container .profile-main .profile-container-top strong {
+        display: none;
     }
 }
