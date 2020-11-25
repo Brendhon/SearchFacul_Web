@@ -12,15 +12,15 @@ const Profile = _ =>
 
         <Header authenticated />
 
-        <div className="profile-main box">
+        <div className="profile-content box">
 
-            <div className="profile-container-top">
+            <div className="profile-content-top">
                 <span>Bem vindo, Inatel</span>
                 <strong>Cursos cadastrados</strong>
                 <Link className="btn btn-info" to="/course/create">Novo curso</Link>
             </div>
 
-            <div className="profile-container-card">
+            <div className="profile-card">
                 <div className="profile-list-card">
                     <Card />
         
