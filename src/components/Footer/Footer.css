@@ -1,4 +1,4 @@
-footer.footer {
+.footer-container {
     display: flex;
     flex: 0.1;
     justify-content: flex-start;
@@ -6,7 +6,7 @@ footer.footer {
     padding: 0px 0px 15px 15px;
 }
 
-footer.footer span {
+.footer-container span {
     color: var(--c-dark);
     font-size: 14px;
 }
