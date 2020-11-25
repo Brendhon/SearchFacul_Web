@@ -13,8 +13,7 @@
     box-sizing: border-box;
 }
 
-/* Definindo alguns padrões de CSS para todos CSS utilizados */
-
+/* Criando alguns padrões de CSS */
 body {
     font-family: Nunito, sans-serif;
     background-color: #d9e7e9;
