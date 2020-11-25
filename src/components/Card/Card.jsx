@@ -9,7 +9,7 @@ const Card = props =>
 
         <div className="card-top">
 
-            {!props.authenticated ? <div /> :
+            {!props.authenticated ? <div style={{margin: 10}}/> :
 
                 <div className="card-top-authenticated">
                     <button className="card-top-button"><FiEdit /></button>
