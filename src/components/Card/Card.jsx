@@ -1,11 +1,27 @@
 import React from 'react'
 import './Card.css'
 
-const Card = _ =>
+import { FiTrash2, FiEdit } from 'react-icons/fi'
+
+const Card = props =>
 
     <div className="card-container">
 
-        <strong className="card-ies">Instituto Nacional de Telecomunicações</strong>
+        <div className="card-top">
+
+            {!props.authenticated ? <div /> :
+
+                <div className="card-top-authenticated">
+                    <button className="card-top-button"><FiEdit /></button>
+                    <button className="card-top-button"><FiTrash2 /></button>
+                </div>
+            }
+            
+            <div className="card-ies">
+                <strong >Instituto Nacional de Telecomunicações</strong>
+            </div>
+
+        </div>
 
         <div className="card-content">
 

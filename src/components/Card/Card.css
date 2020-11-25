@@ -1,22 +1,45 @@
 .card-container {
     width: 20vw;
-    background: #D7E4E6;
-    border-radius: 8px;
     margin: 10px;
+    border-radius: 8px;
+    background: #D7E4E6;
 }
 
-.card-container .card-ies {
-    height: 14vw;
-    padding: 10px;
+.card-container .card-top {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
+    flex-direction: column;
+    height: 13vw;
+    padding: 10px;
     overflow: hidden;
     word-wrap: break-word;
     background-color: #138496;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+}
+
+.card-container .card-top .card-top-authenticated {
+    display: flex;
+    flex: 0.1;
+    justify-content: space-between;
+    font-size: 1rem;
+}
+
+.card-container .card-top .card-top-authenticated .card-top-button {
+    background: transparent;
+    border: 0;
+    color: white;
+}
+
+.card-container .card-top .card-top-authenticated .card-top-button:hover {
+    opacity: 0.8;
+}
+
+.card-container .card-ies {
+    display: flex;
+    flex: 0.9;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
     color: white;
 }
 
@@ -56,14 +79,15 @@
 }
 
 @media(max-width: 768px) {
+    .card-container .card-top {
+        height: 20vw;
+    }
     .card-container .card-content .card-content-title {
         font-size: 0.9rem;
     }
-
     .card-container .card-content .card-content-text {
         font-size: 0.7rem;
     }
-
     .card-container .card-list-data .card-list-item {
         font-size: 0.6rem;
     }
@@ -73,6 +97,9 @@
     .card-container {
         width: 60vw;
     }
+    .card-container .card-top {
+        height: 30vw;
+    }
     .card-container .card-ies {
         font-size: 0.8rem;
     }
@@ -81,5 +108,8 @@
 @media(max-width: 320px) {
     .card-container {
         width: 75vw;
+    }
+    .card-container .card-top {
+        height: 35vw;
     }
 }
