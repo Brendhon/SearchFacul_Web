@@ -1,16 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+/* Declaração de Variáveis */
 :root {
     --c-dark: #2E333E;
     --c-blue: #00A5D8;
 }
 
+/* Definindo alguns padrões de CSS para todos CSS utilizados */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Definindo a fonte padrão */
+/* Definindo alguns padrões de CSS para todos CSS utilizados */
 
 body {
     font-family: Nunito, sans-serif;
