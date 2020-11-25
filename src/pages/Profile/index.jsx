@@ -4,7 +4,7 @@ import './styles.css'
 
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import Card from '../../components/Card/Card'
+import CardsList from '../../components/CardsList/CardsList'
 
 const Profile = _ =>
 
@@ -20,15 +20,7 @@ const Profile = _ =>
                 <Link className="btn btn-info" to="/course/create">Novo curso</Link>
             </div>
 
-            <div className="profile-card">
-                <div className="profile-list-card">
-                    <Card authenticated />
-                    <Card authenticated />
-                    <Card />
-                    <Card authenticated />
-
-                </div>
-            </div>
+            <CardsList authenticated />
 
         </div>
 
