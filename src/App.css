@@ -74,6 +74,11 @@ form textarea:focus {
     transition: filter 0.2s;
 }
 
+.button:focus {
+    outline: none;
+    border: 1px solid #028cb6;
+}
+
 .box {
     background: #f0f0f6;
     box-shadow: 0 0 100px rgba(0, 0, 0, 0.1);
