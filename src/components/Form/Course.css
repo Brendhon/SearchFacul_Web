@@ -5,7 +5,8 @@
     gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "name  name  duration duration" 
+    "name  name  name name" 
+    "score  score  duration duration" 
     "description description description description" 
     "select-titration select-titration select-modality select-modality" 
     "button button button button";
@@ -18,6 +19,10 @@
 
 .course-container form .duration {
     grid-area: duration;
+}
+
+.course-container form .score {
+    grid-area: score;
 }
 
 .course-container form .select-titration {
@@ -50,6 +55,7 @@
         grid-template-areas: 
         "name" 
         "duration" 
+        "score"
         "description"
         "description"
         "select-titration" 

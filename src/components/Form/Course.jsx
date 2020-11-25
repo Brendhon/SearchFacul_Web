@@ -9,6 +9,7 @@ const FormCourse = props =>
 
             <input className="name" placeholder="Nome do curso" />
             <input className="duration" placeholder="Duração (anos)" />
+            <input className="score" placeholder="Nota MAC"/>
 
             <textarea className="description" placeholder="Descrição" />
 
