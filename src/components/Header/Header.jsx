@@ -1,28 +1,60 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Header.css'
+
 import { Link } from 'react-router-dom'
+import Modal from '@material-ui/core/Modal'
+
 import books from '../../assets/img/books.svg'
+import UniversityForm from "../Form/University"
 
-const Header = props =>
+const Header = props => {
 
-    <header className="header-container">
+    // Declaração de estados
+    const [open, setOpen] = useState(false)
 
-        <div className="header-logo">
-            <img className="mr-3" src={books} alt="Livros"></img>
-            <Link to="/" className="header-home" >Home</Link>
-        </div>
+    // Declaração de funções
+    const handleOpen = _ => setOpen(true)
+    const handleClose = _ => setOpen(false)
 
-        {!props.authenticated ?
-            <div className="header-content">
-                <strong className="btn btn-primary mr-3">Login</strong>
-                <Link to="/register" className="btn btn-secondary">Cadastrar</Link>
-            </div> :
-            <div className="header-content">
-                <Link to="/" className="btn btn-outline-secondary .header-edit">Edit</Link>
-                <Link to="/" className="btn btn-outline-danger header-logout">Logout</Link>
+    return (
+        <header className="header-container">
+
+            <div className="header-logo">
+                <img className="mr-3" src={books} alt="Livros"></img>
+                <Link to="/" className="header-home" >Home</Link>
             </div>
-        }
 
-    </header>
+            {!props.authenticated ?
+
+                <div className="header-content">
+                    <strong className="btn btn-primary mr-3">Login</strong>
+                    <Link to="/register" className="btn btn-secondary">Cadastrar</Link>
+                </div> :
+
+                <div className="header-content">
+
+                    <button className="btn btn-outline-secondary .header-edit" onClick={handleOpen}>
+                        Edit
+                    </button>
+                    <Link to="/" className="btn btn-outline-danger header-logout">Logout</Link>
+
+                </div>
+            }
+
+            <Modal open={open} onClose={handleClose}>
+
+                <div className="header-modal-box">
+                    
+                    <h1>Digite os novos dados</h1>
+                    <UniversityForm />
+                </div>
+
+            </Modal>
+
+        </header>
+
+
+    )
+}
 
 export default Header 
