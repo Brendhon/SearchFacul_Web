@@ -11,8 +11,7 @@ const Register = _ =>
         <Header />
 
         <div className="register-content box">
-            <h1>Cadastre sua Universidade</h1>
-            <UniversityForm />
+            <UniversityForm title="Cadastre sua Universidade" />
         </div>
 
         <Footer />

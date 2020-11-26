@@ -1,3 +1,19 @@
+.university-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    background: #F0F0F6;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.university-content h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
 .university-content form {
     width: 800px;
 
@@ -56,8 +72,10 @@
 
 .university-content form .radio {
     grid-area: radio;
+    
     display: flex;
     align-items: center;
+
     margin-right: 20%;
 }
 
@@ -100,6 +118,8 @@
 @media(max-width: 350px) {
     .university-content form {
         width: 200px;
+        margin-bottom: 10px;
+        
         grid-template-columns: 1fr;
         grid-template-areas: 
         "IES"
@@ -113,6 +133,23 @@
         "radio" 
         "UF " 
         "button";
-        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 480px) {
+    .university-content h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 380px) {
+    .university-content h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media(max-width: 320px) {
+    .university-content h1 {
+        font-size: 1rem;
     }
 }

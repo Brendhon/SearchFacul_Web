@@ -5,6 +5,8 @@ const FormUniversity = props =>
 
     <section className="university-content">
 
+        <h1>{props.title}</h1>
+
         <form>
             <input className="IES" placeholder="IES" />
             <input className="telephone" placeholder="Telefone" type="tel" />

@@ -11,29 +11,3 @@
     justify-content: center;
     align-items: center;
 }
-
-.register-container .register-content h1 {
-    display: flex;
-    justify-content: center;
-    margin: 32px;
-    font-size: 2rem;
-    font-weight: 800;
-}
-
-@media(max-width: 480px) {
-    .register-container .register-content h1 {
-        font-size: 1.5rem;
-    }
-}
-
-@media(max-width: 380px) {
-    .register-container .register-content h1 {
-        font-size: 1.2rem;
-    }
-}
-
-@media(max-width: 320px) {
-    .register-container .register-content h1 {
-        font-size: 1rem;
-    }
-}

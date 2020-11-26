@@ -3,6 +3,7 @@ import './Header.css'
 
 import { Link } from 'react-router-dom'
 import Modal from '@material-ui/core/Modal'
+import Alert from '@material-ui/lab/Alert'
 
 import books from '../../assets/img/books.svg'
 import UniversityForm from "../Form/University"
@@ -45,8 +46,12 @@ const Header = props => {
 
                 <div className="header-modal-box">
                     
-                    <h1>Digite os novos dados</h1>
-                    <UniversityForm />
+                    <UniversityForm title="Digite os novos dados" />
+
+                    <div className="alert-true">
+                        <Alert severity="info">Caso não queira alterar algum dado, apenas deixe-o em branco!</Alert>
+                    </div>
+                    
                 </div>
 
             </Modal>
