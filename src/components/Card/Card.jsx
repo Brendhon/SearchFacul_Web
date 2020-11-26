@@ -10,12 +10,12 @@ import CourseForm from '../Form/Course'
 const Card = props => {
 
     // Declaração de estados
-    const [visible, setVisible] = useState("alert-visible-false")
+    const [visible, setVisible] = useState("alert-none")
     const [open, setOpen] = useState(false)
 
     // Declaração de funções
-    const visibleTrue = _ => setVisible("alert-visible-true")
-    const visibleFalse = _ => setVisible("alert-visible-false")
+    const visibleTrue = _ => setVisible("alert-absolute")
+    const visibleFalse = _ => setVisible("alert-none")
 
     const handleOpen = _ => setOpen(true)
     const handleClose = _ => setOpen(false)
@@ -70,8 +70,13 @@ const Card = props => {
             <Modal open={open} onClose={handleClose}>
 
                 <div className="modal-box">
-                    <h1>Digite os novos dados</h1>
-                    <CourseForm />
+                    
+                    <CourseForm title="Digite os novos dados"/>
+
+                    <div className="alert-absolute">
+                        <Alert severity="info">Caso não queira alterar algum dado, apenas deixe-o em branco!</Alert>
+                    </div>
+                    
                 </div>
 
             </Modal>

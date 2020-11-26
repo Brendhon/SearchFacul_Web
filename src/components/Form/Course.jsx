@@ -5,11 +5,13 @@ const FormCourse = props =>
 
     <section className="course-container">
 
+        {props.title ? <h1>{props.title}</h1> : <div />}
+
         <form>
 
             <input className="name" placeholder="Nome do curso" />
             <input className="duration" placeholder="Duração (anos)" />
-            <input className="score" placeholder="Nota MAC"/>
+            <input className="score" placeholder="Nota MAC" />
 
             <textarea className="description" placeholder="Descrição" />
 

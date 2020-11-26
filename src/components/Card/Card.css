@@ -1,12 +1,5 @@
-.alert-visible-false {
+.alert-none {
     display: none;
-}
-
-.alert-visible-true {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    z-index: 1;
 }
 
 .card-container {
@@ -103,73 +96,4 @@
     height: 50px;
     padding: 15px;
     font-size: 1rem;
-}
-
-.modal-box {
-    
-    position:absolute;
-    top:50%;
-    left:50%;
-
-    margin-top:-300px;
-    margin-left:-300px;
-
-    background: #F0F0F6;
-    padding: 20px 40px 20px 40px;
-    border-radius: 8px;
-}
-
-.modal-box h1{
-    font-size: 1.7rem;
-    font-weight: 700;
-    color: var(--c-dark);
-    margin: 10px 10px 10px 120px;
-}
-
-@media(max-width: 630px) {
-    
-    .modal-box {
-        margin-left:-270px;
-        padding: 20px;
-    }
-
-    .modal-box h1 {
-        margin: 10px 10px 10px 100px;
-    }
-}
-
-@media(max-width: 550px) {
-    .modal-box {
-        margin-left:-240px;
-        padding: 15px;
-    }
-
-    .modal-box h1{
-        margin: 10px 10px 10px 100px;
-    }
-}
-
-@media(max-width: 480px) {
-    
-    .modal-box {
-        margin-left:-160px;
-    }
-
-    .modal-box h1{
-        font-size: 1.3rem;
-        margin: 10px 10px 10px 30px;
-    }
-}
-
-@media(max-width: 320px) {
-    
-    .modal-box {
-        margin-left:-155px;
-        padding: 5px;
-    }
-
-    .modal-box h1{
-        font-size: 1.2rem;
-        margin: 10px 10px 10px 50px;
-    }
 }
