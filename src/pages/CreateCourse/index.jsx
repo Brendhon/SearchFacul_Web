@@ -11,7 +11,7 @@ const CreateCourse = _ =>
 
     <div className='create-course-container'>
 
-        <Header />
+        <Header authenticated/>
 
         <div className="create-course-content box">
             <h1>Cadastre um curso</h1>
