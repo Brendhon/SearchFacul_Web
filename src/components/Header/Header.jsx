@@ -48,10 +48,6 @@ const Header = props => {
                 <div className="modal-box">
                     
                     <UniversityForm title="Digite os novos dados" />
-
-                    <div className="alert-absolute">
-                        <Alert severity="info">Caso não queira alterar algum dado, apenas deixe-o em branco!</Alert>
-                    </div>
                     
                     <div className="close-modal">
                         <button className="btn btn-outline-dark" onClick={handleClose}>

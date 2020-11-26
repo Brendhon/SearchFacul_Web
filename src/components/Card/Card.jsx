@@ -20,7 +20,7 @@ const Card = props => {
 
     const editModalOpen = _ => setOpenEditModal(true)
     const editModalClose = _ => setOpenEditModal(false)
-    
+
     const InfoModalOpen = _ => setOpenInfoModal(true)
     const InfoModalClose = _ => setOpenInfoModal(false)
 
@@ -68,7 +68,7 @@ const Card = props => {
 
             {/* Componentes com posições não fixadas */}
             <div className={visible}>
-                <Alert onClose={visibleFalse}>Sucesso ao deletar</Alert>
+                <Alert severity="error" onClose={visibleFalse}>Deletado com sucesso</Alert>
             </div>
 
             <Modal open={openEditModal} onClose={editModalClose}>
@@ -76,10 +76,6 @@ const Card = props => {
                 <div className="modal-box">
 
                     <CourseForm title="Digite os novos dados" />
-
-                    <div className="alert-absolute">
-                        <Alert severity="info">Caso não queira alterar algum dado, apenas deixe-o em branco!</Alert>
-                    </div>
 
                     <div className="close-modal">
                         <button className="btn btn-outline-dark" onClick={editModalClose}>
@@ -96,10 +92,6 @@ const Card = props => {
                 <div className="modal-box">
 
                     <CourseForm title="Digite os novos dados" />
-
-                    <div className="alert-absolute">
-                        <Alert severity="info">Caso não queira alterar algum dado, apenas deixe-o em branco!</Alert>
-                    </div>
 
                     <div className="close-modal">
                         <button className="btn btn-outline-dark" onClick={InfoModalClose}>
