@@ -2,12 +2,11 @@ import React, { useState } from 'react'
 import './Header.css'
 
 import { Link } from 'react-router-dom'
-import Modal from '@material-ui/core/Modal'
-import Alert from '@material-ui/lab/Alert'
-import { FiX } from 'react-icons/fi'
 
 import books from '../../assets/img/books.svg'
-import UniversityForm from "../Form/University"
+
+import UniversityForm from '../Form/University'
+import Modal from '../Modal/Modal'
 
 const Header = props => {
 
@@ -44,18 +43,7 @@ const Header = props => {
             }
 
             <Modal open={open} onClose={handleClose}>
-
-                <div className="modal-box">
-                    
-                    <UniversityForm title="Digite os novos dados" />
-                    
-                    <div className="close-modal">
-                        <button className="btn btn-outline-dark" onClick={handleClose}>
-                            <FiX />
-                        </button>
-                    </div>
-                </div>
-
+                <UniversityForm title="Digite os novos dados" />
             </Modal>
 
         </header>
