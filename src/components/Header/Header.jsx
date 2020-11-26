@@ -44,11 +44,11 @@ const Header = props => {
 
             <Modal open={open} onClose={handleClose}>
 
-                <div className="header-modal-box">
+                <div className="modal-box">
                     
                     <UniversityForm title="Digite os novos dados" />
 
-                    <div className="alert-true">
+                    <div className="alert-absolute">
                         <Alert severity="info">Caso não queira alterar algum dado, apenas deixe-o em branco!</Alert>
                     </div>
                     

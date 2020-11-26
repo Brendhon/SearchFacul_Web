@@ -40,20 +40,6 @@
     color: var(--c-dark);
 }
 
-.header-modal-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.alert-true {
-    position: absolute;
-    left: 0px;
-    bottom: 0px;
-    z-index: 1;
-}
-
 @media(max-width: 550px) {
 
     .header-container .header-logo img {

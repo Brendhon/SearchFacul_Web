@@ -85,3 +85,17 @@ form textarea:focus {
     border-radius: 8px;
     margin: 0 2%;
 }
+
+.alert-absolute {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+}
+
+.modal-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

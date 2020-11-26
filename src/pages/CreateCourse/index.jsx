@@ -18,7 +18,7 @@ const CreateCourse = _ =>
 
             <div className="create-course-data">
                 <img className="create-course-img" src={student} alt="student"></img>
-                <CourseForm title="Cadastre um curso" />
+                <CourseForm/>
             </div>
         </div>
 
