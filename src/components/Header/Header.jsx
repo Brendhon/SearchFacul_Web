@@ -4,6 +4,7 @@ import './Header.css'
 import { Link } from 'react-router-dom'
 import Modal from '@material-ui/core/Modal'
 import Alert from '@material-ui/lab/Alert'
+import { FiX } from 'react-icons/fi'
 
 import books from '../../assets/img/books.svg'
 import UniversityForm from "../Form/University"
@@ -52,6 +53,11 @@ const Header = props => {
                         <Alert severity="info">Caso não queira alterar algum dado, apenas deixe-o em branco!</Alert>
                     </div>
                     
+                    <div className="close-modal">
+                        <button className="btn btn-outline-dark" onClick={handleClose}>
+                            <FiX />
+                        </button>
+                    </div>
                 </div>
 
             </Modal>

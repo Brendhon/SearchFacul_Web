@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Card.css'
 
-import { FiTrash2, FiEdit } from 'react-icons/fi'
+import { FiTrash2, FiEdit, FiX } from 'react-icons/fi'
 import Alert from '@material-ui/lab/Alert'
 import Modal from '@material-ui/core/Modal'
 
@@ -70,13 +70,19 @@ const Card = props => {
             <Modal open={open} onClose={handleClose}>
 
                 <div className="modal-box">
-                    
-                    <CourseForm title="Digite os novos dados"/>
+
+                    <CourseForm title="Digite os novos dados" />
 
                     <div className="alert-absolute">
                         <Alert severity="info">Caso não queira alterar algum dado, apenas deixe-o em branco!</Alert>
                     </div>
-                    
+
+                    <div className="close-modal">
+                        <button className="btn btn-outline-dark" onClick={handleClose}>
+                            <FiX />
+                        </button>
+                    </div>
+
                 </div>
 
             </Modal>

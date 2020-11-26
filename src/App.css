@@ -99,3 +99,11 @@ form textarea:focus {
     align-items: center;
     height: 100vh;
 }
+
+.modal-box .close-modal {
+    position: absolute;
+    margin: 5px;
+    right: 0px;
+    top: 0px;
+    z-index: 1;
+}
