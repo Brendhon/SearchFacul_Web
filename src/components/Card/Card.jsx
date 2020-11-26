@@ -6,6 +6,7 @@ import Alert from '@material-ui/lab/Alert'
 import Modal from '@material-ui/core/Modal'
 
 import CourseForm from '../Form/Course'
+import CardInfo from '../CardInfo/CardInfo'
 
 const Card = props => {
 
@@ -91,7 +92,7 @@ const Card = props => {
 
                 <div className="modal-box">
 
-                    <CourseForm title="Digite os novos dados" />
+                    <CardInfo/>
 
                     <div className="close-modal">
                         <button className="btn btn-outline-dark" onClick={InfoModalClose}>
