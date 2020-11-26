@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import './Card.css'
 
-import { FiTrash2, FiEdit, FiX } from 'react-icons/fi'
+import { FiTrash2, FiEdit } from 'react-icons/fi'
 import Alert from '@material-ui/lab/Alert'
-import Modal from '@material-ui/core/Modal'
+
+import Modal from '../Modal/Modal'
 
 import CourseForm from '../Form/Course'
 import CardInfo from '../CardInfo/CardInfo'
@@ -12,18 +13,18 @@ const Card = props => {
 
     // Declaração de estados
     const [visible, setVisible] = useState("alert-none")
-    const [openEditModal, setOpenEditModal] = useState(false)
-    const [openInfoModal, setOpenInfoModal] = useState(false)
+    const [edit, setEdit] = useState(false)
+    const [info, setInfo] = useState(false)
 
     // Declaração de funções
     const visibleTrue = _ => setVisible("alert-absolute")
     const visibleFalse = _ => setVisible("alert-none")
 
-    const editModalOpen = _ => setOpenEditModal(true)
-    const editModalClose = _ => setOpenEditModal(false)
+    const editOpen = _ => setEdit(true)
+    const editClose = _ => setEdit(false)
 
-    const InfoModalOpen = _ => setOpenInfoModal(true)
-    const InfoModalClose = _ => setOpenInfoModal(false)
+    const infoOpen = _ => setInfo(true)
+    const infoClose = _ => setInfo(false)
 
     return (
         <div className="card-container">
@@ -35,7 +36,7 @@ const Card = props => {
 
                     <div className="card-top-authenticated">
 
-                        <button className="card-top-button" onClick={editModalOpen}>
+                        <button className="card-top-button" onClick={editOpen}>
                             <FiEdit />
                         </button>
 
@@ -63,7 +64,7 @@ const Card = props => {
             {/* Rodapé do Cartão */}
             <footer className="card-bottom">
 
-                <button className="card-bottom-button" onClick={InfoModalOpen}>Saiba mais</button>
+                <button className="card-bottom-button" onClick={infoOpen}>Saiba mais</button>
 
             </footer>
 
@@ -72,36 +73,12 @@ const Card = props => {
                 <Alert severity="error" onClose={visibleFalse}>Deletado com sucesso</Alert>
             </div>
 
-            <Modal open={openEditModal} onClose={editModalClose}>
-
-                <div className="modal-box">
-
-                    <CourseForm title="Digite os novos dados" />
-
-                    <div className="close-modal">
-                        <button className="btn btn-outline-dark" onClick={editModalClose}>
-                            <FiX />
-                        </button>
-                    </div>
-
-                </div>
-
+            <Modal open={edit} onClose={editClose}>
+                <CourseForm title="Digite os novos dados" />
             </Modal>
 
-            <Modal open={openInfoModal} onClose={InfoModalClose}>
-
-                <div className="modal-box">
-
-                    <CardInfo/>
-
-                    <div className="close-modal">
-                        <button className="btn btn-outline-dark" onClick={InfoModalClose}>
-                            <FiX />
-                        </button>
-                    </div>
-
-                </div>
-
+            <Modal open={info} onClose={infoClose}>
+                <CardInfo />
             </Modal>
 
         </div>
