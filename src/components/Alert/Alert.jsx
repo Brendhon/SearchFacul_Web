@@ -1,4 +1,5 @@
 import React from 'react'
+import './Alert.css'
 
 import Alert from '@material-ui/lab/Alert'
 

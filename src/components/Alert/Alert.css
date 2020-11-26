@@ -1,0 +1,11 @@
+.alert-none {
+    display: none;
+}
+
+.alert-absolute {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    z-index: 1;
+    margin: 10px;
+}
