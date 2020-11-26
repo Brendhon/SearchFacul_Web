@@ -58,7 +58,7 @@
     font-size: 1.7rem;
     font-weight: 700;
     color: var(--c-dark);
-    margin: 10px 10px 10px 30vh;
+    margin: 10px 10px 10px 250px;
 }
 
 @media(max-width: 1024px) {
