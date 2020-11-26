@@ -93,20 +93,3 @@ form textarea:focus {
     z-index: 1;
     padding: 10px;
 }
-
-.modal-box {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
-    overflow-y: scroll;
-}
-
-.modal-box .close-modal {
-    position: absolute;
-    margin: 20px;
-    right: 0px;
-    top: 0px;
-    z-index: 1;
-}
