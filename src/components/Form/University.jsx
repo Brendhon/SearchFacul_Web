@@ -5,7 +5,7 @@ const FormUniversity = props =>
 
     <section className="university-content">
 
-        <h1>{props.title}</h1>
+        {props.title ? <h1>{props.title}</h1> : <div />}
 
         <form>
             <input className="IES" placeholder="IES" />
