@@ -97,3 +97,14 @@
     padding: 15px;
     font-size: 1rem;
 }
+
+.card-container .card-bottom .card-bottom-button {
+    background: transparent;
+    border: 0;
+    color: var(--c-blue);
+    outline: none;
+}
+
+.card-container .card-bottom .card-bottom-button:hover {
+    text-decoration: underline;
+}

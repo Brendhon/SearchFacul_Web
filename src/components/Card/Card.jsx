@@ -11,14 +11,18 @@ const Card = props => {
 
     // Declaração de estados
     const [visible, setVisible] = useState("alert-none")
-    const [open, setOpen] = useState(false)
+    const [openEditModal, setOpenEditModal] = useState(false)
+    const [openInfoModal, setOpenInfoModal] = useState(false)
 
     // Declaração de funções
     const visibleTrue = _ => setVisible("alert-absolute")
     const visibleFalse = _ => setVisible("alert-none")
 
-    const handleOpen = _ => setOpen(true)
-    const handleClose = _ => setOpen(false)
+    const editModalOpen = _ => setOpenEditModal(true)
+    const editModalClose = _ => setOpenEditModal(false)
+    
+    const InfoModalOpen = _ => setOpenInfoModal(true)
+    const InfoModalClose = _ => setOpenInfoModal(false)
 
     return (
         <div className="card-container">
@@ -30,7 +34,7 @@ const Card = props => {
 
                     <div className="card-top-authenticated">
 
-                        <button className="card-top-button" onClick={handleOpen}>
+                        <button className="card-top-button" onClick={editModalOpen}>
                             <FiEdit />
                         </button>
 
@@ -58,7 +62,7 @@ const Card = props => {
             {/* Rodapé do Cartão */}
             <footer className="card-bottom">
 
-                <a href="/profile">Saiba mais</a>
+                <button className="card-bottom-button" onClick={InfoModalOpen}>Saiba mais</button>
 
             </footer>
 
@@ -67,7 +71,7 @@ const Card = props => {
                 <Alert onClose={visibleFalse}>Sucesso ao deletar</Alert>
             </div>
 
-            <Modal open={open} onClose={handleClose}>
+            <Modal open={openEditModal} onClose={editModalClose}>
 
                 <div className="modal-box">
 
@@ -78,7 +82,27 @@ const Card = props => {
                     </div>
 
                     <div className="close-modal">
-                        <button className="btn btn-outline-dark" onClick={handleClose}>
+                        <button className="btn btn-outline-dark" onClick={editModalClose}>
+                            <FiX />
+                        </button>
+                    </div>
+
+                </div>
+
+            </Modal>
+
+            <Modal open={openInfoModal} onClose={InfoModalClose}>
+
+                <div className="modal-box">
+
+                    <CourseForm title="Digite os novos dados" />
+
+                    <div className="alert-absolute">
+                        <Alert severity="info">Caso não queira alterar algum dado, apenas deixe-o em branco!</Alert>
+                    </div>
+
+                    <div className="close-modal">
+                        <button className="btn btn-outline-dark" onClick={InfoModalClose}>
                             <FiX />
                         </button>
                     </div>
