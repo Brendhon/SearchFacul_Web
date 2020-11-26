@@ -10,8 +10,9 @@
 }
 
 .university-content h1 {
-    font-size: 2rem;
-    font-weight: 800;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--c-black)
 }
 
 .university-content form {
