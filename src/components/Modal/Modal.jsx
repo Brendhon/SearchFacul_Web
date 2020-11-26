@@ -1,10 +1,11 @@
 import React from 'react'
+import './Modal.css'
 
 import Modal from '@material-ui/core/Modal'
 import { FiX } from 'react-icons/fi'
 
-
-const SModal = props => {
+// eslint-disable-next-line
+export default props => {
 
     const handleClose = _ => props.onClose()
 
@@ -26,5 +27,3 @@ const SModal = props => {
         </Modal>
     )
 }
-
-export default SModal
