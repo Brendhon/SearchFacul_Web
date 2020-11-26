@@ -70,7 +70,7 @@ const Card = props => {
 
             {/* Componentes com posições não fixadas */}
             <div className={visible}>
-                <Alert severity="error" onClose={visibleFalse}>Deletado com sucesso</Alert>
+                <Alert onClose={visibleFalse}>Deletado com sucesso</Alert>
             </div>
 
             <Modal open={edit} onClose={editClose}>
