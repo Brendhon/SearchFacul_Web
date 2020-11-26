@@ -1,8 +1,8 @@
 .university-content form {
-    width: 60vw;
+    width: 800px;
+
     display: grid;
     gap: 10px;
-    align-self: center;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
     "IES  IES  city city" 
@@ -11,6 +11,7 @@
     "address address site site " 
     "radio radio UF UF " 
     "button button button button";
+    align-self: center;
 }
 
 .university-content form .IES {
@@ -57,7 +58,7 @@
     grid-area: radio;
     display: flex;
     align-items: center;
-    margin-right: 50%;
+    margin-right: 20%;
 }
 
 .university-content form .radio .public {
@@ -72,42 +73,21 @@
     filter: brightness(90%);
 }
 
-@media(max-width: 1024px) {
-    .university-content form .radio {
-        margin-right: 20%;
-    }
-}
-
-@media(max-width: 700px) {
-    
-    .university-content {
-        margin: 0 1%;
-    }
-
-    .university-content h1 {
-        font-size: 1.5rem;
-    }
-
-    .university-content form .radio {
-        margin: 0;
-    }
-
+@media(max-width: 850px) {
     .university-content form {
-        width: 95vw;
-        grid-template-columns: 1fr 1fr;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        align-self: center;
-        grid-template-areas: 
-            "IES city" 
-            "email telephone" 
-            "password confirmPassword " 
-            "address site " 
-            "radio UF " 
-            "button button";
+        width: 500px;
     }
-    
+}
+
+@media(max-width: 550px) {
+    .university-content form {
+        width: 320px;
+    }
+
+    .university-content form .radio {
+        margin-right: 0;
+    }
+
     .university-content form .radio .public {
         height: 20px;
     }
@@ -117,18 +97,22 @@
     }
 }
 
-@media(max-width: 320px) {
-
-    .university-content h1 {
-        font-size: 1.2rem;
-    }
-
-
-    .university-content form .radio .public {
-        height: 15px;
-    }
-    
-    .university-content form .radio .private {
-        height: 15px;
+@media(max-width: 350px) {
+    .university-content form {
+        width: 200px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "IES"
+        "city" 
+        "email" 
+        "telephone" 
+        "password" 
+        "confirmPassword " 
+        "address" 
+        "site " 
+        "radio" 
+        "UF " 
+        "button";
+        margin-bottom: 10px;
     }
 }
