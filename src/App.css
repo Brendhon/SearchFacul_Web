@@ -26,7 +26,7 @@ input, button, textarea {
 form input, select {
 
     width: 100%;
-    height: 60px;
+    height: 50px;
 
     font-size: 1rem;
     color: var(--c-dark);
