@@ -1,12 +1,22 @@
-.button-content {
+.button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     
-    --c-main: #5a6268b6;
+    --c-main: #0081b450;
+    --c-activate: #0081b4e5;
 }
 
-.button-content button {
+.button-container .button-content .button-content-activate {
+    background: var(--c-activate);
+    border: 1px solid var(--c-activate);
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    outline: none;
+
+}
+.button-container .button-content .button-content-deactivate {
     background: var(--c-main);
     border: 1px solid var(--c-main);
     border-radius: 8px;
@@ -15,14 +25,15 @@
     outline: none;
 }
 
-.button-content button:hover {
-    opacity: 0.8;
+.button-container .button-content button:hover {
+    background: var(--c-activate);
+    border: 1px solid var(--c-activate);
 }
 
-.button-content .button-triangle {
+.button-container .button-triangle {
     width: 0;
     height: 0;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
-    border-bottom: 15px solid var(--c-main);
+    border-bottom: 15px solid #0081b4e5;
 }

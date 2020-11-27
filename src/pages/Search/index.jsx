@@ -43,19 +43,17 @@ const Search = _ => {
                     <div className="search-buttons">
 
                         <Button activated={buttonCity}
-                            text="Cidade da faculdade"
+                            text="Cidade"
                             deactivate={buttonCityDisabled}
                             activate={buttonCityActivated}></Button>
 
-                        {console.log(buttonCity)}
-
                         <Button activated={buttonName}
-                            text="Nome do Curso"
+                            text="Curso"
                             deactivate={buttonNameDisabled}
                             activate={buttonNameActivated}></Button>
 
                         <Button activated={buttonIes}
-                            text="Nome da faculdade"
+                            text="Faculdade"
                             deactivate={buttonIesDisabled}
                             activate={buttonIesActivated}></Button>
 
