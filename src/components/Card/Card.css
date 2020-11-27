@@ -1,6 +1,7 @@
 .card-container {
     width: 270px;
     margin: 10px;
+    height: 350px;
 
     border-radius: 8px;
     background: #D7E4E6;
@@ -35,14 +36,11 @@
     color: white;
     outline: none;
     border: 0;
+    cursor: pointer;
 }
 
 .card-container .card-top .card-top-authenticated .card-top-button:hover {
     opacity: 0.8;
-}
-
-.card-container .card-top .card-top-authenticated .card-top-button:active {
-    font-size: 0.9rem;
 }
 
 .card-container .card-top .card-ies {
@@ -57,24 +55,30 @@
 
 .card-container .card-content {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: space-between;
 
     height: 150px;
     padding: 15px 15px 0px 15px;
 }
 
 .card-container .card-content .card-content-title {
-    font-size: 1.1rem;
+    display: flex;
+    flex: 0.7;
+    align-items: center;
+}
+
+.card-container .card-content .card-content-title h5 {
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .card-container .card-content .card-content-text {
     font-size: 0.9rem;
-    
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 4;
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
 }
 
@@ -91,14 +95,15 @@
 
     height: 50px;
     padding: 15px;
-    font-size: 1rem;
 }
 
 .card-container .card-bottom .card-bottom-button {
+    font-size: 0.9rem;
     background: transparent;
     border: 0;
     color: var(--c-blue);
     outline: none;
+    cursor: pointer;
 }
 
 .card-container .card-bottom .card-bottom-button:hover {
