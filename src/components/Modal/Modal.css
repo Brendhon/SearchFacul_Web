@@ -14,3 +14,12 @@
     top: 0px;
     z-index: 1;
 }
+
+.modal-box .close-modal .button-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+
+    --c-blue: rgba(0, 0, 0, 0.747);
+}

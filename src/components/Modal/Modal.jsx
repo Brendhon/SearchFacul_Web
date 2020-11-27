@@ -17,7 +17,7 @@ export default props => {
                 {props.children}
 
                 <div className="close-modal">
-                    <button className="btn btn-outline-dark" onClick={handleClose}>
+                    <button className="button-outline button-close" onClick={handleClose}>
                         <FiX />
                     </button>
                 </div>
