@@ -1,6 +1,8 @@
 import React from 'react'
 import './styles.css'
 
+import { Link } from 'react-router-dom'
+
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 
@@ -33,7 +35,7 @@ const Search = _ => {
                             <option value="city">Cidade</option>
                         </select>
 
-                        <button className="button search-input-button" type="submit">Pesquisar</button>
+                        <Link to="/result" className="button search-input-button">Pesquisar</Link>
 
                     </form>
 

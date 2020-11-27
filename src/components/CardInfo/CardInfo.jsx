@@ -33,7 +33,7 @@ const CardInfo = props =>
 
             </div>
 
-            <p className="info-content-description">saddddddddsdadsasd asdmaskdma asdpasmdpasd dmamdapsmda adadpaomsdoas asdma´smdasmd asdasdoasdasdkams adksad asdaskdmas aoksdoasdk asdokpasdkam aksdaosd adkoaskd asdkpasdk asdokapsodk asdokpasdkpa aspdo odapsdka adokpadk adwokapwd wadoapdka dokapd adkaopwd awdokopawkda ddowkaopd awdokapwoodk awdokawp asjdoiasn asodkpaoskd asdpkoaoskd asodkpasodk askdopaskd asodkpasokd asokdpaoskdp sadkapdka asdokap asdasdas asdasd asdasd asdadsijasasdijoasd asdias</p>
+            <p className="info-content-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum risus at libero facilisis, ac maximus justo vulputate. Sed pharetra congue aliquet. Sed tincidunt sollicitudin mattis. Integer varius auctor eros, in convallis quam commodo et. In hac habitasse platea dictumst. Sed luctus porta nibh, ut imperdiet ante egestas et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed vitae ultricies risus.</p>
 
             <div className="info-content-data">
 
