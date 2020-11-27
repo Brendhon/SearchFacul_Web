@@ -1,0 +1,12 @@
+.result-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    color: var(--c-dark);
+    padding: 15px;
+}
+
+.result-content-top .result-number {
+    font-size: 0.9rem;
+}
