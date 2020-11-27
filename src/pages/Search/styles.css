@@ -8,6 +8,22 @@
     display: flex;
     flex: 0.8;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+}
+
+.search-container .search-content .search-img {
+    height: 250px;
+    padding: 10px;
+}
+
+.search-container .search-content .search-form {
+    width: 600px;
+}
+
+.search-container .search-content .search-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+    font-size: 1rem;
 }
