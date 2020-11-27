@@ -6,11 +6,11 @@ import Footer from '../../components/Footer/Footer'
 import UniversityForm from '../../components/Form/University'
 
 const Register = _ =>
-    <div className='register-container'>
+    <div className='container'>
 
         <Header />
 
-        <div className="register-content box">
+        <div className="content-column box register-content">
             <UniversityForm title="Cadastre sua Universidade" />
         </div>
 
