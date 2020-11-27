@@ -10,11 +10,11 @@ const Search = _ => {
 
     return (
 
-        <div className='search-container'>
+        <div className='container'>
 
             <Header />
 
-            <div className="search-content">
+            <div className="content-column search-content">
 
                 <div className="search-text">
                     <strong>Encontre o melhor curso</strong>
