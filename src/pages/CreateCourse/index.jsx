@@ -5,7 +5,7 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import CourseForm from '../../components/Form/Course'
 
-import student from '../../assets/img/students2.svg'
+import books from '../../assets/img/books.svg'
 
 const CreateCourse = _ =>
 
@@ -17,7 +17,7 @@ const CreateCourse = _ =>
             <h1>Cadastre um curso</h1>
 
             <div className="create-course-data">
-                <img className="create-course-img" src={student} alt="student"></img>
+                <img className="create-course-img" src={books} alt="books"></img>
                 <CourseForm/>
             </div>
         </div>
