@@ -28,7 +28,7 @@ const Header = props => {
             {!props.authenticated ?
 
                 <div className="header-content">
-                    <strong className="btn btn-primary mr-3">Login</strong>
+                    <Link to="/logon" className="btn btn-primary mr-3">Login</Link>
                     <Link to="/register" className="btn btn-secondary">Cadastrar</Link>
                 </div> :
 
