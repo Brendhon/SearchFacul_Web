@@ -13,7 +13,7 @@ const FormCourse = props =>
             <input className="duration" placeholder="Duração (anos)" />
             <input className="score" placeholder="Nota MAC" />
 
-            <textarea className="description" placeholder="Descrição" />
+            <textarea maxLength="450" className="description" placeholder="Descrição (até 450 caracteres)" />
 
             <select className="select-titration" name="titration">
                 <option value="">Selecione a titulação</option>
