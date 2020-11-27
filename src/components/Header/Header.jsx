@@ -3,7 +3,7 @@ import './Header.css'
 
 import { Link } from 'react-router-dom'
 
-import books from '../../assets/img/books.svg'
+import books from '../../assets/img/logo.svg'
 
 import UniversityForm from '../Form/University'
 import Modal from '../Modal/Modal'
