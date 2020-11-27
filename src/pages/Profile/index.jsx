@@ -8,16 +8,16 @@ import CardsList from '../../components/CardsList/CardsList'
 
 const Profile = _ =>
 
-    <div className='profile-container'>
+    <div className='container'>
 
         <Header authenticated />
 
-        <div className="profile-content box">
+        <div className="content-column box">
 
             <div className="profile-content-top">
                 <span>Bem vindo, Inatel</span>
                 <strong>Cursos cadastrados</strong>
-                <Link className="btn btn-info" to="/course/create">Novo curso</Link>
+                <Link className="button" to="/course/create">Novo curso</Link>
             </div>
 
             <CardsList authenticated />
