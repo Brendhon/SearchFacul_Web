@@ -68,7 +68,7 @@ const Card = props => {
             {/* Rodapé do Cartão */}
             <footer className="card-bottom">
 
-                <button className="card-bottom-button" onClick={infoOpen}>Saiba mais</button>
+                <button className="a-link" onClick={infoOpen}>Saiba mais</button>
 
             </footer>
 

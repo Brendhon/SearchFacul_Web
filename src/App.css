@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
-
 /* Declaração de Variáveis */
+
 :root {
     --c-dark: #2E333E;
     --c-blue: #00A5D8;
 }
 
 /* Definindo alguns padrões de CSS para todos CSS utilizados */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +15,7 @@
 }
 
 /* Criando alguns padrões de CSS */
+
 body {
     font-family: Nunito, sans-serif;
     background-color: #d9e7e9;
@@ -24,30 +26,22 @@ input, button, textarea {
 }
 
 form input, select {
-
     width: 100%;
     height: 50px;
-
     font-size: 1rem;
     color: var(--c-dark);
-
     border: 0;
     border-radius: 8px;
-    
     padding: 0 24px;
-
     outline: none;
 }
 
 form textarea {
-    
     width: 100%;
     min-height: 140px;
-
     resize: vertical;
     color: var(--c-dark);
     font-size: 1rem;
-
     border: 0;
     border-radius: 8px;
     padding: 16px 24px;
@@ -63,17 +57,13 @@ form input:focus, select:focus, textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-
     background: var(--c-blue);
     border: 0;
     border-radius: 8px;
-
     text-decoration: none;
-    
     color: #fff;
     font-weight: 600;
     font-size: 18px;
-    
     padding: 0px 10px 0px 10px;
     height: 50px;
     outline: none;
@@ -105,4 +95,18 @@ form input:focus, select:focus, textarea:focus {
 .content-row {
     display: flex;
     flex: 0.8;
+}
+
+.a-link {
+    font-size: 0.9rem;
+    background: transparent;
+    border: 0;
+    color: var(--c-blue);
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.a-link:hover {
+    text-decoration: underline;
 }

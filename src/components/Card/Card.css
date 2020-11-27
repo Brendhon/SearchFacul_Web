@@ -96,16 +96,3 @@
     height: 50px;
     padding: 15px;
 }
-
-.card-container .card-bottom .card-bottom-button {
-    font-size: 0.9rem;
-    background: transparent;
-    border: 0;
-    color: var(--c-blue);
-    outline: none;
-    cursor: pointer;
-}
-
-.card-container .card-bottom .card-bottom-button:hover {
-    text-decoration: underline;
-}
