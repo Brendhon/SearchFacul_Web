@@ -9,12 +9,13 @@ import books from '../../assets/img/books.svg'
 
 const CreateCourse = _ =>
 
-    <div className='create-course-container'>
+    <div className='container'>
 
         <Header authenticated/>
 
-        <div className="create-course-content box">
-            <h1>Cadastre um curso</h1>
+        <div className="content-column box">
+
+            <h1 className="create-course-title">Cadastre um curso</h1>
 
             <div className="create-course-data">
                 <img className="create-course-img" src={books} alt="books"></img>
