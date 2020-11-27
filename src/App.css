@@ -24,37 +24,39 @@ input, button, textarea {
 }
 
 form input, select {
+
     width: 100%;
     height: 60px;
+
+    font-size: 1rem;
     color: var(--c-dark);
-    border: 1px solid #dcdce6;
+
+    border: 0;
     border-radius: 8px;
+    
     padding: 0 24px;
+
     outline: none;
 }
 
-form input:focus {
-    border-color: var(--c-blue);
-}
-
-form select:focus {
-    border-color: var(--c-blue);
-}
-
 form textarea {
+    
     width: 100%;
     min-height: 140px;
+
     resize: vertical;
     color: var(--c-dark);
-    border: 1px solid #dcdce6;
+    font-size: 1rem;
+
+    border: 0;
     border-radius: 8px;
     padding: 16px 24px;
     line-height: 24px;
     outline: none;
 }
 
-form textarea:focus {
-    border-color: var(--c-blue);
+form input:focus, select:focus, textarea:focus {
+    border: 1px solid var(--c-blue);
 }
 
 .button {
