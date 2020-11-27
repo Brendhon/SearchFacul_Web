@@ -1,67 +1,44 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './styles.css'
 
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
-import Button from '../../components/Button/Button'
 
-import student from '../../assets/img/logo.svg'
+import student from '../../assets/img/students1.svg'
 
 const Search = _ => {
 
-    // Declaração de estados
-    const [buttonName, setButtonName] = useState(false)
-    const [buttonIes, setButtonIes] = useState(false)
-    const [buttonCity, setButtonCity] = useState(false)
-
-    // Declaração de funções
-    const buttonNameActivated = _ => setButtonName(true)
-    const buttonNameDisabled = _ => setButtonName(false)
-
-    const buttonIesActivated = _ => setButtonIes(true)
-    const buttonIesDisabled = _ => setButtonIes(false)
-
-    const buttonCityActivated = _ => setButtonCity(true)
-    const buttonCityDisabled = _ => setButtonCity(false)
-
     return (
+
         <div className='search-container'>
 
             <Header />
 
             <div className="search-content">
 
-                <img className="search-img" src={student} alt="student"></img>
+                <div className="search-text">
+                    <strong>Encontre o melhor curso</strong>
+                    <p>Vamos ajudá-lo a encontrar os melhores cursos nas melhores universidades</p>
+                </div>
 
-                <section>
+                <section className="search-input">
 
                     <form className="search-form">
-                        <input placeholder="Nome do curso" />
+
+                        <input placeholder="Realize uma pesquisa" />
+
+                        <select className="test" name="option">
+                            <option value="name">Curso</option>
+                            <option value="ies">Faculdade</option>
+                            <option value="city">Cidade</option>
+                        </select>
+
+                        <button className="button search-input-button" type="submit">Pesquisar</button>
+
                     </form>
 
-
-                    <div className="search-buttons">
-
-                        <Button activated={buttonCity}
-                            text="Cidade"
-                            deactivate={buttonCityDisabled}
-                            activate={buttonCityActivated}></Button>
-
-                        <Button activated={buttonName}
-                            text="Curso"
-                            deactivate={buttonNameDisabled}
-                            activate={buttonNameActivated}></Button>
-
-                        <Button activated={buttonIes}
-                            text="Faculdade"
-                            deactivate={buttonIesDisabled}
-                            activate={buttonIesActivated}></Button>
-
-                    </div>
-
-
                 </section>
-
+                <img className="search-img" src={student} alt="student"></img>
             </div>
 
             <Footer />
