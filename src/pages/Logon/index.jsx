@@ -17,8 +17,8 @@ const Logon = _ =>
                 <form>
 
                     <h1>Faça seu Logon</h1>
-                    <input className="mb-2" placeholder="Email" type="email" />
-                    <input placeholder="Senha" type="password" />
+                    <input style={{ marginBottom: 5 }} placeholder="Email" type="email" />
+                    <input style={{ marginBottom: 10 }} placeholder="Senha" type="password" />
                     <button className="button" type="submit">Entrar</button>
 
                 </form>
@@ -29,8 +29,8 @@ const Logon = _ =>
 
         </div>
 
-        <Footer/>
-        
+        <Footer />
+
     </div>
 
 
