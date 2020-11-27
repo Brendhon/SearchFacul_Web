@@ -14,7 +14,6 @@ Este projeto tem como objetivo colocar em prática os conhecimentos adquiridos n
 As seguintes ferramentas foram utilizadas na construção do projeto:
 
  - **[React](https://pt-br.reactjs.org/)**
- - **[Bootstrap](https://getbootstrap.com/)**
  - **[React Icons](https://react-icons.github.io/react-icons/)**
  - **[React Router](https://reactrouter.com/)**
  - **[Material UI](https://material-ui.com/pt/)**
