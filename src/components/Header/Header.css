@@ -18,21 +18,43 @@
     justify-content: flex-end;
 }
 
+.header-container .header-content .register-button {
+    --c-blue: #c82333da;
+    height: 45px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.header-container .header-content .logon-button {
+    --c-blue: #0069d9b2;
+    height: 45px;
+    font-weight: normal;
+    margin-left: 10px;
+}
+
+.logon-button:hover, .register-button:hover {
+    opacity: 0.5;
+}
+
 .header-container .header-content .header-logout{
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+
+    height: 45px;
+    --c-blue: #c82333da;
+    text-decoration: none;
     margin-left: 10px;
 }
 
 .header-container .header-content .header-edit{
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
+    height: 45px;
+    --c-blue: #5a6268ce;
 }
 
 .header-container .header-logo img {
-    width: 6vh;
+    width: 70px;
+    margin-right: 15px;
 }
 
 .header-container .header-logo .header-home {

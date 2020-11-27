@@ -22,23 +22,21 @@ const Header = props => {
 
             <div className="header-logo">
                 <img className="mr-3" src={books} alt="Livros"></img>
-                <Link to="/" className="header-home" >Home</Link>
+                <Link to="/" className="a-link header-home">Home</Link>
             </div>
 
             {!props.authenticated ?
 
                 <div className="header-content">
-                    <Link to="/logon" className="btn btn-primary mr-3">Login</Link>
-                    <Link to="/register" className="btn btn-secondary">Cadastrar</Link>
+                    <Link to="/logon" className="button logon-button">Login</Link>
+                    <Link to="/register" className="button register-button">Cadastrar</Link>
                 </div> :
 
                 <div className="header-content">
-
-                    <button className="btn btn-outline-secondary .header-edit" onClick={handleOpen}>
+                    <button className="button-outline header-edit" onClick={handleOpen}>
                         Edit
                     </button>
-                    <Link to="/" className="btn btn-outline-danger header-logout">Logout</Link>
-
+                    <Link to="/" className="button-outline header-logout">Logout</Link>
                 </div>
             }
 
