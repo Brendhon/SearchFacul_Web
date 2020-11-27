@@ -60,13 +60,13 @@
     margin-bottom: 10px;
 }
 
-@media(max-width: 550px) {
+@media(max-width: 600px) {
     .course-container form {
         width: 450px;
     }
 }
 
-@media(max-width: 480px) {
+@media(max-width: 510px) {
     .course-container form {
         width: 300px;
         grid-template-columns: 1fr;
@@ -86,7 +86,7 @@
     }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 350px) {
 
     .course-container h1 {
         font-size: 1.2rem;

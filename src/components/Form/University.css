@@ -12,7 +12,8 @@
 .university-content h1 {
     font-size: 1.7rem;
     font-weight: 600;
-    color: var(--c-black)
+    color: var(--c-black);
+    margin-bottom: 10px;
 }
 
 .university-content form {
@@ -92,13 +93,18 @@
     filter: brightness(90%);
 }
 
-@media(max-width: 850px) {
+@media(max-width: 900px) {
     .university-content form {
         width: 500px;
     }
 }
 
-@media(max-width: 550px) {
+@media(max-width: 600px) {
+
+    .university-content input {
+        height: 40px;
+    }
+
     .university-content form {
         width: 320px;
     }
@@ -114,9 +120,13 @@
     .university-content form .radio .private {
         height: 20px;
     }
+
+    .university-content h1 {
+        font-size: 1.5rem;
+    }
 }
 
-@media(max-width: 350px) {
+@media(max-width: 380px) {
     .university-content form {
         width: 200px;
         margin-bottom: 10px;
@@ -135,22 +145,8 @@
         "UF " 
         "button";
     }
-}
 
-@media(max-width: 480px) {
     .university-content h1 {
-        font-size: 1.5rem;
-    }
-}
-
-@media(max-width: 380px) {
-    .university-content h1 {
-        font-size: 1.2rem;
-    }
-}
-
-@media(max-width: 320px) {
-    .university-content h1 {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }
