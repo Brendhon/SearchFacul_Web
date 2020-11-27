@@ -74,6 +74,7 @@
     font-size: 1rem;
 
     background-color: var(--c-submit);
+    cursor: pointer;
 }
 
 @media(max-width: 780px) {
