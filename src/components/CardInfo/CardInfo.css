@@ -117,27 +117,10 @@
 @media(max-width: 550px) {
 
     .info-container .info-top .info-top-title {
-        font-size: 1.1rem;
-        color: white;
+        font-size: 0.9rem;
     }
-    .info-container .info-top {
-        justify-content: flex-end;
-    }
-
-    .info-container .info-content .info-content-data {
-        flex-direction: column;
-    } 
-
-    .info-container .info-content .info-content-data fieldset {
-        width: 100%;
-    }
-}
-
-@media(max-width: 550px) {
-
-    .info-container .info-top .info-top-title {
-        font-size: 1.1rem;
-        color: white;
+    .info-container .info-top .info-top-subtitle {
+        font-size: 0.8rem;
     }
     .info-container .info-top {
         justify-content: flex-end;
