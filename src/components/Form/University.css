@@ -23,11 +23,11 @@
     gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
-    "IES  IES  city city" 
-    "email email telephone telephone" 
+    "IES  IES  email email" 
     "password password confirmPassword confirmPassword " 
-    "address address site site " 
-    "radio radio UF UF " 
+    "city city telephone telephone" 
+    "address address UF UF " 
+    "radio radio site site " 
     "button button button button";
     align-self: center;
 }

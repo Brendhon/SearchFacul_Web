@@ -30,8 +30,8 @@ const Search = _ => {
                         <input placeholder="Realize uma pesquisa" />
 
                         <select className="test" name="option">
-                            <option value="name">Curso</option>
-                            <option value="ies">Faculdade</option>
+                            <option value="name">Cursos</option>
+                            <option value="ies">Faculdades</option>
                             <option value="city">Cidade</option>
                         </select>
 
