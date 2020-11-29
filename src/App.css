@@ -33,6 +33,12 @@ body {
     outline: none;
 }
 
+.form-error  {
+    font-size: 0.8rem;
+    color: red;
+    margin-left: 5px;
+}
+
 .form-textarea {
     font-family: Nunito, sans-serif;
     width: 100%;
