@@ -23,3 +23,10 @@
 
     --c-blue: rgba(0, 0, 0, 0.747);
 }
+
+@media(max-width: 550px) { 
+    .modal-box {
+        display: flex;
+        align-items: flex-start;
+    }
+}
