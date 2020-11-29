@@ -3,16 +3,19 @@
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
-
     padding-top: 20px;
     overflow-y: scroll;
 }
 
+.modal-box::-webkit-scrollbar {
+    width: 10px;
+    background: #63636400;
+}
+
 .modal-box .close-modal {
     position: absolute;
-    margin: 20px;
-    right: 0px;
-    top: 0px;
+    right: 40px;
+    top: 10px;
     z-index: 1;
 }
 
@@ -21,6 +24,5 @@
     justify-content: center;
     align-items: center;
     width: 50px;
-
     --c-blue: rgba(0, 0, 0, 0.747);
 }
