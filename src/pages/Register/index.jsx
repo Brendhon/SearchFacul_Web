@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import './styles.css'
 
 import Header from '../../components/Header/Header'
@@ -11,6 +12,8 @@ import { getError, removeEmptyData } from '../../utils/utils'
 import api from '../../services/api'
 
 const Register = _ => {
+
+    const history = useHistory() // Permite fazer a navegação por JS
 
     // Setando os estados do alert
     const [open, setOpen] = useState(false)
@@ -38,7 +41,8 @@ const Register = _ => {
 
         try {
             await api.post('/university', data)
-            successAlertEnabled('Cadastro realizado com sucesso') // Mostrando um alert para o usuário de sucesso
+            successAlertEnabled('Cadastrado com sucesso!! Voce será redirecionado para a página de login') // Alerta de sucesso
+            setTimeout(_ => history.push('/logon'), 4000) // Sair da página apos 4 segundos
         } catch (error) {
             errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
         }
