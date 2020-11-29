@@ -105,13 +105,26 @@
         width: 300px;
         grid-template-columns: 1fr;
         grid-template-areas: 
+
         "name" 
+        "errName"
+
         "duration" 
+        "errDuration"
+
         "score"
+        "errScore"
+
         "description"
         "description"
+        "errDescription"
+
         "select-titration" 
+        "errTitration"
+
         "select-modality" 
+        "errModality"
+
         "button";
     }
 

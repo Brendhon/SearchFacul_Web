@@ -7,7 +7,7 @@ const courseSchema = yup.object().shape({
     duration: yup.string().trim().required('Informe a duração do curso'),
 
     score: yup.string()
-        .length(1, 'Apenas um número')
+        .length(1, 'Apenas um número inteiro')
         .matches(/[0-5]+/gi, "Apenas números de 0 - 5"),
 
     description: yup.string().trim().required('Informe uma descrição'),
