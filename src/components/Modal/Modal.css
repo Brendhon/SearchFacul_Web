@@ -1,9 +1,10 @@
 .modal-box {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
 
+    padding-top: 20px;
     overflow-y: scroll;
 }
 
@@ -22,11 +23,4 @@
     width: 50px;
 
     --c-blue: rgba(0, 0, 0, 0.747);
-}
-
-@media(max-width: 550px) { 
-    .modal-box {
-        display: flex;
-        align-items: flex-start;
-    }
 }
