@@ -27,9 +27,9 @@ const Search = _ => {
 
                     <form className="search-form">
 
-                        <input placeholder="Realize uma pesquisa" />
+                        <input className="form-field" placeholder="Realize uma pesquisa" />
 
-                        <select className="test" name="option">
+                        <select className="form-field" name="option">
                             <option value="name">Cursos</option>
                             <option value="ies">Faculdades</option>
                             <option value="city">Cidade</option>

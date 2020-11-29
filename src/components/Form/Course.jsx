@@ -9,19 +9,19 @@ const FormCourse = props =>
 
         <form>
 
-            <input className="name" placeholder="Nome do curso" />
-            <input className="duration" placeholder="Duração (anos)" />
-            <input className="score" placeholder="Nota MAC" />
+            <input className="form-field name" placeholder="Nome do curso" />
+            <input className="form-field duration" placeholder="Duração (anos)" />
+            <input className="form-field score" placeholder="Nota MAC" />
 
-            <textarea maxLength="450" className="description" placeholder="Descrição (até 450 caracteres)" />
+            <textarea maxLength="450" className="form-textarea description" placeholder="Descrição (até 450 caracteres)" />
 
-            <select className="select-titration" name="titration">
+            <select className="form-field select-titration" name="titration">
                 <option value="">Selecione a titulação</option>
                 <option value="bacharelado">Bacharelado</option>
                 <option value="licenciatura">Licenciatura</option>
             </select>
 
-            <select className="select-modality" name="modality">
+            <select className="form-field select-modality" name="modality">
                 <option value="">Selecione a modalidade</option>
                 <option value="presencial">Presencial</option>
                 <option value="online">Online</option>

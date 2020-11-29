@@ -76,11 +76,7 @@ const FormUniversity = props => {
                 filter(data)
 
                 // Enviando os dados para o banco
-                await api.post('university', data, {
-                    headers: {
-                        Authorization: props.token || ""
-                    }
-                })
+                await api.post('university', data)
 
                 successAlertEnabled("Cadastro realizado com sucesso") // Chamar alerta de sucesso
 
@@ -102,42 +98,42 @@ const FormUniversity = props => {
 
             <form onSubmit={handleRegister}>
 
-                <input className="IES"
+                <input className="form-field IES"
                     required=" "
                     placeholder="IES"
                     value={ies}
                     onChange={addIesContent}
                 />
 
-                <input className="email"
+                <input className="form-field email"
                     required=" "
                     placeholder="Email"
                     value={email}
                     onChange={addEmailContent}
                     type="email" />
 
-                <input className="password"
+                <input className="form-field password"
                     required=" "
                     placeholder="Senha"
                     value={password}
                     onChange={addPasswordContent}
                     type={props.token ? 'text' : 'password'} />
 
-                <input className="confirmPassword"
+                <input className="form-field confirmPassword"
                     required=" "
                     placeholder="Confirme sua senha"
                     value={confirmPassword}
                     onChange={addConfirmPasswordContent}
                     type={props.token ? 'text' : 'password'} />
 
-                <input className="city"
+                <input className="form-field city"
                     required=" "
                     placeholder="Cidade"
                     value={city}
                     onChange={addCityContent}
                 />
 
-                <input className="telephone"
+                <input className="form-field telephone"
                     required=" "
                     placeholder="Telefone"
                     value={telephone}
@@ -146,14 +142,14 @@ const FormUniversity = props => {
                     title="Deve conter apenas números"
                     type="tel" />
 
-                <input className="address"
+                <input className="form-field address"
                     required=" "
                     placeholder="Endereço"
                     value={address}
                     onChange={addAddressContent}
                 />
 
-                <input className="UF"
+                <input className="form-field UF"
                     required=" "
                     placeholder="UF"
                     value={uf}
@@ -163,24 +159,24 @@ const FormUniversity = props => {
                     title="Apenas letras"
                 />
 
-                <input className="site"
+                <input className="form-field site"
                     placeholder="Site"
                     value={site}
                     onChange={addSiteContent}
-                    type="url" 
+                    type="url"
                     title="https://exemplo.br/"
-                    />
+                />
 
                 <div className="radio">
 
-                    <input className="public"
+                    <input className="form-field public"
                         checked={category === "Pública" ? true : false}
                         type="radio"
                         value="Pública"
                         name="category"
                         onChange={addCategoryContent} />Pública
 
-                    <input className="private"
+                    <input className="form-field private"
                         checked={category === "Privada" ? true : false}
                         type="radio"
                         value="Privada"
