@@ -15,59 +15,93 @@
     color: var(--c-black)
 }
 
-.course-container form {
+.course-container .course-form  {
     width: 500px;
     
     display: grid;
-    gap: 10px;
+    gap: 5px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
+    
     "name  name  name name" 
+    "errName  errName  errName errName"
+
     "score  score  duration duration" 
+    "errScore  errScore  errDuration errDuration" 
+
     "description description description description" 
+    "errDescription errDescription errDescription errDescription" 
+
     "select-titration select-titration select-modality select-modality" 
+    "errTitration errTitration errModality errModality" 
+
     "button button button button";
+
     align-self: center;
 }
 
-.course-container form .name {
+.course-container .course-form .error-name {
+    grid-area: errName;
+}
+
+.course-container .course-form .error-score {
+    grid-area: errScore;
+}
+
+.course-container .course-form .error-duration {
+    grid-area: errDuration;
+}
+
+.course-container .course-form .error-description {
+    grid-area: errDescription;
+}
+
+.course-container .course-form .error-titration {
+    grid-area: errTitration;
+}
+
+.course-container .course-form .error-modality {
+    grid-area: errModality;
+}
+
+.course-container .course-form .name {
     grid-area: name;
 }
 
-.course-container form .duration {
+.course-container .course-form .duration {
     grid-area: duration;
 }
 
-.course-container form .score {
+.course-container .course-form .score {
     grid-area: score;
 }
 
-.course-container form .select-titration {
+.course-container .course-form .select-titration {
     grid-area: select-titration;
 }
 
-.course-container form .select-modality {
+.course-container .course-form .select-modality {
     grid-area: select-modality;
 }
 
-.course-container form .description {
+.course-container .course-form .description {
     grid-area: description;
 }
 
-.course-container form .button {
+.course-container .course-form .button {
     grid-area: button;
 
     margin-bottom: 10px;
 }
 
 @media(max-width: 600px) {
-    .course-container form {
+    .course-container .course-form {
         width: 450px;
     }
 }
 
 @media(max-width: 510px) {
-    .course-container form {
+    .course-container .course-form {
         width: 300px;
         grid-template-columns: 1fr;
         grid-template-areas: 
@@ -86,9 +120,12 @@
     }
 }
 
-@media(max-width: 350px) {
+@media(max-width: 355px) {
 
     .course-container h1 {
         font-size: 1.2rem;
+    }
+    .course-container .course-form {
+        width: 220px;
     }
 }

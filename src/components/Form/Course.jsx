@@ -1,36 +1,85 @@
 import React from 'react'
 import './Course.css'
 
-const FormCourse = props =>
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-    <section className="course-container">
+import { courseSchema } from '../../utils/schemas'
 
-        {props.title ? <h1>{props.title}</h1> : <div />}
+const FormCourse = props => {
 
-        <form>
+    const initialValues = {
+        name: props.name || "",
+        duration: props.duration || "",
+        score: props.score || "",
+        description: props.description || "",
+        titration: props.titration || "",
+        modality: props.modality || "",
+    }
 
-            <input className="form-field name" placeholder="Nome do curso" />
-            <input className="form-field duration" placeholder="Duração (anos)" />
-            <input className="form-field score" placeholder="Nota MAC" />
+    return (
 
-            <textarea maxLength="450" className="form-textarea description" placeholder="Descrição (até 450 caracteres)" />
+        <Formik initialValues={initialValues}
+            validationSchema={courseSchema}
+            onSubmit={props.onSubmit}>
 
-            <select className="form-field select-titration" name="titration">
-                <option value="">Selecione a titulação</option>
-                <option value="bacharelado">Bacharelado</option>
-                <option value="licenciatura">Licenciatura</option>
-            </select>
+            <section className="course-container" >
 
-            <select className="form-field select-modality" name="modality">
-                <option value="">Selecione a modalidade</option>
-                <option value="presencial">Presencial</option>
-                <option value="online">Online</option>
-            </select>
+                {props.title ? <h1>{props.title}</h1> : <div />}
 
-            <button className="button" type="submit">Enviar</button>
+                <Form className="course-form">
 
-        </form>
+                    <Field name="name"
+                        className="form-field name"
+                        placeholder="Nome do curso" />
+                    <ErrorMessage className="form-error error-name" component="span" name="name" />
 
-    </section>
+                    <Field name="duration"
+                        className="form-field duration"
+                        placeholder="Duração (anos)" />
+                    <ErrorMessage className="form-error error-duration" component="span" name="duration" />
+
+                    <Field name="score"
+                        className="form-field score"
+                        placeholder="Nota MAC" />
+                    <ErrorMessage className="form-error error-score" component="span" name="score" />
+
+                    <Field as="textarea"
+                        name="description"
+                        maxLength="450"
+                        className="form-textarea description"
+                        placeholder="Descrição (até 450 caracteres)" />
+                    <ErrorMessage className="form-error error-description" component="span" name="description" />
+
+                    <Field as="select"
+                        className="form-field select-titration"
+                        name="titration">
+
+                        <option value="">Selecione a titulação</option>
+                        <option value="bacharelado">Bacharelado</option>
+                        <option value="licenciatura">Licenciatura</option>
+
+                    </Field>
+                    <ErrorMessage className="form-error error-titration" component="span" name="titration" />
+
+                    <Field as="select"
+                        className="form-field select-modality"
+                        name="modality">
+
+                        <option value="">Selecione a modalidade</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="online">Online</option>
+
+                    </Field>
+                    <ErrorMessage className="form-error error-modality" component="span" name="modality" />
+
+                    <button className="button" type="submit">Enviar</button>
+
+                </Form>
+
+            </section>
+
+        </Formik>
+    )
+}
 
 export default FormCourse
