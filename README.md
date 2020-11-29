@@ -17,6 +17,8 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
  - **[React Icons](https://react-icons.github.io/react-icons/)**
  - **[React Router](https://reactrouter.com/)**
  - **[Material UI](https://material-ui.com/pt/)**
+ - **[Formik](https://formik.org/)**
+ - **[Yup](https://github.com/jquense/yup)**
  - **[Axios](https://github.com/axios/axios)**
  - **[Jest](https://jestjs.io/)**
  - **[Travis CI](https://travis-ci.com/)**
