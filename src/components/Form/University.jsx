@@ -1,32 +1,205 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './University.css'
 
-const FormUniversity = props =>
+import Alert from '../Alert/Alert'
+import { filter, match, getError } from '../../utils/utils'
 
-    <section className="university-content">
+import api from '../../services/api'
 
-        {props.title ? <h1>{props.title}</h1> : <div />}
+const FormUniversity = props => {
 
-        <form>
-            <input className="IES" placeholder="IES" />
-            <input className="telephone" placeholder="Telefone" type="tel" />
-            <input className="email" placeholder="Email" type="email" />
-            <input className="UF" placeholder="UF" />
-            <input className="password" placeholder="Senha" />
-            <input className="city" placeholder="Cidade" />
-            <input className="confirmPassword" placeholder="Confirme sua senha" />
-            <input className="address" placeholder="Endereço" />
-            <input className="site" placeholder="Site" type="url" />
+    // Declaração dos estados
+    const [ies, setIes] = useState(props.IES || "")
+    const [telephone, setTelephone] = useState(props.telephone || "")
+    const [email, setEmail] = useState(props.email || "")
+    const [uf, setUf] = useState(props.uf || "")
+    const [password, setPassword] = useState(props.password || "")
+    const [confirmPassword, setConfirmPassword] = useState(props.confirmPassword || "")
+    const [city, setCity] = useState(props.city || "")
+    const [address, setAddress] = useState(props.address || "")
+    const [site, setSite] = useState(props.site || "")
+    const [category, setCategory] = useState(props.category || "")
 
-            <div className="radio">
-                <input className="private" type="radio" value="public" name="category" />Pública
-                <input className="public" type="radio" value="private" name="category" />Privada
-            </div>
+    // Setando os estados do alert
+    const [open, setOpen] = useState(false)
+    const [message, setMessage] = useState("")
+    const [type, setType] = useState("info")
 
-            <button className="button" type="submit">Enviar</button>
-        </form>
+    //Declaração de funções
+    const addIesContent = event => setIes(event.target.value)
+    const addTelephoneContent = event => setTelephone(event.target.value)
+    const addEmailContent = event => setEmail(event.target.value)
+    const addUfContent = event => setUf(event.target.value)
+    const addPasswordContent = event => setPassword(event.target.value)
+    const addConfirmPasswordContent = event => setConfirmPassword(event.target.value)
+    const addCityContent = event => setCity(event.target.value)
+    const addAddressContent = event => setAddress(event.target.value)
+    const addSiteContent = event => setSite(event.target.value)
+    const addCategoryContent = event => setCategory(event.target.value)
 
-    </section>
+    // Setando funções do Alert
+    const alertDisabled = _ => setOpen(false)
+    const errorAlertEnabled = message => {
+        setMessage(message)
+        setType("error")
+        setOpen(true)
+    }
+    const successAlertEnabled = message => {
+        setMessage(message)
+        setType("success")
+        setOpen(true)
+    }
+
+    // Função que enviara os dados para o banco 
+    const handleRegister = async event => {
+
+        event.preventDefault() // Evitar que a página seja recarregada
+
+        // Setando os dados que serão enviados
+        const data = {
+            IES: ies,
+            telephone,
+            email,
+            password,
+            uf: uf.toUpperCase(),
+            city,
+            address,
+            category,
+            site
+        }
+
+        if (match(password, confirmPassword)) {
+
+            try {
+
+                // Removendo os dados vazios
+                filter(data)
+
+                // Enviando os dados para o banco
+                await api.post('university', data, {
+                    headers: {
+                        Authorization: props.token || ""
+                    }
+                })
+
+                successAlertEnabled("Cadastro realizado com sucesso") // Chamar alerta de sucesso
+
+            } catch (error) {
+                errorAlertEnabled(getError(error)) // Chamar alerta de Erro
+            }
+
+        }
+        else {
+            errorAlertEnabled("Senhas não batem") // Chamar alerta de Erro
+        }
+
+    }
+
+    return (
+        <section className="university-content">
+
+            {props.title ? <h1>{props.title}</h1> : <div />}
+
+            <form onSubmit={handleRegister}>
+
+                <input className="IES"
+                    required=" "
+                    placeholder="IES"
+                    value={ies}
+                    onChange={addIesContent}
+                />
+
+                <input className="email"
+                    required=" "
+                    placeholder="Email"
+                    value={email}
+                    onChange={addEmailContent}
+                    type="email" />
+
+                <input className="password"
+                    required=" "
+                    placeholder="Senha"
+                    value={password}
+                    onChange={addPasswordContent}
+                    type={props.token ? 'text' : 'password'} />
+
+                <input className="confirmPassword"
+                    required=" "
+                    placeholder="Confirme sua senha"
+                    value={confirmPassword}
+                    onChange={addConfirmPasswordContent}
+                    type={props.token ? 'text' : 'password'} />
+
+                <input className="city"
+                    required=" "
+                    placeholder="Cidade"
+                    value={city}
+                    onChange={addCityContent}
+                />
+
+                <input className="telephone"
+                    required=" "
+                    placeholder="Telefone"
+                    value={telephone}
+                    onChange={addTelephoneContent}
+                    pattern="\d{8,11}"
+                    title="Deve conter apenas números"
+                    type="tel" />
+
+                <input className="address"
+                    required=" "
+                    placeholder="Endereço"
+                    value={address}
+                    onChange={addAddressContent}
+                />
+
+                <input className="UF"
+                    required=" "
+                    placeholder="UF"
+                    value={uf}
+                    onChange={addUfContent}
+                    maxLength="2"
+                    pattern="\w{2}"
+                    title="Apenas letras"
+                />
+
+                <input className="site"
+                    placeholder="Site"
+                    value={site}
+                    onChange={addSiteContent}
+                    type="url" 
+                    title="https://exemplo.br/"
+                    />
+
+                <div className="radio">
+
+                    <input className="public"
+                        checked={category === "Pública" ? true : false}
+                        type="radio"
+                        value="Pública"
+                        name="category"
+                        onChange={addCategoryContent} />Pública
+
+                    <input className="private"
+                        checked={category === "Privada" ? true : false}
+                        type="radio"
+                        value="Privada"
+                        name="category"
+                        onChange={addCategoryContent} />Privada
+
+                </div>
+
+                <button className="button" type="submit">Enviar</button>
+
+            </form>
+
+            {/* Componentes com posições não fixadas */}
+            <Alert type={type} text={message} open={open} onClose={alertDisabled} />
+
+        </section>
 
 
+    )
+
+}
 export default FormUniversity
