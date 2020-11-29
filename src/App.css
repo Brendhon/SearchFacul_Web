@@ -79,7 +79,7 @@ body {
 
 .box {
     background: #f0f0f6;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
     border-radius: 8px;
     margin: 0 3%;
 }
