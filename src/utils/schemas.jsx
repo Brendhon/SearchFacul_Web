@@ -18,8 +18,7 @@ const universitySchema = yup.object().shape({
     IES: yup.string().trim().required('Informe um IES da faculdade'),
 
     telephone: yup.string()
-        .matches(/^(\+?\d{0,4})?\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{3}\)?)\s?-?\s?(\(?\d{4}\)?)?$/,
-            "Insira um número de telefone válido")
+        .matches(/^[0-9]{8,11}$/, "Insira um número de telefone válido")
         .required('Informe um telefone para contato'),
 
     email: yup.string()
