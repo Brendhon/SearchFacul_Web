@@ -1,200 +1,107 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './University.css'
 
-import Alert from '../Alert/Alert'
-import { filter, match, getError } from '../../utils/utils'
+import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-import api from '../../services/api'
+import { universitySchema } from '../../utils/schemas'
 
 const FormUniversity = props => {
 
-    // Declaração dos estados
-    const [ies, setIes] = useState(props.IES || "")
-    const [telephone, setTelephone] = useState(props.telephone || "")
-    const [email, setEmail] = useState(props.email || "")
-    const [uf, setUf] = useState(props.uf || "")
-    const [password, setPassword] = useState(props.password || "")
-    const [confirmPassword, setConfirmPassword] = useState(props.confirmPassword || "")
-    const [city, setCity] = useState(props.city || "")
-    const [address, setAddress] = useState(props.address || "")
-    const [site, setSite] = useState(props.site || "")
-    const [category, setCategory] = useState(props.category || "")
-
-    // Setando os estados do alert
-    const [open, setOpen] = useState(false)
-    const [message, setMessage] = useState("")
-    const [type, setType] = useState("info")
-
-    //Declaração de funções
-    const addIesContent = event => setIes(event.target.value)
-    const addTelephoneContent = event => setTelephone(event.target.value)
-    const addEmailContent = event => setEmail(event.target.value)
-    const addUfContent = event => setUf(event.target.value)
-    const addPasswordContent = event => setPassword(event.target.value)
-    const addConfirmPasswordContent = event => setConfirmPassword(event.target.value)
-    const addCityContent = event => setCity(event.target.value)
-    const addAddressContent = event => setAddress(event.target.value)
-    const addSiteContent = event => setSite(event.target.value)
-    const addCategoryContent = event => setCategory(event.target.value)
-
-    // Setando funções do Alert
-    const alertDisabled = _ => setOpen(false)
-    const errorAlertEnabled = message => {
-        setMessage(message)
-        setType("error")
-        setOpen(true)
-    }
-    const successAlertEnabled = message => {
-        setMessage(message)
-        setType("success")
-        setOpen(true)
-    }
-
-    // Função que enviara os dados para o banco 
-    const handleRegister = async event => {
-
-        event.preventDefault() // Evitar que a página seja recarregada
-
-        // Setando os dados que serão enviados
-        const data = {
-            IES: ies,
-            telephone,
-            email,
-            password,
-            uf: uf.toUpperCase(),
-            city,
-            address,
-            category,
-            site
-        }
-
-        if (match(password, confirmPassword)) {
-
-            try {
-
-                // Removendo os dados vazios
-                filter(data)
-
-                // Enviando os dados para o banco
-                await api.post('university', data)
-
-                successAlertEnabled("Cadastro realizado com sucesso") // Chamar alerta de sucesso
-
-            } catch (error) {
-                errorAlertEnabled(getError(error)) // Chamar alerta de Erro
-            }
-
-        }
-        else {
-            errorAlertEnabled("Senhas não batem") // Chamar alerta de Erro
-        }
-
+    const initialValues = {
+        IES: props.IES || "",
+        telephone: props.telephone || "",
+        email: props.email || "",
+        uf: props.uf || "",
+        password: props.password || "",
+        confirmPassword: props.confirmPassword || "",
+        city: props.city || "",
+        address: props.address || "",
+        site: props.site || "",
+        category: props.category || "",
     }
 
     return (
-        <section className="university-content">
 
-            {props.title ? <h1>{props.title}</h1> : <div />}
+        <Formik initialValues={initialValues}
+            validationSchema={universitySchema}
+            onSubmit={props.onSubmit}>
 
-            <form onSubmit={handleRegister}>
+            {({ values }) => (
+                <section className="university-content">
 
-                <input className="form-field IES"
-                    required=" "
-                    placeholder="IES"
-                    value={ies}
-                    onChange={addIesContent}
-                />
+                    {props.title ? <h1>{props.title}</h1> : <div />}
 
-                <input className="form-field email"
-                    required=" "
-                    placeholder="Email"
-                    value={email}
-                    onChange={addEmailContent}
-                    type="email" />
+                    <Form className="university-form">
 
-                <input className="form-field password"
-                    required=" "
-                    placeholder="Senha"
-                    value={password}
-                    onChange={addPasswordContent}
-                    type={props.token ? 'text' : 'password'} />
+                        <Field className="form-field IES"
+                            name="IES"
+                            placeholder="IES" />
+                        <ErrorMessage className="form-error error-ies" component="span" name="IES" />
 
-                <input className="form-field confirmPassword"
-                    required=" "
-                    placeholder="Confirme sua senha"
-                    value={confirmPassword}
-                    onChange={addConfirmPasswordContent}
-                    type={props.token ? 'text' : 'password'} />
+                        <Field className="form-field email"
+                            name="email"
+                            placeholder="Email"
+                            type="email" />
+                        <ErrorMessage className="form-error error-email" component="span" name="email" />
 
-                <input className="form-field city"
-                    required=" "
-                    placeholder="Cidade"
-                    value={city}
-                    onChange={addCityContent}
-                />
+                        <Field className="form-field password"
+                            name="password"
+                            placeholder="Senha"
+                            type={props.token ? 'text' : 'password'} />
+                        <ErrorMessage className="form-error error-password" component="span" name="password" />
 
-                <input className="form-field telephone"
-                    required=" "
-                    placeholder="Telefone"
-                    value={telephone}
-                    onChange={addTelephoneContent}
-                    pattern="\d{8,11}"
-                    title="Deve conter apenas números"
-                    type="tel" />
+                        <Field className="form-field confirmPassword"
+                            name="confirmPassword"
+                            placeholder="Confirme sua senha"
+                            type={props.token ? 'text' : 'password'} />
+                        <ErrorMessage className="form-error error-confirmPassword" component="span" name="confirmPassword" />
 
-                <input className="form-field address"
-                    required=" "
-                    placeholder="Endereço"
-                    value={address}
-                    onChange={addAddressContent}
-                />
+                        <Field className="form-field city"
+                            name="city"
+                            placeholder="Cidade" />
+                        <ErrorMessage className="form-error error-city" component="span" name="city" />
 
-                <input className="form-field UF"
-                    required=" "
-                    placeholder="UF"
-                    value={uf}
-                    onChange={addUfContent}
-                    maxLength="2"
-                    pattern="\w{2}"
-                    title="Apenas letras"
-                />
+                        <Field className="form-field telephone"
+                            name="telephone"
+                            placeholder="Telefone" />
+                        <ErrorMessage className="form-error error-telephone" component="span" name="telephone" />
 
-                <input className="form-field site"
-                    placeholder="Site"
-                    value={site}
-                    onChange={addSiteContent}
-                    type="url"
-                    title="https://exemplo.br/"
-                />
+                        <Field className="form-field address"
+                            name="address"
+                            placeholder="Endereço" />
+                        <ErrorMessage className="form-error error-address" component="span" name="address" />
 
-                <div className="radio">
+                        <Field className="form-field UF"
+                            name="uf"
+                            placeholder="UF"
+                            maxLength="2" />
+                        <ErrorMessage className="form-error error-uf" component="span" name="uf" />
 
-                    <input className="form-field public"
-                        checked={category === "Pública" ? true : false}
-                        type="radio"
-                        value="Pública"
-                        name="category"
-                        onChange={addCategoryContent} />Pública
+                        <Field className="form-field site"
+                            name="site"
+                            placeholder="Site" />
+                        <ErrorMessage className="form-error error-site" component="span" name="site" />
 
-                    <input className="form-field private"
-                        checked={category === "Privada" ? true : false}
-                        type="radio"
-                        value="Privada"
-                        name="category"
-                        onChange={addCategoryContent} />Privada
+                        <Field as="select"
+                            className="form-field select-category"
+                            name="category">
 
-                </div>
+                            <option value="">Selecione uma categoria</option>
+                            <option value="private">Privado</option>
+                            <option value="public">Pública</option>
+                        </Field>
+                        <ErrorMessage className="form-error error-category" component="span" name="category" />
 
-                <button className="button" type="submit">Enviar</button>
+                        <button className="button" type="submit">Enviar</button>
 
-            </form>
-
-            {/* Componentes com posições não fixadas */}
-            <Alert type={type} text={message} open={open} onClose={alertDisabled} />
-
-        </section>
+                    </Form>
+                
+                </section>
+            )}
 
 
+
+        </Formik>
     )
 
 }

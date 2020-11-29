@@ -16,85 +16,131 @@
     margin-bottom: 10px;
 }
 
-.university-content form {
+.university-content .university-form {
     width: 800px;
 
     display: grid;
-    gap: 10px;
+    align-self: center;
+    gap: 5px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
+
     "IES  IES  email email" 
-    "password password confirmPassword confirmPassword " 
+    "errIES  errIES  errEmail errEmail" 
+
+    "password password confirmPassword confirmPassword" 
+    "errPassword errPassword errConfirmPassword errConfirmPassword" 
+
     "city city telephone telephone" 
-    "address address UF UF " 
-    "radio radio site site " 
+    "errCity errCity errTelephone errTelephone" 
+    
+    "address address UF UF" 
+    "errAddress errAddress errUf errUf" 
+
+    "site site category category" 
+    "errSite errSite errCategory errCategory" 
+
     "button button button button";
-    align-self: center;
 }
 
-.university-content form .IES {
+.university-content .university-form .error-ies {
+    grid-area: errIES;
+}
+
+.university-content .university-form .error-email {
+    grid-area: errEmail;
+}
+
+.university-content .university-form .error-password {
+    grid-area: errPassword;
+}
+
+.university-content .university-form .error-confirmPassword {
+    grid-area: errConfirmPassword;
+}
+
+.university-content .university-form .error-city {
+    grid-area: errCity;
+}
+
+.university-content .university-form .error-telephone {
+    grid-area: errTelephone;
+}
+
+.university-content .university-form .error-address {
+    grid-area: errAddress;
+}
+
+.university-content .university-form .error-uf {
+    grid-area: errUf;
+}
+
+.university-content .university-form .error-site{
+    grid-area: errSite;
+}
+
+.university-content .university-form .error-category{
+    grid-area: errCategory;
+}
+
+.university-content .university-form .IES {
     grid-area: IES;
 }
 
-.university-content form .telephone {
+.university-content .university-form .telephone {
     grid-area: telephone;
 }
 
-.university-content form .email {
+.university-content .university-form .email {
     grid-area: email;
 }
 
-.university-content form .UF {
+.university-content .university-form .UF {
     grid-area: UF;
 }
 
-.university-content form .password {
+.university-content .university-form .password {
     grid-area: password;
 }
 
-.university-content form .city {
+.university-content .university-form .city {
     grid-area: city;
 }
 
-.university-content form .confirmPassword {
+.university-content .university-form .confirmPassword {
     grid-area: confirmPassword;
 }
 
-.university-content form .address {
+.university-content .university-form .address {
     grid-area: address;
 }
 
-.university-content form .site {
+.university-content .university-form .site {
     grid-area: site;
 }
 
-.university-content form button {
+.university-content .university-form button {
     grid-area: button;
 }
 
-.university-content form .radio {
-    grid-area: radio;
-    
-    display: flex;
-    align-items: center;
-
-    margin-right: 20%;
+.university-content .university-form .select-category {
+    grid-area: category;
 }
 
-.university-content form .radio .public {
+.university-content .university-form .select-category .public {
     height: 30px;
 }
 
-.university-content form .radio .private {
+.university-content .university-form .select-category .private {
     height: 30px;
 }
 
-.university-content form button:hover {
+.university-content .university-form button:hover {
     filter: brightness(90%);
 }
 
 @media(max-width: 900px) {
-    .university-content form {
+    .university-content .university-form {
         width: 500px;
     }
 }
@@ -105,19 +151,19 @@
         height: 40px;
     }
 
-    .university-content form {
+    .university-content .university-form {
         width: 320px;
     }
 
-    .university-content form .radio {
+    .university-content .university-form .select-category {
         margin-right: 0;
     }
 
-    .university-content form .radio .public {
+    .university-content .university-form .select-category .public {
         height: 20px;
     }
     
-    .university-content form .radio .private {
+    .university-content .university-form .select-category .private {
         height: 20px;
     }
 
@@ -127,22 +173,44 @@
 }
 
 @media(max-width: 380px) {
-    .university-content form {
-        width: 200px;
+
+    .university-content .university-form {
+        width: 250px;
         margin-bottom: 10px;
-        
+
         grid-template-columns: 1fr;
         grid-template-areas: 
+
         "IES"
-        "city" 
+        "errIES"
+
         "email" 
-        "telephone" 
+        "errEmail"
+
         "password" 
+        "errPassword"
+
         "confirmPassword " 
+        "errConfirmPassword"
+
+        "city" 
+        "errCity"
+
+        "telephone" 
+        "errTelephone"
+
         "address" 
-        "site " 
-        "radio" 
-        "UF " 
+        "errAddress"
+
+        "UF"
+        "errUf"
+
+        "category" 
+        "errCategory"
+
+        "site" 
+        "errSite"
+
         "button";
     }
 
