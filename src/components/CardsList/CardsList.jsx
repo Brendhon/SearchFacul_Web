@@ -7,7 +7,7 @@ const CardsList = props =>
     <div className="container-card-list">
         <div className="container-card-list-item">
             {props.courses.map(course => (
-                <Card {...course} authenticated={props.authenticated ? true : false} />
+                <Card key={course.id} {...course} authenticated={props.authenticated ? true : false} />
             ))}
         </div>
     </div>
