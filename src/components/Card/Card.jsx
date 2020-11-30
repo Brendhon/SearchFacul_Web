@@ -7,8 +7,6 @@ import { useHistory } from 'react-router-dom'
 import Modal from '../Modal/Modal'
 import CardInfo from '../CardInfo/CardInfo'
 
-import Fade from '@material-ui/core/Fade'
-
 const Card = props => {
 
     const [info, setInfo] = useState(false)
@@ -20,7 +18,7 @@ const Card = props => {
     const history = useHistory() // Permite fazer a navegação por JS
 
     return (
-        <Fade in={true} style={{ transitionDelay: '500ms' }}>
+        
             <div className={hide ? "card-container card-container-hide" : "card-container"}>
 
                 {/* Cabeçalho do Card */}
@@ -84,7 +82,6 @@ const Card = props => {
                 </Modal>
 
             </div>
-        </Fade>
     )
 }
 

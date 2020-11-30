@@ -77,17 +77,10 @@ const Profile = _ => {
                     <Link className="button" to="/course/create">Novo curso</Link>
                 </div>
 
-                {courses[0] ? <CardsList authenticated
+                <CardsList authenticated
                     courses={courses}
                     handleDeleteCourse={handleDeleteCourse}
-                    handleEditCourse={handleEditCourse} /> :
-
-                    <div className="container-card-empty">
-                        <strong>Nenhum curso cadastrado</strong>
-                        <p>Cadastre seu primeiro curso no botão "Novo curso"</p>
-                    </div>
-                }
-
+                    handleEditCourse={handleEditCourse} />
 
             </div>
 

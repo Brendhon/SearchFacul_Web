@@ -13,25 +13,6 @@
     font-size: 2rem;
 }
 
-.container-card-empty {
-    display: flex;
-    height: 80%;
-    padding: 50px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-card-empty strong {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.container-card-empty p {
-    font-size: 1.3rem;
-}
-
-
 @media(max-width: 685px) {
     .profile-content-top strong {
         display: none;
