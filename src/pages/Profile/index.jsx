@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import './styles.css'
 
@@ -6,27 +6,53 @@ import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import CardsList from '../../components/CardsList/CardsList'
 
-const Profile = _ =>
+import api from '../../services/api'
 
-    <div className='container'>
+const Profile = _ => {
 
-        <Header authenticated />
+    // Verificando se o usuário esta autentificado 
+    const authorization = localStorage.getItem('authorization')
 
-        <div className="content-column box">
+    const [courses, setCourses] = useState([])
 
-            <div className="profile-content-top">
-                <span>Bem vindo, Inatel</span>
-                <strong>Cursos cadastrados</strong>
-                <Link className="button" to="/course/create">Novo curso</Link>
+    // Usando 'useEffect' para carregar os casos 
+    useEffect(_ => {
+
+        // Realizando um Get no profile e enviando o authorization no header
+        api.get('profile',
+            {
+                headers: {
+                    authorization
+                }
+
+            }).then(response => {
+                setCourses(response.data)
+            })
+
+    }, [authorization]) // O useEffect só sera chamado novamente se o authorization mudar
+
+    return (
+        <div className='container'>
+
+            <Header />
+
+            <div className="content-column box">
+
+                <div className="profile-content-top">
+                    <span>Bem vindo, Inatel</span>
+                    <strong>Cursos cadastrados</strong>
+                    <Link className="button" to="/course/create">Novo curso</Link>
+                </div>
+
+                <CardsList authenticated courses={courses} />
+
             </div>
 
-            <CardsList authenticated />
+            <Footer />
 
         </div>
-
-        <Footer />
-
-    </div>
+    )
+}
 
 
 export default Profile
