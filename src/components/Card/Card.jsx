@@ -43,7 +43,7 @@ const Card = props => {
                         <button className="card-top-button"
                             onClick={() => {
                                 setHide(true)
-                                setTimeout(_ => props.handleDeleteCourse(props.id), 500)
+                                setTimeout(_ => props.handleDeleteCourse(props.id), 300)
                             }}>
                             <FiTrash2 />
                         </button>
