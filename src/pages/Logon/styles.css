@@ -1,43 +1,55 @@
-.logon-container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
 .logon-content {
     align-items: center;
     justify-content: center;
 }
 
-.logon-content .logon-form form {
+.logon-content .logon-form-content {
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 450px;
 }
 
-.logon-content .logon-form form h1 {
-    margin-bottom: 32px;
-    font-size: 32px;
-    font-weight: 800;
+.logon-content .logon-button {
+    width: 100%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.logon-content .logon-title {
+   font-size: 2rem;
+   margin-bottom: 10px;
+}
+
+.logon-content .logon-input {
+   margin-top: 10px;
 }
 
 .logon-content img {
     margin-left: 100px;
-    margin-right: 0;
-    padding-right: 0;
-    width: 35vw;
+    width: 30vw;
 }
 
-.logon-content .logon-form form button:hover {
-    filter: brightness(90%);
+@media(max-width: 860px) {
+    .logon-content {
+        flex-direction: column;
+    }
+
+    .logon-content .logon-form-content {
+        width: 50vw;
+    }
+
+    .logon-content img {
+        margin: 0;
+    }
+
 }
 
-@media(max-width: 425px) {
+@media(max-width: 470px) {
     .logon-content img {
         display: none;
     }
 
-    .logon-content .logon-form form {
+    .logon-content .logon-form-content {
         width: 90vw;
     }
 }

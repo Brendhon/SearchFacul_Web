@@ -39,4 +39,14 @@ const universitySchema = yup.object().shape({
 
 })
 
-export { courseSchema, universitySchema }
+const loginSchema = yup.object().shape({
+
+    email: yup.string()
+        .email('Deve ser um formato válido')
+        .required('Informe um email'),
+
+    password: yup.string().trim().required('Informe uma senha'),
+
+})
+
+export { courseSchema, universitySchema, loginSchema }
