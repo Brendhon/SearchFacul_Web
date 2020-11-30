@@ -13,6 +13,7 @@ const Card = props => {
     // Declaração de estados
     const [edit, setEdit] = useState(false)
     const [info, setInfo] = useState(false)
+    const [hide, setHide] = useState(false)
 
     const editOpen = _ => setEdit(true)
     const editClose = _ => setEdit(false)
@@ -21,7 +22,7 @@ const Card = props => {
     const infoClose = _ => setInfo(false)
 
     return (
-        <div className="card-container">
+        <div className={hide ? "card-container card-container-hide" : "card-container"}>
 
             {/* Cabeçalho do Card */}
             <header className="card-top">
@@ -34,7 +35,10 @@ const Card = props => {
                             <FiEdit />
                         </button>
 
-                        <button className="card-top-button" onClick={() => props.handleDeleteCourse(props.id)}>
+                        <button className="card-top-button" onClick={() => {
+                            setHide(true)
+                            setTimeout(_=> props.handleDeleteCourse(props.id), 500)
+                        }}>
                             <FiTrash2 />
                         </button>
 
