@@ -29,7 +29,7 @@ const EditCourse = props => {
     const [type, setType] = useState("info")
 
     // Setando funções do Alert
-    const alertDisabled = _ => setMessage("")
+    const alertDisabled = _ => setOpen(false)
     const errorAlertEnabled = message => {
         setMessage(message)
         setType("error")
@@ -74,7 +74,7 @@ const EditCourse = props => {
 
             </div>
 
-            <Alert type={type} text={message} open={message ? true : false} onClose={alertDisabled} />
+            <Alert type={type} text={message} open={open} onClose={alertDisabled} />
 
             <Footer />
 
