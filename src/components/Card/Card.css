@@ -47,6 +47,7 @@
     outline: none;
     border: 0;
     cursor: pointer;
+    font-size: 15px;
 }
 
 .card-container .card-top .card-top-authenticated .card-top-button:hover {
