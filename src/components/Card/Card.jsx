@@ -28,7 +28,7 @@ const Card = props => {
                     <div className="card-top-authenticated">
 
                         <button className="card-top-button"
-                            onClick={_ => history.push(`/course/edit/${props.id}`, {
+                            onClick={_ => history.push(`/course/update/${props.id}`, {
                                 id: props.id,
                                 name: props.name,
                                 description: props.description,

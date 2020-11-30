@@ -19,7 +19,7 @@ const Routes = _ =>
             <Route path='/register' component={Register} />
             <Route path='/profile' component={Profile} />
             <Route path='/course/create' component={CreateCourse} />
-            <Route path='/course/edit/:id' component={EditCourse} />
+            <Route path='/course/update/:id' component={EditCourse} />
             <Route path='/result' component={SearchResult} />
         </Switch>
 
