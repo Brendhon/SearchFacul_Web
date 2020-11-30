@@ -19,7 +19,12 @@
 }
 
 .profile-content-top .profile-buttons .button-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
     --c-blue: #5a6268ce;
+    text-decoration: none;
 }
 
 .profile-content-top .profile-buttons .button-create {

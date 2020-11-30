@@ -59,7 +59,7 @@ const Profile = _ => {
                     <strong>Cursos cadastrados</strong>
 
                     <div className="profile-buttons">
-                        <button className="button-outline button-delete">Editar</button>
+                        <Link className="button-outline button-delete">Editar</Link>
                         <Link className="button button-create" to="/course/create">Novo curso</Link>
                     </div>
                 </div>
