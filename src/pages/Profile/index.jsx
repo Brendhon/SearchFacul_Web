@@ -17,8 +17,6 @@ const Profile = _ => {
     const [courses, setCourses] = useState([])
     const [alert, setAlert] = useState(false)
 
-    const [edit, setEdit] = useState(false)
-
     // Declaração de funções
     const alertOpen = _ => setAlert(true)
     const alertClose = _ => setAlert(false)
@@ -58,10 +56,7 @@ const Profile = _ => {
                 }
             })
 
-            // Buscando os dados novamente
             fetchData()
-
-            setEdit(false)
 
         } catch (error) {
             console.log(error.response)
@@ -85,9 +80,7 @@ const Profile = _ => {
                 {courses[0] ? <CardsList authenticated
                     courses={courses}
                     handleDeleteCourse={handleDeleteCourse}
-                    handleEditCourse={handleEditCourse} 
-                    setEdit={setEdit} 
-                    edit={edit}/> :
+                    handleEditCourse={handleEditCourse} /> :
 
                     <div className="container-card-empty">
                         <strong>Nenhum curso cadastrado</strong>

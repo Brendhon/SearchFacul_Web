@@ -8,13 +8,16 @@ import Modal from '../Modal/Modal'
 import CourseForm from '../Form/Course'
 import CardInfo from '../CardInfo/CardInfo'
 
+import Alert from '../Alert/Alert'
+
 const Card = props => {
 
     const [info, setInfo] = useState(false)
     const [hide, setHide] = useState(false)
+    const [edit, setEdit] = useState(false)
 
-    const editOpen = _ => props.setEdit(true)
-    const editClose = _ => props.setEdit(false)
+    const editOpen = _ => setEdit(true)
+    const editClose = _ => setEdit(false)
 
     const infoOpen = _ => setInfo(true)
     const infoClose = _ => setInfo(false)
@@ -68,12 +71,12 @@ const Card = props => {
 
             </footer>
 
-            <Modal open={props.edit} onClose={editClose}>
+            <Modal open={edit} onClose={editClose}>
                 <CourseForm title="Digite os novos dados" {...props}
                     onSubmit={(values) => {
                         props.handleEditCourse(values, props.id)
-                        editClose()
                     }} />
+                <Alert />
             </Modal>
 
             <Modal open={info} onClose={infoClose}>
