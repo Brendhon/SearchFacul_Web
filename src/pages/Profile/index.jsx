@@ -57,7 +57,11 @@ const Profile = _ => {
                 <div className="profile-content-top">
                     <span>Bem vindo, Inatel</span>
                     <strong>Cursos cadastrados</strong>
-                    <Link className="button" to="/course/create">Novo curso</Link>
+
+                    <div className="profile-buttons">
+                        <button className="button-outline button-delete">Editar</button>
+                        <Link className="button button-create" to="/course/create">Novo curso</Link>
+                    </div>
                 </div>
 
                 <CardsList authenticated

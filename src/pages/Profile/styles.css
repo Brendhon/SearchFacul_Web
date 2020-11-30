@@ -10,10 +10,27 @@
 }
 
 .profile-content-top strong {
+    margin-left: 50px;
     font-size: 2rem;
 }
 
-@media(max-width: 685px) {
+.profile-content-top .profile-buttons {
+    display: flex;
+}
+
+.profile-content-top .profile-buttons .button-delete {
+    --c-blue: #5a6268ce;
+}
+
+.profile-content-top .profile-buttons .button-create {
+    margin-left: 15px;
+}
+
+.profile-content-top .profile-buttons .button-create:hover {
+    opacity: 0.8;
+}
+
+@media(max-width: 850px) {
     .profile-content-top strong {
         display: none;
     }
