@@ -47,6 +47,16 @@
     margin-left: 10px;
 }
 
+.header-container .header-content .header-profile{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 45px;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
 .header-container .header-content .header-edit{
     height: 45px;
     --c-blue: #5a6268ce;

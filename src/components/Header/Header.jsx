@@ -31,15 +31,26 @@ const Header = props => {
             {!authorization ?
 
                 <div className="header-content">
+
                     <Link to="/logon" className="button logon-button">Login</Link>
                     <Link to="/register" className="button register-button">Cadastrar</Link>
+                    
                 </div> :
 
                 <div className="header-content">
+                    
                     <button className="button-outline header-edit" onClick={handleOpen}>
                         Edit
                     </button>
-                    <Link to="/" className="button-outline header-logout">Logout</Link>
+
+                    <Link to="/profile" className="button-outline header-profile">Profile</Link>
+
+                    <Link to="/"
+                        onClick={() => { localStorage.removeItem('authorization') }}
+                        className="button-outline header-logout">
+                        Logout
+                    </Link>
+
                 </div>
             }
 
