@@ -35,7 +35,7 @@ const CreateCourse = _ => {
         setOpen(true)
     }
 
-    const handleRegister = async data => {
+    const handleRegisterCourse = async data => {
 
         //Removendo campos desnecessários
         removeEmptyData(data)
@@ -46,8 +46,10 @@ const CreateCourse = _ => {
                     Authorization: localStorage.getItem('authorization')
                 }
             })
+
             successAlertEnabled('Cadastrado com sucesso!! Voce será redirecionado para a página de perfil') // Alerta de sucesso
-            setTimeout(_ => history.push('/profile'), 4000) // Sair da página apos 4 segundos
+            setTimeout(_ => history.push('/profile'), 3000) // Sair da página apos 4 segundos
+            
         } catch (error) {
             errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
         }
@@ -64,7 +66,7 @@ const CreateCourse = _ => {
 
                 <div className="create-course-data">
                     <img className="create-course-img" src={books} alt="books"></img>
-                    <CourseForm onSubmit={handleRegister} />
+                    <CourseForm onSubmit={handleRegisterCourse} />
                 </div>
             </div>
 
