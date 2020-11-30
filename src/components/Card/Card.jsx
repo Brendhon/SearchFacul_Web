@@ -48,7 +48,7 @@ const Card = props => {
                 }
 
                 <div className="card-ies">
-                    <strong >Instituto Nacional de Telecomunicações</strong>
+                    <strong >{props.IES}</strong>
                 </div>
 
             </header>
@@ -57,10 +57,10 @@ const Card = props => {
             <div className="card-content">
 
                 <div className="card-content-title">
-                    <h5> Engenharia de computação </h5>
+                    <h5> {props.name} </h5>
                 </div>
                 <div className="card-content-text">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque justo nulla, volutpat in sollicitudin vitae, sollicitudin eget risus. Nulla facilisi. Suspendisse congue, quam eu pharetra convallis, purus lacus malesuada purus, vitae blandit turpis nunc ac nisi. Suspendisse vitae iaculis orci, sed venenatis odio. Integer eget dui et felis ullamcorper laoreet. Integer egestas aliquam egestas. Etiam vitae eleifend metus. Nulla porta lorem eu diam lacinia, nec sollicitudin tellus sodales. Donec eros risus, ultrices eget urna in, gravida semper urna. Pellentesque eleifend mi at felis tempus rutrum. Nullam nulla felis, semper quis convallis elementum, finibus fringilla libero. Nunc sodales, massa id fermentum interdum, nibh tellus aliquam ligula, vel maximus lectus turpis vitae metus.</p>
+                    <p>{props.description}</p>
                 </div>
 
             </div>
@@ -76,11 +76,11 @@ const Card = props => {
             <Alert type="info" text="Deletado com sucesso" open={alert} onClose={alertClose} />
 
             <Modal open={edit} onClose={editClose}>
-                <CourseForm title="Digite os novos dados" />
+                <CourseForm title="Digite os novos dados" {...props} />
             </Modal>
 
             <Modal open={info} onClose={infoClose}>
-                <CardInfo />
+                <CardInfo {...props} />
             </Modal>
 
         </div>
