@@ -1,6 +1,7 @@
 .container-card-list {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 15px;
 }
 
 .container-card-list .container-card-list-item {
