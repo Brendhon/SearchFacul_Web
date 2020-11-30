@@ -3,7 +3,8 @@ import * as yup from 'yup'
 const courseSchema = yup.object().shape({
 
     name: yup.string().required('Informe um nome'),
-    duration: yup.string().trim().required('Informe a duração do curso'),
+    duration: yup.string().matches(/[0-9]+/gi, "Apenas números inteiros")
+        .required('Informe a duração do curso'),
     score: yup.string()
         .length(1, 'Apenas um número inteiro')
         .matches(/[0-5]+/gi, "Apenas números de 0 - 5"),
