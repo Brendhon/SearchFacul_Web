@@ -1,21 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './Header.css'
 
 import { Link } from 'react-router-dom'
 
 import books from '../../assets/img/logo.svg'
 
-import UniversityForm from '../Form/University'
-import Modal from '../Modal/Modal'
-
-const Header = props => {
-
-    // Declaração de estados
-    const [open, setOpen] = useState(false)
-
-    // Declaração de funções
-    const handleOpen = _ => setOpen(true)
-    const handleClose = _ => setOpen(false)
+const Header = _ => {
 
     // Verificando se o usuário esta autentificado 
     const authorization = localStorage.getItem('authorization')
@@ -39,10 +29,6 @@ const Header = props => {
 
                 <div className="header-content">
                     
-                    <button className="button-outline header-edit" onClick={handleOpen}>
-                        Edit
-                    </button>
-
                     <Link to="/profile" className="button-outline header-profile">Profile</Link>
 
                     <Link to="/"
@@ -53,10 +39,6 @@ const Header = props => {
 
                 </div>
             }
-
-            <Modal open={open} onClose={handleClose}>
-                <UniversityForm title="Digite os novos dados" />
-            </Modal>
 
         </header>
 
