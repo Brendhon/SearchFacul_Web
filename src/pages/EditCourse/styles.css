@@ -1,0 +1,38 @@
+.edit-course-title {
+    display: flex;
+    justify-content: center;
+    margin: 32px;
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+.edit-course-data {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.edit-course-data .edit-course-img {
+    width: 400px;
+}
+
+@media(max-width: 950px) {
+    
+    .edit-course-data .edit-course-img{
+        display: none;
+    }
+}
+
+@media(max-width: 425px) {
+
+    .edit-course-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 320px) {
+
+    .edit-course-title {
+        font-size: 1.2rem;
+    }
+}
