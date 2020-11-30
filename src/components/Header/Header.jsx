@@ -17,6 +17,9 @@ const Header = props => {
     const handleOpen = _ => setOpen(true)
     const handleClose = _ => setOpen(false)
 
+    // Verificando se o usuário esta autentificado 
+    const authorization = localStorage.getItem('authorization')
+
     return (
         <header className="header-container">
 
@@ -25,7 +28,7 @@ const Header = props => {
                 <Link to="/" className="a-link header-home">Home</Link>
             </div>
 
-            {!props.authenticated ?
+            {!authorization ?
 
                 <div className="header-content">
                     <Link to="/logon" className="button logon-button">Login</Link>
