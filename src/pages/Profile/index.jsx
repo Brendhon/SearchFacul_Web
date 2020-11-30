@@ -5,6 +5,7 @@ import './styles.css'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import CardsList from '../../components/CardsList/CardsList'
+import Alert from '../../components/Alert/Alert'
 
 import api from '../../services/api'
 
@@ -14,6 +15,11 @@ const Profile = _ => {
     const authorization = localStorage.getItem('authorization')
 
     const [courses, setCourses] = useState([])
+    const [alert, setAlert] = useState(false)
+
+    // Declaração de funções
+    const alertOpen = _ => setAlert(true)
+    const alertClose = _ => setAlert(false)
 
     // Usando 'useEffect' para carregar os casos 
     useEffect(_ => {
@@ -31,6 +37,24 @@ const Profile = _ => {
 
     }, [authorization]) // O useEffect só sera chamado novamente se o authorization mudar
 
+    const handleDeleteCourse = async id => {
+
+        try {
+            await api.delete(`course/${id}`, {
+                headers: {
+                    authorization
+                }
+            })
+
+            // Removendo o curso deletado da lista 
+            setCourses(courses.filter(course => course.id !== id))
+
+        } catch (error) {
+            alertOpen()
+        }
+    }
+
+
     return (
         <div className='container'>
 
@@ -44,8 +68,8 @@ const Profile = _ => {
                     <Link className="button" to="/course/create">Novo curso</Link>
                 </div>
 
-                {courses[0] ? <CardsList authenticated courses={courses} /> :
-                
+                {courses[0] ? <CardsList authenticated courses={courses} handleDeleteCourse={handleDeleteCourse} /> :
+
                     <div className="container-card-empty">
                         <strong>Nenhum curso cadastrado</strong>
                         <p>Cadastre seu primeiro curso no botão "Novo curso"</p>
@@ -56,6 +80,9 @@ const Profile = _ => {
             </div>
 
             <Footer />
+
+            {/* Componentes com posições não fixadas */}
+            <Alert type="error" text="Erro ao deletar!! Tente novamente" open={alert} onClose={alertClose} />
 
         </div>
     )
