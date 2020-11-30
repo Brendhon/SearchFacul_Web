@@ -9,8 +9,7 @@ const CardsList = props =>
             {props.courses.map(course => (
                 <Card key={course.id}
                     {...course}
-                    authenticated={props.authenticated ? true : false}
-                    handleDeleteCourse={props.handleDeleteCourse} />
+                    {...props}/>
             ))}
         </div>
     </div>

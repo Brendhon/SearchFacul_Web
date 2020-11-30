@@ -10,13 +10,11 @@ import CardInfo from '../CardInfo/CardInfo'
 
 const Card = props => {
 
-    // Declaração de estados
-    const [edit, setEdit] = useState(false)
     const [info, setInfo] = useState(false)
     const [hide, setHide] = useState(false)
 
-    const editOpen = _ => setEdit(true)
-    const editClose = _ => setEdit(false)
+    const editOpen = _ => props.setEdit(true)
+    const editClose = _ => props.setEdit(false)
 
     const infoOpen = _ => setInfo(true)
     const infoClose = _ => setInfo(false)
@@ -37,7 +35,7 @@ const Card = props => {
 
                         <button className="card-top-button" onClick={() => {
                             setHide(true)
-                            setTimeout(_=> props.handleDeleteCourse(props.id), 500)
+                            setTimeout(_ => props.handleDeleteCourse(props.id), 1000)
                         }}>
                             <FiTrash2 />
                         </button>
@@ -70,8 +68,12 @@ const Card = props => {
 
             </footer>
 
-            <Modal open={edit} onClose={editClose}>
-                <CourseForm title="Digite os novos dados" {...props} />
+            <Modal open={props.edit} onClose={editClose}>
+                <CourseForm title="Digite os novos dados" {...props}
+                    onSubmit={(values) => {
+                        props.handleEditCourse(values, props.id)
+                        editClose()
+                    }} />
             </Modal>
 
             <Modal open={info} onClose={infoClose}>

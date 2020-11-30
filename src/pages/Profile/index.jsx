@@ -17,25 +17,20 @@ const Profile = _ => {
     const [courses, setCourses] = useState([])
     const [alert, setAlert] = useState(false)
 
+    const [edit, setEdit] = useState(false)
+
     // Declaração de funções
     const alertOpen = _ => setAlert(true)
     const alertClose = _ => setAlert(false)
 
-    // Usando 'useEffect' para carregar os casos 
-    useEffect(_ => {
+    // Buscando os dados no perfil e passando o authorization
+    const fetchData = async _ => await api.get('profile', { headers: { authorization } })
+        .then(response => {
+            setCourses(response.data)
+        })
 
-        // Realizando um Get no profile e enviando o authorization no header
-        api.get('profile',
-            {
-                headers: {
-                    authorization
-                }
-
-            }).then(response => {
-                setCourses(response.data)
-            })
-
-    }, [authorization]) // O useEffect só sera chamado novamente se o authorization mudar
+    // eslint-disable-next-line
+    useEffect(_ => fetchData(), [authorization]) // Usando 'useEffect' para carregar os casos
 
     const handleDeleteCourse = async id => {
 
@@ -46,11 +41,30 @@ const Profile = _ => {
                 }
             })
 
-            // Removendo o curso deletado da lista 
-            setCourses(courses.filter(course => course.id !== id))
+            // Buscando os dados novamente
+            fetchData()
 
         } catch (error) {
             alertOpen()
+        }
+    }
+
+    const handleEditCourse = async (data, id) => {
+
+        try {
+            await api.put(`course/${id}`, data, {
+                headers: {
+                    authorization
+                }
+            })
+
+            // Buscando os dados novamente
+            fetchData()
+
+            setEdit(false)
+
+        } catch (error) {
+            console.log(error.response)
         }
     }
 
@@ -68,7 +82,12 @@ const Profile = _ => {
                     <Link className="button" to="/course/create">Novo curso</Link>
                 </div>
 
-                {courses[0] ? <CardsList authenticated courses={courses} handleDeleteCourse={handleDeleteCourse} /> :
+                {courses[0] ? <CardsList authenticated
+                    courses={courses}
+                    handleDeleteCourse={handleDeleteCourse}
+                    handleEditCourse={handleEditCourse} 
+                    setEdit={setEdit} 
+                    edit={edit}/> :
 
                     <div className="container-card-empty">
                         <strong>Nenhum curso cadastrado</strong>
@@ -82,7 +101,7 @@ const Profile = _ => {
             <Footer />
 
             {/* Componentes com posições não fixadas */}
-            <Alert type="error" text="Erro ao deletar!! Tente novamente" open={alert} onClose={alertClose} />
+            <Alert type="error" text="Erro!! Tente novamente" open={alert} onClose={alertClose} />
 
         </div>
     )
