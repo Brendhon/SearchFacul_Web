@@ -55,8 +55,8 @@ const FormCourse = props => {
                         name="titration">
 
                         <option value="">Selecione a titulação</option>
-                        <option value="bacharelado">Bacharelado</option>
-                        <option value="licenciatura">Licenciatura</option>
+                        <option value="Bacharelado">Bacharelado</option>
+                        <option value="Licenciatura">Licenciatura</option>
 
                     </Field>
                     <ErrorMessage className="form-error error-titration" component="span" name="titration" />
@@ -66,8 +66,8 @@ const FormCourse = props => {
                         name="modality">
 
                         <option value="">Selecione a modalidade</option>
-                        <option value="presencial">Presencial</option>
-                        <option value="online">Online</option>
+                        <option value="Presencial">Presencial</option>
+                        <option value="Online">Online</option>
 
                     </Field>
                     <ErrorMessage className="form-error error-modality" component="span" name="modality" />
