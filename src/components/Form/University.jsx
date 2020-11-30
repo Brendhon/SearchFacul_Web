@@ -86,8 +86,8 @@ const FormUniversity = props => {
                         name="category">
 
                         <option value="">Selecione uma categoria</option>
-                        <option value="private">Privado</option>
-                        <option value="public">Pública</option>
+                        <option value="Privado">Privado</option>
+                        <option value="Pública">Pública</option>
                     </Field>
                     <ErrorMessage className="form-error error-category" component="span" name="category" />
 
