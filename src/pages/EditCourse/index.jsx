@@ -16,12 +16,14 @@ const EditCourse = props => {
     // Pegando o token no storage do navegador
     const authorization = localStorage.getItem('authorization')
 
+    // Pegando o ID
     const { id } = useParams()
 
     // Pegando o objeto enviado via navegação
     const course = props.location.state
 
-    const history = useHistory() // Permite fazer a navegação por JS
+    // Permite fazer a navegação por JS
+    const history = useHistory() 
 
     // Setando os estados do alert
     const [open, setOpen] = useState(false)
@@ -51,7 +53,7 @@ const EditCourse = props => {
             })
 
             successAlertEnabled('Editado com sucesso!!') // Alerta de sucesso
-            setTimeout(_ => history.push('/profile'), 3000) // Sair da página apos 3 segundos
+            setTimeout(_ => history.goBack(), 2000) // Sair da página apos 2 segundos
             
         } catch (error) {
             errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso

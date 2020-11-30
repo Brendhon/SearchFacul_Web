@@ -47,23 +47,6 @@ const Profile = _ => {
         }
     }
 
-    const handleEditCourse = async (data, id) => {
-
-        try {
-            await api.put(`course/${id}`, data, {
-                headers: {
-                    authorization
-                }
-            })
-
-            fetchData()
-
-        } catch (error) {
-            console.log(error.response)
-        }
-    }
-
-
     return (
         <div className='container'>
 
@@ -79,8 +62,7 @@ const Profile = _ => {
 
                 <CardsList authenticated
                     courses={courses}
-                    handleDeleteCourse={handleDeleteCourse}
-                    handleEditCourse={handleEditCourse} />
+                    handleDeleteCourse={handleDeleteCourse} />
 
             </div>
 
