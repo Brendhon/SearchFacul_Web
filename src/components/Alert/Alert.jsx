@@ -12,7 +12,7 @@ export default props => {
 
     return (
         <div className={CName}>
-            <Alert severity={props.type} onClose={handleClose}>{props.text}</Alert>
+            <Alert severity={props.type || "info"} onClose={handleClose}>{props.text}</Alert>
         </div>
     )
 }
