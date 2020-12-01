@@ -3,7 +3,7 @@ import './University.css'
 
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-import { universitySchema } from '../../utils/schemas'
+import { universitySchema, updateUniversitySchema } from '../../utils/schemas'
 
 const FormUniversity = props => {
 
@@ -23,7 +23,7 @@ const FormUniversity = props => {
     return (
 
         <Formik initialValues={initialValues}
-            validationSchema={universitySchema}
+            validationSchema={props.authorization ? updateUniversitySchema : universitySchema}
             onSubmit={props.onSubmit}>
 
             <section className="university-content">
@@ -45,14 +45,14 @@ const FormUniversity = props => {
 
                     <Field className="form-field password"
                         name="password"
-                        placeholder="Senha"
-                        type={props.token ? 'text' : 'password'} />
+                        placeholder={props.authorization  ? "Nova senha" : "Senha"}
+                        type='password' />
                     <ErrorMessage className="form-error error-password" component="span" name="password" />
 
                     <Field className="form-field confirmPassword"
                         name="confirmPassword"
-                        placeholder="Confirme sua senha"
-                        type={props.token ? 'text' : 'password'} />
+                        placeholder={props.authorization  ? "Confirme sua nova senha" : "Senha"}
+                        type='password' />
                     <ErrorMessage className="form-error error-confirmPassword" component="span" name="confirmPassword" />
 
                     <Field className="form-field city"

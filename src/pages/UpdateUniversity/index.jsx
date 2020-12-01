@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import './styles.css'
 
+import imgBye from '../../assets/img/bye.gif'
+
 import { useHistory } from 'react-router-dom'
 import Fade from '@material-ui/core/Fade'
 
@@ -12,9 +14,11 @@ import Modal from '../../components/Modal/Modal'
 
 import api from '../../services/api'
 
-import imgBye from '../../assets/img/bye.gif'
+import { removeEmptyData } from '../../utils/utils'
 
 const UpdateUniversity = props => {
+
+    const authorization = localStorage.getItem('authorization')
 
     const history = useHistory()
 
@@ -24,20 +28,36 @@ const UpdateUniversity = props => {
     const modalOpen = _ => setModal(true)
     const modalClose = _ => setModal(false)
 
-    
     // Pegando o objeto enviado via navegação
     const university = props.location.state
 
-    const handleUpdateCourse = _ => alert('sucesso')
+    const handleUpdateCourse = async data => {
+
+        // Removendo os campos vazios do formulário
+        delete data["confirmPassword"]
+        removeEmptyData(data)
+
+        try {
+            await api.put('university', data, {
+                headers: {
+                    authorization
+                }
+            })
+            history.push('/profile')
+        } catch (error) {
+            console.log(error.response)
+        }
+    }
 
     const handleDeleteCourse = async _ => {
 
         try {
             await api.delete('university', {
                 headers: {
-                    authorization: localStorage.getItem('authorization')
+                    authorization
                 }
             })
+
         } catch (error) {
             console.log(error)
         }
@@ -57,7 +77,10 @@ const UpdateUniversity = props => {
 
                 <h1 className="update-title">Edite os dados de sua escolha</h1>
 
-                <UniversityForm onSubmit={handleUpdateCourse}  {...university}/>
+                <UniversityForm
+                    onSubmit={handleUpdateCourse}
+                    authorization
+                    {...university} />
 
             </div>
 

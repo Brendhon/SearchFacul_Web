@@ -40,6 +40,24 @@ const universitySchema = yup.object().shape({
 
 })
 
+const updateUniversitySchema = yup.object().shape({
+
+    telephone: yup.string()
+        .matches(/^[0-9]{8,11}$/, "Insira um número de telefone válido"),
+
+    email: yup.string()
+        .email('Deve ser um formato válido'),
+
+    uf: yup.string()
+        .matches(/^[A-Z]{2,2}$/, "Apenas letras maiúsculas"),
+
+    password: yup.string(),
+
+    confirmPassword: yup.string().oneOf([yup.ref('password'), null], 'As senhas não coincidem'),
+    site: yup.string().url('Deve estar no formato de Url'),
+
+})
+
 const loginSchema = yup.object().shape({
 
     email: yup.string()
@@ -50,4 +68,9 @@ const loginSchema = yup.object().shape({
 
 })
 
-export { courseSchema, universitySchema, loginSchema }
+export {
+    courseSchema,
+    universitySchema,
+    loginSchema,
+    updateUniversitySchema
+}
