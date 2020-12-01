@@ -29,6 +29,7 @@ const CardInfo = props =>
 
                 <p className="align-items"><FiClock className="info-content-data-icon" />{props.duration} anos</p>
 
+                {/* Mostrar pontuação caso ela exista*/}
                 {props.score ?
                     <p className="align-items">{props.score} <FaStar className="info-content-data-icon" /></p> :
                     <div />
@@ -66,10 +67,11 @@ const CardInfo = props =>
         <footer className="info-bottom">
 
 
+            {/* Se a universidade possuir um site cadastrado ele ira aparecer */}
             {props.site ?
 
                 // eslint-disable-next-line 
-                < a className="a-link" target="_blank"
+                <a className="a-link" target="_blank"
                     style={{ fontSize: 17, fontWeight: 600 }}
                     href={props.site}>Entre no site para saber mais</a> :
                 <div />
