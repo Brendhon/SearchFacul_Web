@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
 import './styles.css'
+
+import { useHistory } from 'react-router-dom'
 
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
@@ -13,6 +14,7 @@ import api from '../../services/api'
 
 const Register = _ => {
 
+    // Instanciando e iniciando constantes
     const history = useHistory() // Permite fazer a navegação por JS
 
     // Setando os estados do alert
@@ -33,6 +35,7 @@ const Register = _ => {
         setOpen(true)
     }
 
+    // Função responsável por enviar os dados ao banco
     const handleRegister = async data => {
 
         //Removendo campos desnecessários
@@ -40,15 +43,21 @@ const Register = _ => {
         removeEmptyData(data)
 
         try {
+
             await api.post('/university', data)
-            successAlertEnabled('Cadastrado com sucesso!! Voce será redirecionado para a página de login') // Alerta de sucesso
-            setTimeout(_ => history.push('/logon'), 4000) // Sair da página apos 4 segundos
+
+            successAlertEnabled('Cadastrado com sucesso!!')
+            setTimeout(_ => history.push('/logon'), 2000) // Sair da página apos 2 segundos
+
         } catch (error) {
-            errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
+
+            errorAlertEnabled(getError(error))
+
         }
     }
 
     return (
+
         <div className='container'>
 
             <Header />
@@ -62,6 +71,7 @@ const Register = _ => {
             {/* Componentes com posições não fixadas */}
             <Alert type={type} text={message} open={open} onClose={alertDisabled} />
 
-        </div>)
+        </div>
+    )
 }
 export default Register
