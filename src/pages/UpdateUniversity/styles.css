@@ -1,0 +1,52 @@
+.update-content .update-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 2rem;
+}
+
+.update-content .content-delete {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.update-content .content-delete .button-delete {
+    --c-blue: #c82333da;
+    margin: 10px;
+}
+
+.update-content .content-delete .button-delete:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.modal-delete-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 420px;
+}
+
+.modal-delete-message h1 {
+    margin-bottom: 20px;
+}
+
+.modal-delete-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal-delete-buttons button {
+    margin: 20px;
+    width: 150px;
+}
+
+.modal-delete-buttons .button-confirm {
+    --c-blue: #c82333da;
+}
+
+.modal-delete-buttons button:hover {
+    opacity: 0.5;
+}
