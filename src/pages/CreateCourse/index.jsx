@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
 import './styles.css'
 
 import books from '../../assets/img/books.svg'
+
+import { useHistory } from 'react-router-dom'
 
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
@@ -15,14 +16,16 @@ import api from '../../services/api'
 
 const CreateCourse = _ => {
 
+    // Instanciando e iniciando constantes
     const history = useHistory() // Permite fazer a navegação por JS
+    const authorization = localStorage.getItem('authorization')
 
     // Setando os estados do alert
     const [open, setOpen] = useState(false)
     const [message, setMessage] = useState("")
     const [type, setType] = useState("info")
 
-    // Setando funções do Alert
+    // Criando as funções do Alert
     const alertDisabled = _ => setOpen(false)
     const errorAlertEnabled = message => {
         setMessage(message)
@@ -35,23 +38,23 @@ const CreateCourse = _ => {
         setOpen(true)
     }
 
+    // Função responsável por Registrar o curso no banco
     const handleRegisterCourse = async data => {
 
-        //Removendo campos desnecessários
+        // Removendo campos vazios dos dados recebidos pelo formulário
         removeEmptyData(data)
 
         try {
-            await api.post('/course', data, {
-                headers: {
-                    Authorization: localStorage.getItem('authorization')
-                }
-            })
 
-            successAlertEnabled('Cadastrado com sucesso!! Voce será redirecionado para a página de perfil') // Alerta de sucesso
-            setTimeout(_ => history.push('/profile'), 3000) // Sair da página apos 4 segundos
-            
+            await api.post('/course', data, { headers: { authorization } })
+
+            successAlertEnabled('Operação realizada com Sucesso!!')
+            setTimeout(_ => history.push('/profile'), 2000) // Sair da página apos 2 segundos
+
         } catch (error) {
-            errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
+
+            errorAlertEnabled(getError(error))
+
         }
     }
 
@@ -70,9 +73,9 @@ const CreateCourse = _ => {
                 </div>
             </div>
 
-            <Alert type={type} text={message} open={open} onClose={alertDisabled} />
-
             <Footer />
+
+            <Alert type={type} text={message} open={open} onClose={alertDisabled} />
 
         </div>
     )
