@@ -7,6 +7,7 @@ import { courseSchema, updateCourseSchema } from '../../utils/schemas'
 
 const FormCourse = props => {
 
+    // Definindo os valores padrões
     const initialValues = {
         name: props.name || "",
         duration: props.duration || "",
