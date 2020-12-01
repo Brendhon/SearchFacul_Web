@@ -57,7 +57,7 @@ const Profile = _ => {
             <div className="content-column box">
 
                 <div className="profile-content-top">
-                    <span>Bem vindo, {courses[0].IES}</span>
+                    <span>Bem vindo </span>
                     <strong>Cursos cadastrados</strong>
 
                     <div className="profile-buttons">
