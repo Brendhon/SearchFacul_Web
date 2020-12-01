@@ -14,7 +14,7 @@ import api from '../../services/api'
 
 import imgBye from '../../assets/img/bye.gif'
 
-const UpdateUniversity = _ => {
+const UpdateUniversity = props => {
 
     const history = useHistory()
 
@@ -23,6 +23,10 @@ const UpdateUniversity = _ => {
 
     const modalOpen = _ => setModal(true)
     const modalClose = _ => setModal(false)
+
+    
+    // Pegando o objeto enviado via navegação
+    const university = props.location.state
 
     const handleUpdateCourse = _ => alert('sucesso')
 
@@ -53,7 +57,8 @@ const UpdateUniversity = _ => {
 
                 <h1 className="update-title">Edite os dados de sua escolha</h1>
 
-                <UniversityForm onSubmit={handleUpdateCourse} />
+                <UniversityForm onSubmit={handleUpdateCourse}  {...university}/>
+
             </div>
 
             <Footer />
