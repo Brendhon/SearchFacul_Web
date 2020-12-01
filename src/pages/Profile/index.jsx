@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import './styles.css'
 
 import Header from '../../components/Header/Header'
@@ -13,6 +13,8 @@ const Profile = _ => {
 
     // Verificando se o usuário esta autentificado 
     const authorization = localStorage.getItem('authorization')
+
+    const history = useHistory()
 
     const [courses, setCourses] = useState([])
     const [alert, setAlert] = useState(false)
@@ -59,7 +61,20 @@ const Profile = _ => {
                     <strong>Cursos cadastrados</strong>
 
                     <div className="profile-buttons">
-                        <Link className="button-outline button-delete">Editar</Link>
+
+                        <button className="button-outline button-delete"
+                            onClick={_ => history.push("/university/update", {
+                                IES: courses.IES,
+                                telephone: courses.telephone,
+                                email: courses.email,
+                                uf: courses.uf,
+                                city: courses.city,
+                                address: courses.address,
+                                site: courses.site,
+                                category: courses.category
+                            })}>
+                            Editar
+                        </button>
                         <Link className="button button-create" to="/course/create">Novo curso</Link>
                     </div>
                 </div>
