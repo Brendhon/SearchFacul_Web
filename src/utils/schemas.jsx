@@ -14,6 +14,15 @@ const courseSchema = yup.object().shape({
 
 })
 
+const updateCourseSchema = yup.object().shape({
+
+    duration: yup.string().length(1, 'Apenas um número inteiro').matches(/[0-9]+/gi, "Apenas números inteiros"),
+    score: yup.string()
+        .length(1, 'Apenas um número inteiro')
+        .matches(/[0-5]+/gi, "Apenas números de 0 - 5"),
+
+})
+
 const universitySchema = yup.object().shape({
 
     IES: yup.string().trim().required('Informe um IES da faculdade'),
@@ -70,6 +79,7 @@ const loginSchema = yup.object().shape({
 
 export {
     courseSchema,
+    updateCourseSchema,
     universitySchema,
     loginSchema,
     updateUniversitySchema
