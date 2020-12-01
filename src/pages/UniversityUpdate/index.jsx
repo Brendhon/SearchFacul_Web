@@ -16,7 +16,7 @@ import api from '../../services/api'
 
 import { removeEmptyData, getError } from '../../utils/utils'
 
-const UpdateUniversity = props => {
+const UniversityUpdate = props => {
 
     // Instanciando e iniciando constantes
     const authorization = localStorage.getItem('authorization')
@@ -135,7 +135,7 @@ const UpdateUniversity = props => {
 
                             <button className="button button-confirm"
                                 onClick={() => {
-                                    
+
                                     setBye(true)
 
                                     setTimeout(async _ => {
@@ -161,4 +161,4 @@ const UpdateUniversity = props => {
         </div>
     )
 }
-export default UpdateUniversity
+export default UniversityUpdate

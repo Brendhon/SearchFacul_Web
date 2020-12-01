@@ -14,7 +14,7 @@ import { getError, removeEmptyData } from '../../utils/utils'
 
 import api from '../../services/api'
 
-const CreateCourse = _ => {
+const CourseRegister = _ => {
 
     // Instanciando e iniciando constantes
     const history = useHistory() // Permite fazer a navegação por JS
@@ -82,4 +82,4 @@ const CreateCourse = _ => {
 }
 
 
-export default CreateCourse
+export default CourseRegister

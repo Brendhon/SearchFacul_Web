@@ -12,7 +12,7 @@ import { getError, removeEmptyData } from '../../utils/utils'
 
 import api from '../../services/api'
 
-const EditCourse = props => {
+const CourseUpdate = props => {
 
     // Instanciando e iniciando constantes
     const authorization = localStorage.getItem('authorization') // Pegando o token no storage do navegador
@@ -39,7 +39,7 @@ const EditCourse = props => {
     }
 
     // Função responsável por editar os dados
-    const handleEdit = async data => {
+    const handleUpdate = async data => {
 
         // Removendo atributos vazios
         removeEmptyData(data)
@@ -70,7 +70,7 @@ const EditCourse = props => {
 
                 <div className="edit-course-data">
                     <CourseForm
-                        onSubmit={handleEdit}
+                        onSubmit={handleUpdate}
                         authorization
                         {...course} />
                 </div>
@@ -86,4 +86,4 @@ const EditCourse = props => {
 }
 
 
-export default EditCourse
+export default CourseUpdate
