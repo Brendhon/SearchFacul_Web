@@ -18,10 +18,12 @@ import { removeEmptyData, getError } from '../../utils/utils'
 
 const UpdateUniversity = props => {
 
+    // Instanciando e iniciando constantes
     const authorization = localStorage.getItem('authorization')
-
+    const university = props.location.state // Pegando o objeto enviado via navegação
     const history = useHistory()
 
+    // Setando os estados do modal
     const [modal, setModal] = useState(false)
     const [bye, setBye] = useState(false)
 
@@ -43,43 +45,45 @@ const UpdateUniversity = props => {
         setOpen(true)
     }
 
+    // Setando funções do Modal
     const modalOpen = _ => setModal(true)
     const modalClose = _ => setModal(false)
 
-    // Pegando o objeto enviado via navegação
-    const university = props.location.state
-
-    const handleUpdateCourse = async data => {
+    // Função que irá atualizar os dados da universidade
+    const handleUpdate = async data => {
 
         // Removendo os campos vazios do formulário
         delete data["confirmPassword"]
         removeEmptyData(data)
 
         try {
-            await api.put('university', data, {
-                headers: {
-                    authorization
-                }
-            })
-            successAlertEnabled('Operação realizada com Sucesso!!') // Alerta de sucesso
+
+            await api.put('university', data, { headers: { authorization } })
+
+            successAlertEnabled('Operação realizada com Sucesso!!')
             setTimeout(_ => history.push('/profile'), 2000) // Sair da página apos 4 segundos
+
         } catch (error) {
+
             errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
+
         }
+
     }
 
-    const handleDeleteCourse = async _ => {
+    // Função que irá deletar a universidade
+    const handleDelete = async _ => {
 
         try {
-            await api.delete('university', {
-                headers: {
-                    authorization
-                }
-            })
+
+            await api.delete('university', { headers: { authorization } })
 
         } catch (error) {
+
             errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
+
         }
+        
     }
 
     return (
@@ -97,7 +101,7 @@ const UpdateUniversity = props => {
                 <h1 className="update-title">Edite os dados de sua escolha</h1>
 
                 <UniversityForm
-                    onSubmit={handleUpdateCourse}
+                    onSubmit={handleUpdate}
                     authorization
                     {...university} />
 
@@ -131,12 +135,13 @@ const UpdateUniversity = props => {
 
                             <button className="button button-confirm"
                                 onClick={() => {
+                                    
                                     setBye(true)
 
                                     setTimeout(async _ => {
-                                        await handleDeleteCourse()
+                                        await handleDelete() // Apagando os dados da universidade no sistema
                                         localStorage.clear() // Limpando o storage do navegador
-                                        history.push('/')
+                                        history.push('/') // O redirecionando para a página inicial
                                     }, 3000)
 
                                 }}>Sim</button>
@@ -152,7 +157,7 @@ const UpdateUniversity = props => {
 
             {/* Componentes com posições não fixadas */}
             <Alert type={type} text={message} open={open} onClose={alertDisabled} />
-            
+
         </div>
     )
 }
