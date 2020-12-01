@@ -52,7 +52,7 @@ const FormUniversity = props => {
 
                     <Field className="form-field confirmPassword"
                         name="confirmPassword"
-                        placeholder={props.authorization  ? "Confirme sua nova senha" : "Senha"}
+                        placeholder={props.authorization  ? "Confirme sua nova senha" : "Confirme sua senha"}
                         type='password' />
                     <ErrorMessage className="form-error error-confirmPassword" component="span" name="confirmPassword" />
 
