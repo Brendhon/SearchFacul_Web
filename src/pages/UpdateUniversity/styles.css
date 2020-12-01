@@ -50,3 +50,25 @@
 .modal-delete-buttons button:hover {
     opacity: 0.5;
 }
+
+@media(max-width: 950px) { 
+    .update-content .update-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width: 480px) { 
+    .modal-delete-message {
+        width: 300px;
+    }
+
+    .modal-delete-buttons button {
+        width: 100px;
+    }
+}
+
+@media(max-width: 390px) { 
+    .update-content .update-title {
+        font-size: 1.2rem;
+    }
+}

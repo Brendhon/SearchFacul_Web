@@ -14,7 +14,7 @@ import Modal from '../../components/Modal/Modal'
 
 import api from '../../services/api'
 
-import { removeEmptyData } from '../../utils/utils'
+import { removeEmptyData, getError } from '../../utils/utils'
 
 const UpdateUniversity = props => {
 
@@ -24,6 +24,24 @@ const UpdateUniversity = props => {
 
     const [modal, setModal] = useState(false)
     const [bye, setBye] = useState(false)
+
+    // Setando os estados do alert
+    const [open, setOpen] = useState(false)
+    const [message, setMessage] = useState("")
+    const [type, setType] = useState("info")
+
+    // Setando funções do Alert
+    const alertDisabled = _ => setOpen(false)
+    const errorAlertEnabled = message => {
+        setMessage(message)
+        setType("error")
+        setOpen(true)
+    }
+    const successAlertEnabled = message => {
+        setMessage(message)
+        setType("success")
+        setOpen(true)
+    }
 
     const modalOpen = _ => setModal(true)
     const modalClose = _ => setModal(false)
@@ -43,9 +61,10 @@ const UpdateUniversity = props => {
                     authorization
                 }
             })
-            history.push('/profile')
+            successAlertEnabled('Operação realizada com Sucesso!!') // Alerta de sucesso
+            setTimeout(_ => history.push('/profile'), 2000) // Sair da página apos 4 segundos
         } catch (error) {
-            console.log(error.response)
+            errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
         }
     }
 
@@ -59,7 +78,7 @@ const UpdateUniversity = props => {
             })
 
         } catch (error) {
-            console.log(error)
+            errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
         }
     }
 
@@ -131,6 +150,9 @@ const UpdateUniversity = props => {
                 }
             </Modal>
 
+            {/* Componentes com posições não fixadas */}
+            <Alert type={type} text={message} open={open} onClose={alertDisabled} />
+            
         </div>
     )
 }
