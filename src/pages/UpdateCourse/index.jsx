@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import { useHistory, useParams } from 'react-router-dom'
 import './styles.css'
+
+import { useHistory, useParams } from 'react-router-dom'
 
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
@@ -13,17 +14,11 @@ import api from '../../services/api'
 
 const EditCourse = props => {
 
-    // Pegando o token no storage do navegador
-    const authorization = localStorage.getItem('authorization')
-
-    // Pegando o ID
-    const { id } = useParams()
-
-    // Pegando o objeto enviado via navegação
-    const course = props.location.state
-
-    // Permite fazer a navegação por JS
-    const history = useHistory()
+    // Instanciando e iniciando constantes
+    const authorization = localStorage.getItem('authorization') // Pegando o token no storage do navegador
+    const { id } = useParams() // Pegando o ID 
+    const course = props.location.state // Pegando o objeto enviado via navegação
+    const history = useHistory() // Permite fazer a navegação por JS
 
     // Setando os estados do alert
     const [open, setOpen] = useState(false)
@@ -43,6 +38,7 @@ const EditCourse = props => {
         setOpen(true)
     }
 
+    // Função responsável por editar os dados
     const handleEdit = async data => {
 
         // Removendo atributos vazios
@@ -50,18 +46,17 @@ const EditCourse = props => {
 
         try {
 
-            await api.put(`course/${id}`, data, {
-                headers: {
-                    authorization
-                }
-            })
+            await api.put(`course/${id}`, data, { headers: { authorization } })
 
-            successAlertEnabled('Editado com sucesso!!') // Alerta de sucesso
+            successAlertEnabled('Editado com sucesso!!')
             setTimeout(_ => history.goBack(), 2000) // Sair da página apos 2 segundos
 
         } catch (error) {
-            errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
+
+            errorAlertEnabled(getError(error))
+
         }
+
     }
 
     return (
@@ -82,9 +77,9 @@ const EditCourse = props => {
 
             </div>
 
-            <Alert type={type} text={message} open={open} onClose={alertDisabled} />
-
             <Footer />
+
+            <Alert type={type} text={message} open={open} onClose={alertDisabled} />
 
         </div>
     )
