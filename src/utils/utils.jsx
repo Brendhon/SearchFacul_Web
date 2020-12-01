@@ -6,9 +6,18 @@ const getError = error => {
 }
 
 const removeEmptyData = data => {
-    for (let prop in data)
-        if (!data[prop].trim())
-            delete data[prop]
+    for (let prop in data) {
+
+        if (typeof data[prop] === "number") {
+            if (!data[prop])
+                delete data[prop]
+        }
+
+        if (typeof data[prop] === "string") {
+            if (!data[prop].trim())
+                delete data[prop]
+        }
+    }
 }
 
 export { getError, removeEmptyData }
