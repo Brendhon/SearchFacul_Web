@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { Link, useHistory } from 'react-router-dom'
 import './styles.css'
+
+import { Link, useHistory } from 'react-router-dom'
 
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
@@ -11,25 +12,26 @@ import api from '../../services/api'
 
 const Profile = _ => {
 
-    // Verificando se o usuário esta autentificado 
-    const authorization = localStorage.getItem('authorization')
-
+    // Instanciando e iniciando constantes
+    const authorization = localStorage.getItem('authorization') // Verificando se o usuário esta autentificado 
     const history = useHistory()
 
+    // Declarando os estados
     const [university, setUniversity] = useState({})
     const [courses, setCourses] = useState([])
-    const [alert, setAlert] = useState(false)
+    const [alert, setAlert] = useState(false) // Estado que irá definir se o alert está visível ou não
 
     // Declaração de funções
     const alertOpen = _ => setAlert(true)
     const alertClose = _ => setAlert(false)
 
-    // Buscando os dados no perfil e passando o authorization
+    // Buscando os cursos e os setando no estado
     const fetchData = async _ => await api.get('profile', { headers: { authorization } })
         .then(response => {
             setCourses(response.data)
         })
 
+    // Usando o "useEffect" para carregar os dados da universidade e os setar no estado
     useEffect(_ => {
 
         // Trazendo os dados da universidade
@@ -38,30 +40,30 @@ const Profile = _ => {
                 setUniversity(response.data)
             })
 
-        // Trazendo os dados dos cursos pertencentes a universidade
         fetchData()
 
-    // eslint-disable-next-line
+        // eslint-disable-next-line
     }, [authorization])
 
+    // Função responsável por deletar cursos
     const handleDeleteCourse = async id => {
 
         try {
-            await api.delete(`course/${id}`, {
-                headers: {
-                    authorization
-                }
-            })
+
+            await api.delete(`course/${id}`, { headers: { authorization } })
 
             // Buscando os dados novamente
             fetchData()
 
         } catch (error) {
-            alertOpen()
+
+            alertOpen() // Mostrando mensagem de erro
+
         }
     }
 
     return (
+
         <div className='container'>
 
             <Header />
@@ -88,6 +90,7 @@ const Profile = _ => {
                             Editar
                         </button>
                         <Link className="button button-create" to="/course/create">Novo curso</Link>
+                        
                     </div>
                 </div>
 
