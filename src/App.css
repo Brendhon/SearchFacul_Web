@@ -71,6 +71,7 @@ body {
     padding: 0px 10px 0px 10px;
     height: 50px;
     outline: none;
+    cursor: pointer;
 }
 
 .button:active {
