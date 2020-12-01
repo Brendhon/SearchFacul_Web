@@ -57,21 +57,21 @@ const Profile = _ => {
             <div className="content-column box">
 
                 <div className="profile-content-top">
-                    <span>Bem vindo, Inatel</span>
+                    <span>Bem vindo, {courses[0].IES}</span>
                     <strong>Cursos cadastrados</strong>
 
                     <div className="profile-buttons">
 
                         <button className="button-outline button-delete"
                             onClick={_ => history.push("/university/update", {
-                                IES: courses.IES,
-                                telephone: courses.telephone,
-                                email: courses.email,
-                                uf: courses.uf,
-                                city: courses.city,
-                                address: courses.address,
-                                site: courses.site,
-                                category: courses.category
+                                IES: courses[0].IES,
+                                telephone: courses[0].telephone,
+                                email: courses[0].email,
+                                uf: courses[0].uf,
+                                city: courses[0].city,
+                                address: courses[0].address,
+                                site: courses[0].site,
+                                category: courses[0].category
                             })}>
                             Editar
                         </button>
