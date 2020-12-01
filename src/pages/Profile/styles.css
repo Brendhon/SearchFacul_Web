@@ -20,9 +20,9 @@
 
 .profile-content-top .profile-buttons .button-delete {
     display: flex;
-    justify-content: center;
     align-items: center;
-    
+    padding-top: 2px;
+
     --c-blue: #5a6268ce;
     text-decoration: none;
 }
