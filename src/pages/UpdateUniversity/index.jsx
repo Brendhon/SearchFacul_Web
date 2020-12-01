@@ -10,6 +10,7 @@ import UniversityForm from '../../components/Form/University'
 import Alert from '../../components/Alert/Alert'
 import Modal from '../../components/Modal/Modal'
 
+import api from '../../services/api'
 
 import imgBye from '../../assets/img/bye.gif'
 
@@ -24,6 +25,19 @@ const UpdateUniversity = _ => {
     const modalClose = _ => setModal(false)
 
     const handleUpdateCourse = _ => alert('sucesso')
+
+    const handleDeleteCourse = async _ => {
+
+        try {
+            await api.delete('university', {
+                headers: {
+                    authorization: localStorage.getItem('authorization')
+                }
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
 
     return (
         <div className='container'>
@@ -46,13 +60,12 @@ const UpdateUniversity = _ => {
 
             <Modal open={modal} onClose={modalClose}>
 
-
                 {bye ?
                     <Fade in={bye}>
                         <div className="container-column box"
-                            style={{ backgroundColor: "white", padding: 15, width:340 }}>
+                            style={{ backgroundColor: "white", padding: 15, width: 340 }}>
                             <h1>Bye</h1>
-                            <img src={imgBye} width="300"alt="Adeus" />
+                            <img src={imgBye} width="300" alt="Adeus" />
                         </div>
                     </Fade>
 
@@ -73,11 +86,12 @@ const UpdateUniversity = _ => {
                                 onClick={() => {
                                     setBye(true)
 
-                                    // setTimeout(_ => {
-                                    //     localStorage.clear() // Limpando o storage do navegador
-                                    //     history.push('/')
-                                    // }, 3000)
-                                    
+                                    setTimeout(async _ => {
+                                        await handleDeleteCourse()
+                                        localStorage.clear() // Limpando o storage do navegador
+                                        history.push('/')
+                                    }, 3000)
+
                                 }}>Sim</button>
 
                             <button className="button button-skip"
