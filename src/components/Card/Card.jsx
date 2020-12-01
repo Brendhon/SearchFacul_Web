@@ -5,7 +5,7 @@ import { FiTrash2, FiEdit } from 'react-icons/fi'
 import { useHistory } from 'react-router-dom'
 
 import Modal from '../Modal/Modal'
-import CardInfo from '../CardInfo/CardInfo'
+import InfoCard from '../InfoCard/InfoCard'
 
 const Card = props => {
 
@@ -48,7 +48,7 @@ const Card = props => {
                             <button className="card-top-button"
                                 onClick={() => {
                                     setHide(true)
-                                    setTimeout(_ => props.handleDeleteCourse(props.id), 300)
+                                    setTimeout(_ => props.handleDelete(props.id), 300)
                                 }}>
                                 <FiTrash2 />
                             </button>
@@ -83,7 +83,7 @@ const Card = props => {
 
                 {/* Conteúdo não visível */}
                 <Modal open={info} onClose={infoClose}>
-                    <CardInfo {...props} />
+                    <InfoCard {...props} />
                 </Modal>
 
             </div>

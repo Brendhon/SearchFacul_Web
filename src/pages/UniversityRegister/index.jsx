@@ -12,7 +12,7 @@ import { getError, removeEmptyData } from '../../utils/utils'
 
 import api from '../../services/api'
 
-const Register = _ => {
+const UniversityRegister = _ => {
 
     // Instanciando e iniciando constantes
     const history = useHistory() // Permite fazer a navegação por JS
@@ -74,4 +74,4 @@ const Register = _ => {
         </div>
     )
 }
-export default Register
+export default UniversityRegister

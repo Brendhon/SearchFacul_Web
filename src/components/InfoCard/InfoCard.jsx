@@ -1,10 +1,10 @@
 import React from 'react'
-import './CardInfo.css'
+import './InfoCard.css'
 
 import { FiPhone, FiMail, FiClock, FiMap, FiMapPin } from 'react-icons/fi'
 import { FaStar } from 'react-icons/fa'
 
-const CardInfo = props =>
+const InfoCard = props =>
 
     <div className="info-container">
 
@@ -81,4 +81,4 @@ const CardInfo = props =>
 
     </div >
 
-export default CardInfo 
+export default InfoCard 

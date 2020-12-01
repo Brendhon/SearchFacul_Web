@@ -39,7 +39,7 @@ const CourseRegister = _ => {
     }
 
     // Função responsável por Registrar o curso no banco
-    const handleRegisterCourse = async data => {
+    const handleRegister = async data => {
 
         // Removendo campos vazios dos dados recebidos pelo formulário
         removeEmptyData(data)
@@ -69,7 +69,7 @@ const CourseRegister = _ => {
 
                 <div className="create-course-data">
                     <img className="create-course-img" src={books} alt="books"></img>
-                    <CourseForm onSubmit={handleRegisterCourse} />
+                    <CourseForm onSubmit={handleRegister} />
                 </div>
             </div>
 

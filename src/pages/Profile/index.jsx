@@ -46,7 +46,7 @@ const Profile = _ => {
     }, [authorization])
 
     // Função responsável por deletar cursos
-    const handleDeleteCourse = async id => {
+    const handleDelete = async id => {
 
         try {
 
@@ -96,7 +96,7 @@ const Profile = _ => {
 
                 <CardsList authenticated
                     courses={courses}
-                    handleDeleteCourse={handleDeleteCourse} />
+                    handleDelete={handleDelete} />
 
             </div>
 
