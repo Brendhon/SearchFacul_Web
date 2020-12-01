@@ -16,6 +16,7 @@ const Profile = _ => {
 
     const history = useHistory()
 
+    const [university, setUniversity] = useState({})
     const [courses, setCourses] = useState([])
     const [alert, setAlert] = useState(false)
 
@@ -29,8 +30,19 @@ const Profile = _ => {
             setCourses(response.data)
         })
 
+    useEffect(_ => {
+
+        // Trazendo os dados da universidade
+        api.get('university', { headers: { authorization } })
+            .then(response => {
+                setUniversity(response.data)
+            })
+
+        // Trazendo os dados dos cursos pertencentes a universidade
+        fetchData()
+
     // eslint-disable-next-line
-    useEffect(_ => fetchData(), [authorization]) // Usando 'useEffect' para carregar os casos
+    }, [authorization])
 
     const handleDeleteCourse = async id => {
 
@@ -64,14 +76,14 @@ const Profile = _ => {
 
                         <button className="button-outline button-delete"
                             onClick={_ => history.push("/university/update", {
-                                IES: courses[0].IES,
-                                telephone: courses[0].telephone,
-                                email: courses[0].email,
-                                uf: courses[0].uf,
-                                city: courses[0].city,
-                                address: courses[0].address,
-                                site: courses[0].site,
-                                category: courses[0].category
+                                IES: university.IES,
+                                telephone: university.telephone,
+                                email: university.email,
+                                uf: university.uf,
+                                city: university.city,
+                                address: university.address,
+                                site: university.site,
+                                category: university.category
                             })}>
                             Editar
                         </button>
