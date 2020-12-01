@@ -6,7 +6,7 @@ import Card from '../Card/Card'
 import Fade from '@material-ui/core/Fade'
 
 const CardsList = props =>
-    <Fade in={true} style={{ transitionDelay: '800ms' }}>
+    <Fade in={true} style={{ transitionDelay: '500ms' }}>
         <div className="container-card-list">
             <div className="container-card-list-item">
                 {props.courses.map(course => (
