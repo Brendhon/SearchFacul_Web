@@ -17,12 +17,14 @@ import api from '../../services/api'
 
 const Logon = _ => {
 
+    // Instanciando e iniciando constantes
+    const history = useHistory()
+
+    // Criando valores iniciais para o formulário
     const initialValues = {
         email: "",
         password: ""
     }
-
-    const history = useHistory()
 
     // Setando os estados do alert
     const [open, setOpen] = useState(false)
@@ -35,19 +37,22 @@ const Logon = _ => {
         setOpen(true)
     }
 
+    // Função responsável criar uma sessão
     const handleLogin = async data => {
 
         try {
 
             const response = await api.post('session', data)
 
-            // Salvando no storage do navegador
-            localStorage.setItem('authorization', response.data.token) 
+            // Salvando no storage do navegador o token da resposta do banco de dados
+            localStorage.setItem('authorization', response.data.token)
 
-            history.push('/profile') //Indo para o profile da universidade
-            
+            history.push('/profile') // Indo para a página profile
+
         } catch (error) {
-            errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
+
+            errorAlertEnabled(getError(error))
+
         }
     }
 
