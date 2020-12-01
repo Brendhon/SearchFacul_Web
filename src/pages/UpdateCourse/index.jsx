@@ -7,7 +7,7 @@ import Footer from '../../components/Footer/Footer'
 import CourseForm from '../../components/Form/Course'
 import Alert from '../../components/Alert/Alert'
 
-import { getError } from '../../utils/utils'
+import { getError, removeEmptyData } from '../../utils/utils'
 
 import api from '../../services/api'
 
@@ -23,7 +23,7 @@ const EditCourse = props => {
     const course = props.location.state
 
     // Permite fazer a navegação por JS
-    const history = useHistory() 
+    const history = useHistory()
 
     // Setando os estados do alert
     const [open, setOpen] = useState(false)
@@ -45,7 +45,11 @@ const EditCourse = props => {
 
     const handleEdit = async data => {
 
+        // Removendo atributos vazios
+        removeEmptyData(data)
+
         try {
+
             await api.put(`course/${id}`, data, {
                 headers: {
                     authorization
@@ -54,10 +58,9 @@ const EditCourse = props => {
 
             successAlertEnabled('Editado com sucesso!!') // Alerta de sucesso
             setTimeout(_ => history.goBack(), 2000) // Sair da página apos 2 segundos
-            
+
         } catch (error) {
             errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
-            console.log(error.response)
         }
     }
 
@@ -71,7 +74,10 @@ const EditCourse = props => {
                 <h1 className="edit-course-title">Edite os dados de sua escolha</h1>
 
                 <div className="edit-course-data">
-                    <CourseForm onSubmit={handleEdit} {...course} />
+                    <CourseForm
+                        onSubmit={handleEdit}
+                        authorization
+                        {...course} />
                 </div>
 
             </div>

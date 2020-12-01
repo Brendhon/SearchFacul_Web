@@ -3,7 +3,7 @@ import './Course.css'
 
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
-import { courseSchema } from '../../utils/schemas'
+import { courseSchema, updateCourseSchema } from '../../utils/schemas'
 
 const FormCourse = props => {
 
@@ -19,7 +19,7 @@ const FormCourse = props => {
     return (
 
         <Formik initialValues={initialValues}
-            validationSchema={courseSchema}
+            validationSchema={props.authorization ? updateCourseSchema : courseSchema}
             onSubmit={props.onSubmit}>
 
             <section className="course-container" >
