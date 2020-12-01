@@ -19,14 +19,14 @@
 }
 
 .header-container .header-content .register-button {
-    --c-blue: #c82333da;
+    --c-main: var(--c-red);
     height: 45px;
     font-weight: normal;
     margin-left: 10px;
 }
 
 .header-container .header-content .logon-button {
-    --c-blue: #0069d9b2;
+    --c-main: #0069d9b2;
     height: 45px;
     font-weight: normal;
     margin-left: 10px;
@@ -42,7 +42,7 @@
     justify-content: center;
 
     height: 45px;
-    --c-blue: #c82333da;
+    --c-main: var(--c-red);
     text-decoration: none;
     margin-left: 10px;
 }
@@ -55,11 +55,6 @@
     height: 45px;
     text-decoration: none;
     margin-left: 10px;
-}
-
-.header-container .header-content .header-edit{
-    height: 45px;
-    --c-blue: #5a6268ce;
 }
 
 .header-container .header-logo img {

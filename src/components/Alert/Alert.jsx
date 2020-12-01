@@ -8,10 +8,8 @@ export default props => {
 
     const handleClose = _ => props.onClose()
 
-    const CName = props.open ? "alert-absolute" : "alert-none"
-
     return (
-        <div className={CName}>
+        <div className={props.open ? "alert-absolute" : "alert-none"}>
             <Alert severity={props.type || "info"} onClose={handleClose}>{props.text}</Alert>
         </div>
     )

@@ -9,21 +9,25 @@ import CardInfo from '../CardInfo/CardInfo'
 
 const Card = props => {
 
+    // Instanciando e iniciando constantes
+    const history = useHistory() // Permite fazer a navegação por JS
+
+    // Declarando os estados de controle do modal e animação ao deletar
     const [info, setInfo] = useState(false)
     const [hide, setHide] = useState(false)
 
     const infoOpen = _ => setInfo(true)
     const infoClose = _ => setInfo(false)
 
-    const history = useHistory() // Permite fazer a navegação por JS
-
     return (
         
+            // Renderização condicional para fazer o efeito ao apagar 
             <div className={hide ? "card-container card-container-hide" : "card-container"}>
 
                 {/* Cabeçalho do Card */}
                 <header className="card-top">
 
+                    {/* Verificar se o usuário esta autentificado */}
                     {!props.authenticated ? <div style={{ margin: 10 }} /> :
 
                         <div className="card-top-authenticated">
@@ -72,11 +76,12 @@ const Card = props => {
 
                 {/* Rodapé do Cartão */}
                 <footer className="card-bottom">
-
+                    
                     <button className="a-link" onClick={infoOpen}>Saiba mais</button>
 
                 </footer>
 
+                {/* Conteúdo não visível */}
                 <Modal open={info} onClose={infoClose}>
                     <CardInfo {...props} />
                 </Modal>

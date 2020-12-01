@@ -18,7 +18,7 @@
     overflow: hidden;
     word-wrap: break-word;
 
-    background-color: #4b86b4;
+    background-color: var(--b-card);
 
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -70,7 +70,7 @@
 }
 
 .info-container .info-content .info-content-data-icon {
-    color: var(--c-blue);
+    color: var(--c-main);
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -85,7 +85,7 @@
     padding: 10px 10px 10px 0px;
     margin: 5px;
 
-    border: 1px solid var(--c-blue);
+    border: 1px solid var(--c-main);
     border-radius: 8px;
 
     font-size: 0.8rem;
@@ -93,7 +93,7 @@
 
 .info-container .info-content .info-content-data fieldset legend {
   
-    color: var(--c-blue);
+    color: var(--c-main);
     font-size: 1.4rem;
     padding: 0px 5px 0px 5px;
 }
@@ -103,8 +103,7 @@
     justify-content: center;
     align-items: center;
 
-    border-top: 1px solid;
-    border-color: #ffffff;
+    border-top: 1px solid #ffffff;
     background-color: #b6cbf8cb;
     
     border-bottom-left-radius: 8px;

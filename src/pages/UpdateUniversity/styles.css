@@ -12,7 +12,7 @@
 }
 
 .update-content .content-delete .button-delete {
-    --c-blue: #c82333da;
+    --c-main: var(--c-red);
     margin: 10px;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .modal-delete-buttons .button-confirm {
-    --c-blue: #c82333da;
+    --c-main: var(--c-red);
 }
 
 .modal-delete-buttons button:hover {

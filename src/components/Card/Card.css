@@ -27,7 +27,7 @@
     overflow: hidden;
     word-wrap: break-word;
 
-    background-color: #4b86b4;
+    background-color: var(--b-card);
 
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;

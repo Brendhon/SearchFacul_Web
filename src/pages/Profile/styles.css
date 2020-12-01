@@ -6,7 +6,7 @@
     color: var(--c-dark);
     padding: 15px;
 
-    --c-blue: #138496ce;
+    --c-main: #138496ce;
 }
 
 .profile-content-top strong {
@@ -23,7 +23,7 @@
     align-items: center;
     padding-top: 2px;
 
-    --c-blue: #5a6268ce;
+    --c-main: #5a6268ce;
     text-decoration: none;
 }
 

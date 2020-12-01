@@ -2,8 +2,11 @@
 /* Declaração de Variáveis */
 
 :root {
+    --c-main: #00A5D8;
+    --b-card: #4b86b4;
+
     --c-dark: #2E333E;
-    --c-blue: #00A5D8;
+    --c-red: #c82333da;
 }
 
 /* Definindo alguns padrões de CSS para todos CSS utilizados */
@@ -54,14 +57,14 @@ body {
 }
 
 .form-field:focus, .form-textarea:focus {
-    border: 1px solid var(--c-blue);
+    border: 1px solid var(--c-main);
 }
 
 .button {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: var(--c-blue);
+    background: var(--c-main);
     border: 0;
     border-radius: 8px;
     text-decoration: none;
@@ -106,7 +109,7 @@ body {
     font-size: 0.9rem;
     background: transparent;
     border: 0;
-    color: var(--c-blue);
+    color: var(--c-main);
     outline: none;
     cursor: pointer;
     text-decoration: none;
@@ -124,14 +127,14 @@ body {
     outline: none;
     font-weight: normal;
 
-    border: 1px solid var(--c-blue);
-    color: var(--c-blue);
+    border: 1px solid var(--c-main);
+    color: var(--c-main);
     border-radius: 8px;
 
     cursor: pointer;
 }
 
 .button-outline:hover {
-    background: var(--c-blue);
+    background: var(--c-main);
     color: white;
 }
