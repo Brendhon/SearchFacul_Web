@@ -36,7 +36,10 @@ const Search = _ => {
 
                 <Formik initialValues={initialValues}
                 validationSchema={searchSchema}
-                onSubmit={(data) => history.push(`/result/${data.option}?text=${data.search}`)}>
+                onSubmit={(data) => history.push('/result', {
+                    option: data.option,
+                    text: data.search
+                })}>
 
                     <section className="search-input">
 
