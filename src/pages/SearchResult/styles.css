@@ -10,3 +10,23 @@
 .result-content-top .result-number {
     font-size: 0.9rem;
 }
+
+.result-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-empty strong {
+    font-size: 2rem;
+}
+
+.result-empty p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.result-empty .empty-button:hover {
+    opacity: 0.8;
+}
