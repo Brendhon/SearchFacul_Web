@@ -10,7 +10,7 @@
 }
 
 .profile-content-top strong {
-    margin-left: 150px;
+    margin-left: 100px;
     font-size: 2rem;
 }
 
@@ -33,6 +33,25 @@
 
 .profile-content-top .profile-buttons .button-create:hover {
     opacity: 0.8;
+}
+
+.profile-empty {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 70%;
+}
+
+.profile-empty h2 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.profile-empty p {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
 }
 
 @media(max-width: 850px) {

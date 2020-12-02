@@ -19,6 +19,7 @@ const Profile = _ => {
     // Declarando os estados
     const [university, setUniversity] = useState({})
     const [courses, setCourses] = useState([])
+    const [empty, setEmpty] = useState(false)
     const [alert, setAlert] = useState(false) // Estado que irá definir se o alert está visível ou não
 
     // Declaração de funções
@@ -29,6 +30,10 @@ const Profile = _ => {
     const fetchData = async _ => await api.get('profile', { headers: { authorization } })
         .then(response => {
             setCourses(response.data)
+
+            if (!response.data.length)
+                setEmpty(true)
+
         })
 
     // Usando o "useEffect" para carregar os dados da universidade e os setar no estado
@@ -90,13 +95,22 @@ const Profile = _ => {
                             Editar
                         </button>
                         <Link className="button button-create" to="/course/create">Novo curso</Link>
-                        
+
                     </div>
                 </div>
 
-                <CardsList authenticated
-                    courses={courses}
-                    handleDelete={handleDelete} />
+                {!empty ?
+
+                    <CardsList authenticated
+                        courses={courses}
+                        handleDelete={handleDelete} /> :
+
+                    <div className="profile-empty">
+                        <h2>Nenhum curso cadastrado!</h2>
+                        <p>Crie um novo curso no botão <strong>Novo curso</strong></p>
+                    </div>
+
+                }
 
             </div>
 
