@@ -46,9 +46,9 @@ const FormCourse = props => {
 
                     <Field as="textarea"
                         name="description"
-                        maxLength="450"
+                        maxLength="1000"
                         className="form-textarea description"
-                        placeholder="Descrição (até 450 caracteres)" />
+                        placeholder="Descrição (até 1000 caracteres)" />
                     <ErrorMessage className="form-error error-description" component="span" name="description" />
 
                     <Field as="select"
