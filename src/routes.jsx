@@ -16,7 +16,7 @@ const Routes = _ =>
 
         <Switch>
             <Route path='/' exact component={Search} />
-            <Route path='/result' component={SearchResult} />
+            <Route path='/result/:option' component={SearchResult} />
             <Route path='/logon' exact component={Logon} />
             <Route path='/profile' component={Profile} />
             <Route path='/register' component={UniversityRegister} />

@@ -77,10 +77,17 @@ const loginSchema = yup.object().shape({
 
 })
 
+const searchSchema = yup.object().shape({
+
+    search: yup.string().required('Informe um conteúdo para a pesquisa'),
+
+})
+
 export {
     courseSchema,
     updateCourseSchema,
     universitySchema,
+    updateUniversitySchema,
     loginSchema,
-    updateUniversitySchema
+    searchSchema
 }

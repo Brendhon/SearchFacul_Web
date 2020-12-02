@@ -13,6 +13,26 @@
     padding: 10px;
 }
 
+.search-content .search-input .search-form {
+    width: 700px;
+    display: grid;
+    grid-template-columns: 2fr 0.5fr 0.5fr;
+    grid-template-areas:   
+    "search option button"
+    "errSearch . .";
+}
+
+.search-content .search-input .search-form .form-text {
+    grid-area: search;
+}
+.search-content .search-input .search-form .form-error-text {
+    grid-area: errSearch;
+}
+
+.search-content .search-input .search-form .form-option {
+    grid-area: option;
+}
+
 .search-content .search-input {
     display: flex;
     flex: 0.1;
@@ -63,6 +83,7 @@
 }
 
 .search-content .search-form .search-input-button {
+    grid-area: button;
     width: 150px;
     height: 50px;
     margin: 0px;
@@ -85,21 +106,9 @@
     opacity: 0.8;
 }
 
-@media(max-width: 780px) {
+@media(max-width: 750px) {
 
-    .search-content .search-form {
-        width: 500px;
-    }
-
-    .search-content .search-form select {
-        width: 110px;
-        padding-left: 2px;
-        padding-right: 2px;
-    }
-}
-
-@media(max-width: 680px) {
-
+    
     .search-content .search-text strong {
         font-size: 1.5rem;
     }
@@ -107,10 +116,23 @@
     .search-content .search-text p {
         font-size: 1rem;
     }
+
+    .search-content .search-input .search-form {
+        width: 500px;
+    }
+    
+    .search-content .search-form select {
+        width: 110px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .search-content .search-form .search-input-button {
+        width: 110px;
+    }
 }
 
 @media(max-width: 550px) {
-
     .search-content .search-text strong {
         font-size: 1.2rem;
     }
@@ -121,7 +143,7 @@
         margin-right: 20px;
     }
 
-    .search-content .search-form {
+    .search-content .search-input .search-form {
         display: flex;
         width: 300px;
         flex-direction: column;
@@ -129,27 +151,31 @@
         justify-content: center;
     }
 
-    .search-content .search-img {
-        display: none;
-    }
-
-    .search-content .search-form input {
+    .search-content .search-input .search-form .form-text {
         border-radius: 8px;
 
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
     }
-    
-    .search-content .search-form select {
+
+    .search-content .search-input .search-form .form-error-text {
+        width: 300px;
+        margin-bottom: 5px;
+    }
+
+    .search-content .search-input .search-form .form-option {
         width: 100%;
         margin-bottom: 20px;
 
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
     }
-    
+
     .search-content .search-form .search-input-button {
         border-radius: 8px;
     }
 
+    .search-content .search-img {
+        display: none;
+    }
 }
