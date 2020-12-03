@@ -4,19 +4,12 @@ import './Course.css'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 import { courseSchema, updateCourseSchema } from '../../utils/schemas'
+import { courseFactory } from '../../utils/factory'
 
 const FormCourse = props => {
 
     // Definindo os valores padrões
-    const initialValues = {
-        name: props.name || "",
-        duration: props.duration || "",
-        score: props.score || "",
-        description: props.description || "",
-        titration: props.titration || "",
-        modality: props.modality || "",
-        period: props.period || ""
-    }
+    const initialValues = courseFactory(props)
 
     return (
 

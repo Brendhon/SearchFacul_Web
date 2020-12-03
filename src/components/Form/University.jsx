@@ -4,21 +4,17 @@ import './University.css'
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 
 import { universitySchema, updateUniversitySchema } from '../../utils/schemas'
+import { universityFactory } from '../../utils/factory'
 
 const FormUniversity = props => {
 
+    const universityObject = universityFactory(props)
+
     // Definindo valores padrões
     const initialValues = {
-        IES: props.IES || "",
-        telephone: props.telephone || "",
-        email: props.email || "",
-        uf: props.uf || "",
+        ...universityObject,
         password: props.password || "",
-        confirmPassword: props.confirmPassword || "",
-        city: props.city || "",
-        address: props.address || "",
-        site: props.site || "",
-        category: props.category || "",
+        confirmPassword: props.confirmPassword || ""
     }
 
     return (
@@ -46,13 +42,13 @@ const FormUniversity = props => {
 
                     <Field className="form-field password"
                         name="password"
-                        placeholder={props.authorization  ? "Nova senha" : "Senha"}
+                        placeholder={props.authorization ? "Nova senha" : "Senha"}
                         type='password' />
                     <ErrorMessage className="form-error error-password" component="span" name="password" />
 
                     <Field className="form-field confirmPassword"
                         name="confirmPassword"
-                        placeholder={props.authorization  ? "Confirme sua nova senha" : "Confirme sua senha"}
+                        placeholder={props.authorization ? "Confirme sua nova senha" : "Confirme sua senha"}
                         type='password' />
                     <ErrorMessage className="form-error error-confirmPassword" component="span" name="confirmPassword" />
 

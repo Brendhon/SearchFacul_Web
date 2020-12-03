@@ -8,6 +8,8 @@ import Footer from '../../components/Footer/Footer'
 import CardsList from '../../components/CardsList/CardsList'
 import Alert from '../../components/Alert/Alert'
 
+import { universityFactory } from '../../utils/factory'
+
 import api from '../../services/api'
 
 const Profile = _ => {
@@ -42,7 +44,12 @@ const Profile = _ => {
         // Trazendo os dados da universidade
         api.get('university', { headers: { authorization } })
             .then(response => {
-                setUniversity(response.data)
+                
+                // Criando um objeto apenas com os dados necessários
+                const universityObject = universityFactory(response.data)
+
+                setUniversity(universityObject)
+
             })
 
         fetchData()
@@ -82,16 +89,7 @@ const Profile = _ => {
                     <div className="profile-buttons">
 
                         <button className="button-outline button-delete"
-                            onClick={_ => history.push("/university/update", {
-                                IES: university.IES,
-                                telephone: university.telephone,
-                                email: university.email,
-                                uf: university.uf,
-                                city: university.city,
-                                address: university.address,
-                                site: university.site,
-                                category: university.category
-                            })}>
+                            onClick={_ => history.push("/university/update", university)}>
                             Editar
                         </button>
                         <Link className="button button-create" to="/course/create">Novo curso</Link>
