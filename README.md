@@ -21,6 +21,7 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
  - **[Yup](https://github.com/jquense/yup)**
  - **[Axios](https://github.com/axios/axios)**
  - **[Jest](https://jestjs.io/)**
+ - **[Enzyme](https://github.com/enzymejs/enzyme)**
  - **[Test Renderer](https://www.npmjs.com/package/react-test-renderer)**
  - **[Travis CI](https://travis-ci.com/)**
 
