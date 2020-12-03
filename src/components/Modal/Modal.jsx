@@ -16,7 +16,7 @@ export default props => {
             disableEnforceFocus
             disableAutoFocus>
 
-            <Slide in={props.open} direction="down">
+            <Slide in={props.open} direction="left">
                 <div className="modal-box">
 
                     {props.children}
