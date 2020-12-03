@@ -40,6 +40,7 @@ const Card = props => {
                                     duration: props.duration,
                                     titration: props.titration,
                                     modality: props.modality,
+                                    period: props.period,
                                     score: props.score
                                 })}>
                                 <FiEdit />

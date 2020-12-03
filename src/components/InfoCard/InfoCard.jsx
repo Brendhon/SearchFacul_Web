@@ -27,6 +27,8 @@ const InfoCard = props =>
 
                 <p>{props.modality}</p>
 
+                <p>{props.period}</p>
+
                 <p className="align-items"><FiClock className="info-content-data-icon" />{props.duration} anos</p>
 
                 {/* Mostrar pontuação caso ela exista*/}

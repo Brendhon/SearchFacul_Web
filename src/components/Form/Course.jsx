@@ -15,6 +15,7 @@ const FormCourse = props => {
         description: props.description || "",
         titration: props.titration || "",
         modality: props.modality || "",
+        period: props.period || ""
     }
 
     return (
@@ -34,15 +35,29 @@ const FormCourse = props => {
                         placeholder="Nome do curso" />
                     <ErrorMessage className="form-error error-name" component="span" name="name" />
 
+                    <Field name="score"
+                        className="form-field score"
+                        placeholder="Nota MAC" />
+                    <ErrorMessage className="form-error error-score" component="span" name="score" />
+
                     <Field name="duration"
                         className="form-field duration"
                         placeholder="Duração (anos)" />
                     <ErrorMessage className="form-error error-duration" component="span" name="duration" />
 
-                    <Field name="score"
-                        className="form-field score"
-                        placeholder="Nota MAC" />
-                    <ErrorMessage className="form-error error-score" component="span" name="score" />
+                    <Field as="select"
+                        className="form-field period"
+                        name="period">
+
+                        <option value="">Selecione o período</option>
+                        <option value="Diurno">Diurno</option>
+                        <option value="Matutino">Matutino</option>
+                        <option value="Vespertino">Vespertino</option>
+                        <option value="Integral">Integral</option>
+                        <option value="Noturno">Noturno</option>
+
+                    </Field>
+                    <ErrorMessage className="form-error error-period" component="span" name="period" />
 
                     <Field as="textarea"
                         name="description"

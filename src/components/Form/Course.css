@@ -16,7 +16,7 @@
 }
 
 .course-container .course-form  {
-    width: 500px;
+    width: 650px;
     
     display: grid;
     gap: 5px;
@@ -26,8 +26,8 @@
     "name  name  name name" 
     "errName  errName  errName errName"
 
-    "score  score  duration duration" 
-    "errScore  errScore  errDuration errDuration" 
+    "score  duration period period" 
+    "errScore  errDuration errPeriod errPeriod" 
 
     "description description description description" 
     "errDescription errDescription errDescription errDescription" 
@@ -64,6 +64,10 @@
     grid-area: errModality;
 }
 
+.course-container .course-form .error-period {
+    grid-area: errPeriod;
+}
+
 .course-container .course-form .name {
     grid-area: name;
 }
@@ -74,6 +78,10 @@
 
 .course-container .course-form .score {
     grid-area: score;
+}
+
+.course-container .course-form .period {
+    grid-area: period;
 }
 
 .course-container .course-form .select-titration {
@@ -92,6 +100,12 @@
     grid-area: button;
 
     margin-bottom: 10px;
+}
+
+@media(max-width: 750px) {
+    .course-container .course-form {
+        width: 450px;
+    }
 }
 
 @media(max-width: 600px) {
@@ -118,6 +132,9 @@
         "description"
         "description"
         "errDescription"
+
+        "period"
+        "errPeriod"
 
         "select-titration" 
         "errTitration"
