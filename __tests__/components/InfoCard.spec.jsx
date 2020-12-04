@@ -22,4 +22,12 @@ describe("InfoCard", () => {
         // Comparando os Snapshots para verificar se teve alteração no component
         expect(component).toMatchSnapshot()
     })
+
+    it("Should be able to use props", () => {
+
+        const component = TestRenderer.create(<InfoCard {...data} />).root
+
+        // Comparando os Snapshots para verificar se os dados foram passados corretamente
+        expect(component.props.IES).toBe(data.IES)
+    })
 })
