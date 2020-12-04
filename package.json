@@ -109,7 +109,7 @@
     ],
     "setupFiles": [
       "react-app-polyfill/jsdom",
-      "<rootDir>/__tests__/setup.{js,jsx,ts,tsx}"
+      "<rootDir>/__tests__/setup.jsx"
     ],
     "setupFilesAfterEnv": [],
     "testMatch": [
