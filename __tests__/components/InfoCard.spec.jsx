@@ -10,8 +10,8 @@ describe("InfoCard", () => {
     let data
 
     // Antes de todos os testes iniciar a variável
-    beforeAll(() => {
-        data = CONSTANTS.universityAndCourseData
+    beforeEach(() => {
+        data = Object.assign({}, CONSTANTS.universityAndCourseData)
     })
 
     it("Should be able to render", () => {
@@ -23,11 +23,27 @@ describe("InfoCard", () => {
         expect(component).toMatchSnapshot()
     })
 
-    it("Should be able to use props", () => {
+    it("Should be able to render without score", () => {
 
-        const component = TestRenderer.create(<InfoCard {...data} />).root
+        // Deletando o score para verificar se a renderização condicional irá renderizar uma div vazia
+        delete data["score"]
 
-        // Comparando os Snapshots para verificar se os dados foram passados corretamente
-        expect(component.props.IES).toBe(data.IES)
+        // Renderizando o componente sem a propriedade "score"
+        const component = TestRenderer.create(<InfoCard {...data} />).toJSON()
+
+        // Comparando os Snapshots para verificar se teve alteração no component
+        expect(component).toMatchSnapshot()
+    })
+
+    it("Should be able to render without site", () => {
+
+        // Deletando o score para verificar se a renderização condicional irá renderizar uma div vazia
+        delete data["site"]
+
+        // Renderizando o componente sem a propriedade "score"
+        const component = TestRenderer.create(<InfoCard {...data} />).toJSON()
+
+        // Comparando os Snapshots para verificar se teve alteração no component
+        expect(component).toMatchSnapshot()
     })
 })
