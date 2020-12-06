@@ -14,7 +14,7 @@ describe("Factory", () => {
         // Criando um objeto apenas com os valores do curso
         const result = courseFactory(data)
 
-        expect(result.IES).toBeFalsy()
+        expect(result.ies).toBeFalsy()
         expect(result).toHaveProperty("name");
     })
 
@@ -25,6 +25,6 @@ describe("Factory", () => {
         const result = universityFactory(data)
 
         expect(result.name).toBeFalsy()
-        expect(result).toHaveProperty("IES");
+        expect(result).toHaveProperty("ies");
     })
 })

@@ -25,7 +25,7 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: 
 
-    "IES  IES  email email" 
+    "ies  ies  email email" 
     "errIES  errIES  errEmail errEmail" 
 
     "password password confirmPassword confirmPassword" 
@@ -83,8 +83,8 @@
     grid-area: errCategory;
 }
 
-.university-content .university-form .IES {
-    grid-area: IES;
+.university-content .university-form .ies {
+    grid-area: ies;
 }
 
 .university-content .university-form .telephone {
@@ -181,7 +181,7 @@
         grid-template-columns: 1fr;
         grid-template-areas: 
 
-        "IES"
+        "ies"
         "errIES"
 
         "email" 

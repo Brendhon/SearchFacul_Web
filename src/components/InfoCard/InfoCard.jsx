@@ -11,7 +11,7 @@ const InfoCard = props =>
         {/* Cabeçalho do info */}
         <header className="info-top">
 
-            <strong className="info-top-title">{props.IES}</strong>
+            <strong className="info-top-title">{props.ies}</strong>
             <p className="info-top-subtitle">{props.category}</p>
 
         </header>

@@ -53,6 +53,7 @@ const CourseRegister = _ => {
 
         } catch (error) {
 
+            console.log(data)
             errorAlertEnabled(getError(error))
 
         }

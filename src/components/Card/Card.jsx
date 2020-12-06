@@ -54,7 +54,7 @@ const Card = props => {
                 }
 
                 <div className="card-ies">
-                    <strong >{props.IES}</strong>
+                    <strong >{props.ies}</strong>
                 </div>
 
             </header>

@@ -29,10 +29,10 @@ const FormUniversity = props => {
 
                 <Form className="university-form">
 
-                    <Field className="form-field IES"
-                        name="IES"
+                    <Field className="form-field ies"
+                        name="ies"
                         placeholder="IES" />
-                    <ErrorMessage className="form-error error-ies" component="span" name="IES" />
+                    <ErrorMessage className="form-error error-ies" component="span" name="ies" />
 
                     <Field className="form-field email"
                         name="email"

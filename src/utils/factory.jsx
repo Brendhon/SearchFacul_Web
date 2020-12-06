@@ -12,7 +12,7 @@ const courseFactory = data => {
 
 const universityFactory = data => {
     return {
-        IES: data.IES || "",
+        ies: data.ies || "",
         telephone: data.telephone  || "",
         email: data.email || "",
         uf: data.uf || "",

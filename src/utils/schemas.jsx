@@ -26,7 +26,7 @@ const updateCourseSchema = yup.object().shape({
 
 const universitySchema = yup.object().shape({
 
-    IES: yup.string().trim().required('Informe um IES da faculdade'),
+    ies: yup.string().trim().required('Informe um ies da faculdade'),
 
     telephone: yup.string()
         .matches(/^[0-9]{8,11}$/, "Insira um número de telefone válido")
