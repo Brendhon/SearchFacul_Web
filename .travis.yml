@@ -8,6 +8,7 @@ install:
 
 before_script:
     - npm install
+    - npm install -g jest
     
 script:
-    - npm test
+    - jest
