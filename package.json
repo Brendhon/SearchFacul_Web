@@ -79,7 +79,8 @@
   "scripts": {
     "dev": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js"
+    "test": "node scripts/test.js",
+    "testAll": "node scripts/test.js --watchAll"
   },
   "eslintConfig": {
     "extends": [
