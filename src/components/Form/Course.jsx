@@ -30,7 +30,7 @@ const FormCourse = props => {
 
                     <Field name="score"
                         className="form-field score"
-                        placeholder="Nota MAC" />
+                        placeholder="Nota MEC" />
                     <ErrorMessage className="form-error error-score" component="span" name="score" />
 
                     <Field name="duration"
