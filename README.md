@@ -69,7 +69,7 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 ---
 ## Como executar o projeto
 
-#### Pré-requisitos
+#### 💡Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 **[Git](https://git-scm.com)** e **[Node.js](https://nodejs.org/en/)**.<br> 
