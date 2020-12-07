@@ -1,11 +1,20 @@
-# SearchFacul
+[![Build Status](https://travis-ci.com/Brendhon/SearchFacul_Web.svg?branch=main)](https://travis-ci.com/Brendhon/SearchFacul_Web)
 
-🚧  Em construção...  🚧
+<div style="text-align:center">
+    <h1>Search Facul</h1>
+    <img src="src\assets\img\logo2.svg" width="300px;" alt="logo"/>
+</div>
 
 ---
 
 ## 🎓 Sobre o projeto
-Este projeto tem como objetivo colocar em prática os conhecimentos adquiridos na disciplina de **C214** (Engenharia de Software) durante a graduação em Engenharia de Computação pelo **[Inatel](https://inatel.br/home/)**
+
+O Search Facul é uma plataforma que tem como propósito facilitar a busca de estudantes por faculdades e seus cursos. O estudante pode em uma única plataforma: 
+ - Pesquisar por todas as informações de cursos em uma cidade;
+ - Pesquisar por um curso de escolha;
+ - Pesquisar os cursos em uma faculdade específica.
+
+Este é o site do projeto **[Search Facul](https://github.com/Brendhon/SearchFacul_API)** que tem como objetivo colocar em prática os conhecimentos adquiridos na disciplina de **C214** (Engenharia de Software) durante a graduação em Engenharia de Computação pelo **[Inatel](https://inatel.br/home/)** e dos conhecimentos adquiridos sobre desenvolvimento Web nos cursos disponibilizados pela **[COD3R](https://www.cod3r.com.br/)**.
 
 ---
 
@@ -36,6 +45,9 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 **[Git](https://git-scm.com)** e **[Node.js](https://nodejs.org/en/)**.<br> 
+
+É necessário também que a **[API](https://github.com/Brendhon/SearchFacul_API)** do projeto esteja em execução.
+
 Recomendações:
 * Um editor para trabalhar com o código como **[VSCode](https://code.visualstudio.com/)**
 ```bash
@@ -67,7 +79,7 @@ $ npm run dev
 # Execute os testes
 $ npm test
 
-# Será gerada uma pasta (coverage) contendo uma página com os dados dos testes de forma mais detalhada
+# Será mostrado um menu com as opções de teste
 
 ```
 
