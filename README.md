@@ -18,6 +18,21 @@ Este é o site do projeto **[Search Facul](https://github.com/Brendhon/SearchFac
 
 ---
 
+## ⚙️ Funcionalidades
+
+- Universidades:
+  - [x] Cadastrar
+  - [x] Realizar login 
+  - [x] Editar Dados
+  - [x] Excluir conta
+
+- Cursos:
+  - [x] Cadastrar
+  - [x] Listar
+  - [x] Editar
+  - [x] Deletar
+---
+
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram utilizadas na construção do projeto:
