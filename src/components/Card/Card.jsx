@@ -24,7 +24,7 @@ const Card = props => {
     return (
 
         // Renderização condicional para fazer o efeito ao apagar 
-        <div className={hide ? "card-container card-container-hide" : "card-container"}>
+        <div className={hide ? "card-container card-container-hide" : "card-container fadeIn"}>
 
             {/* Cabeçalho do Card */}
             <header className="card-top">
