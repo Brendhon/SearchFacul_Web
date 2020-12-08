@@ -5,7 +5,6 @@ import UniversityRegister from '../../src/pages/UniversityRegister'
 
 jest.mock('react-router-dom', () => ({
     Link: 'Link',
-    Route: ({ children, path }) => children({ match: path === '/profile' }),
     useParams: jest.fn(),
     useHistory: jest.fn(),
 })) 

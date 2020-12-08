@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CourseRegister Should be able to render University Register page 1`] = `
+exports[`CourseRegister Should be able to render Course Register page 1`] = `
 <div
   className="container"
 >
