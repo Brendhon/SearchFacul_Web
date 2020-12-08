@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CourseRegister Should be able to render University Register page 1`] = `
+<div
+  className="container"
+>
+  <header
+    className="header-container"
+  >
+    <div
+      className="header-logo"
+    >
+      <img
+        alt="Livros"
+        className="mr-3"
+        src="logo.svg"
+      />
+      <Link
+        className="a-link header-home"
+        to="/"
+      >
+        Home
+      </Link>
+    </div>
+    <div
+      className="header-content"
+    >
+      <Link
+        className="button logon-button"
+        to="/logon"
+      >
+        Login
+      </Link>
+      <Link
+        className="button register-button"
+        to="/register"
+      >
+        Cadastrar
+      </Link>
+    </div>
+  </header>
+  <div
+    className="content-column box"
+  >
+    <h1
+      className="create-course-title"
+    >
+      Cadastre um curso
+    </h1>
+    <div
+      className="create-course-data"
+    >
+      <img
+        alt="books"
+        className="create-course-img"
+        src="books.svg"
+      />
+      <section
+        className="course-container"
+      >
+        <div />
+        <form
+          action="#"
+          className="course-form"
+          onReset={[Function]}
+          onSubmit={[Function]}
+        >
+          <input
+            className="form-field name"
+            name="name"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="Nome do curso"
+            value=""
+          />
+          <input
+            className="form-field score"
+            name="score"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="Nota MEC"
+            value=""
+          />
+          <input
+            className="form-field duration"
+            name="duration"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="Duração (anos)"
+            value=""
+          />
+          <select
+            className="form-field period"
+            name="period"
+            onBlur={[Function]}
+            onChange={[Function]}
+            value=""
+          >
+            <option
+              value=""
+            >
+              Selecione o período
+            </option>
+            <option
+              value="Diurno"
+            >
+              Diurno
+            </option>
+            <option
+              value="Matutino"
+            >
+              Matutino
+            </option>
+            <option
+              value="Vespertino"
+            >
+              Vespertino
+            </option>
+            <option
+              value="Integral"
+            >
+              Integral
+            </option>
+            <option
+              value="Noturno"
+            >
+              Noturno
+            </option>
+          </select>
+          <textarea
+            className="form-textarea description"
+            maxLength="1000"
+            name="description"
+            onBlur={[Function]}
+            onChange={[Function]}
+            placeholder="Descrição (até 1000 caracteres)"
+            value=""
+          />
+          <select
+            className="form-field select-titration"
+            name="titration"
+            onBlur={[Function]}
+            onChange={[Function]}
+            value=""
+          >
+            <option
+              value=""
+            >
+              Selecione a titulação
+            </option>
+            <option
+              value="Bacharelado"
+            >
+              Bacharelado
+            </option>
+            <option
+              value="Licenciatura"
+            >
+              Licenciatura
+            </option>
+          </select>
+          <select
+            className="form-field select-modality"
+            name="modality"
+            onBlur={[Function]}
+            onChange={[Function]}
+            value=""
+          >
+            <option
+              value=""
+            >
+              Selecione a modalidade
+            </option>
+            <option
+              value="Presencial"
+            >
+              Presencial
+            </option>
+            <option
+              value="Online"
+            >
+              Online
+            </option>
+          </select>
+          <button
+            className="button"
+            type="submit"
+          >
+            Enviar
+          </button>
+        </form>
+      </section>
+    </div>
+  </div>
+  <footer
+    className="footer-container"
+  >
+    <span>
+      Made by Brendhon Moreira
+    </span>
+  </footer>
+  <div
+    className="alert-none"
+  >
+    <div
+      className="MuiPaper-root MuiAlert-root MuiAlert-standardInfo MuiPaper-elevation0"
+      role="alert"
+    >
+      <div
+        className="MuiAlert-icon"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20, 12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10, 10 0 0,0 12,2M11,17H13V11H11V17Z"
+          />
+        </svg>
+      </div>
+      <div
+        className="MuiAlert-message"
+      >
+        
+      </div>
+      <div
+        className="MuiAlert-action"
+      >
+        <button
+          aria-label="Close"
+          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          title="Close"
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

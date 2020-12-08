@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UniversityRegister Should be able to render University Register page 1`] = `
+<div
+  className="container"
+>
+  <header
+    className="header-container"
+  >
+    <div
+      className="header-logo"
+    >
+      <img
+        alt="Livros"
+        className="mr-3"
+        src="logo.svg"
+      />
+      <Link
+        className="a-link header-home"
+        to="/"
+      >
+        Home
+      </Link>
+    </div>
+    <div
+      className="header-content"
+    >
+      <Link
+        className="button logon-button"
+        to="/logon"
+      >
+        Login
+      </Link>
+      <Link
+        className="button register-button"
+        to="/register"
+      >
+        Cadastrar
+      </Link>
+    </div>
+  </header>
+  <div
+    className="content-column box register-content"
+  >
+    <section
+      className="university-content"
+    >
+      <h1>
+        Cadastre sua Universidade
+      </h1>
+      <form
+        action="#"
+        className="university-form"
+        onReset={[Function]}
+        onSubmit={[Function]}
+      >
+        <input
+          className="form-field ies"
+          name="ies"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="IES"
+          value=""
+        />
+        <input
+          className="form-field email"
+          name="email"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Email"
+          type="email"
+          value=""
+        />
+        <input
+          className="form-field password"
+          name="password"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Senha"
+          type="password"
+          value=""
+        />
+        <input
+          className="form-field confirmPassword"
+          name="confirmPassword"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Confirme sua senha"
+          type="password"
+          value=""
+        />
+        <input
+          className="form-field city"
+          name="city"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Cidade"
+          value=""
+        />
+        <input
+          className="form-field telephone"
+          name="telephone"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Telefone"
+          value=""
+        />
+        <input
+          className="form-field address"
+          name="address"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Endereço"
+          value=""
+        />
+        <input
+          className="form-field UF"
+          maxLength="2"
+          name="uf"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="UF"
+          value=""
+        />
+        <input
+          className="form-field site"
+          name="site"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Site"
+          value=""
+        />
+        <select
+          className="form-field select-category"
+          name="category"
+          onBlur={[Function]}
+          onChange={[Function]}
+          value=""
+        >
+          <option
+            value=""
+          >
+            Selecione uma categoria
+          </option>
+          <option
+            value="Privado"
+          >
+            Privado
+          </option>
+          <option
+            value="Pública"
+          >
+            Pública
+          </option>
+        </select>
+        <button
+          className="button"
+          type="submit"
+        >
+          Enviar
+        </button>
+      </form>
+    </section>
+  </div>
+  <footer
+    className="footer-container"
+  >
+    <span>
+      Made by Brendhon Moreira
+    </span>
+  </footer>
+  <div
+    className="alert-none"
+  >
+    <div
+      className="MuiPaper-root MuiAlert-root MuiAlert-standardInfo MuiPaper-elevation0"
+      role="alert"
+    >
+      <div
+        className="MuiAlert-icon"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root MuiSvgIcon-fontSizeInherit"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M11,9H13V7H11M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20, 12C20,16.41 16.41,20 12,20M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10, 10 0 0,0 12,2M11,17H13V11H11V17Z"
+          />
+        </svg>
+      </div>
+      <div
+        className="MuiAlert-message"
+      >
+        
+      </div>
+      <div
+        className="MuiAlert-action"
+      >
+        <button
+          aria-label="Close"
+          className="MuiButtonBase-root MuiIconButton-root MuiIconButton-colorInherit MuiIconButton-sizeSmall"
+          disabled={false}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          title="Close"
+          type="button"
+        >
+          <span
+            className="MuiIconButton-label"
+          >
+            <svg
+              aria-hidden={true}
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+            </svg>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
