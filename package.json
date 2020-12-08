@@ -109,8 +109,7 @@
       "!src/**/*.d.ts"
     ],
     "setupFiles": [
-      "react-app-polyfill/jsdom",
-      "<rootDir>/__tests__/setup.jsx"
+      "react-app-polyfill/jsdom"
     ],
     "setupFilesAfterEnv": [],
     "testMatch": [
@@ -156,7 +155,6 @@
     ]
   },
   "devDependencies": {
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.3.2",
-    "enzyme": "^3.11.0"
+    "axios-mock-adapter": "^1.19.0"
   }
 }
