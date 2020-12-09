@@ -60,16 +60,14 @@ const SearchResult = props => {
 
                 {!empty ? <CardsList courses={courses} /> :
 
-                    <Fade in={empty} style={{ transitionDelay: '300ms' }}>
-                        <div className="result-empty">
-                            <img src={emptyImg} width="200" alt="vazio" />
-                            <strong> Sem resultados!!</strong>
-                            <p> Tente realizar outra pesquisa</p>
-                            <Link to="/" className="button empty-button">
-                                <FaArrowLeft style={{ marginRight: 8 }} />Voltar
+                    <div className="result-empty fadeIn">
+                        <img src={emptyImg} width="200" alt="vazio" />
+                        <strong> Sem resultados!!</strong>
+                        <p> Tente realizar outra pesquisa</p>
+                        <Link to="/" className="button empty-button">
+                            <FaArrowLeft style={{ marginRight: 8 }} />Voltar
                             </Link>
-                        </div>
-                    </Fade>
+                    </div>
                 }
             </div>
 
