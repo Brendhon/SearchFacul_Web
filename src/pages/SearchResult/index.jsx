@@ -3,7 +3,6 @@ import './styles.css'
 
 import { Link } from 'react-router-dom'
 import { FaArrowLeft } from "react-icons/fa"
-import Fade from '@material-ui/core/Fade'
 
 import emptyImg from '../../assets/img/empty.gif'
 
