@@ -9,13 +9,15 @@ import CardsList from '../../components/CardsList/CardsList'
 import Alert from '../../components/Alert/Alert'
 
 import { universityFactory } from '../../utils/factory'
+import { isAuthenticated } from '../../utils/auth'
+
 
 import api from '../../services/api'
 
 const Profile = _ => {
 
     // Instanciando e iniciando constantes
-    const authorization = localStorage.getItem('authorization') // Verificando se o usuário esta autentificado 
+    const authorization = isAuthenticated() // Verificando se o usuário esta autentificado 
     const history = useHistory()
 
     // Declarando os estados

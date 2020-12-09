@@ -11,6 +11,7 @@ import CourseForm from '../../components/Form/Course'
 import Alert from '../../components/Alert/Alert'
 
 import { getError, removeEmptyData } from '../../utils/utils'
+import { isAuthenticated } from '../../utils/auth'
 
 import api from '../../services/api'
 
@@ -18,7 +19,7 @@ const CourseRegister = _ => {
 
     // Instanciando e iniciando constantes
     const history = useHistory() // Permite fazer a navegação por JS
-    const authorization = localStorage.getItem('authorization')
+    const authorization = isAuthenticated() // Verificando se o usuário esta autentificado 
 
     // Setando os estados do alert
     const [open, setOpen] = useState(false)

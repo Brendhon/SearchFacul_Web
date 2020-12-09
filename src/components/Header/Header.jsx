@@ -1,14 +1,16 @@
 import React from 'react'
 import './Header.css'
 
+import books from '../../assets/img/logo.svg'
+
 import { Link } from 'react-router-dom'
 
-import books from '../../assets/img/logo.svg'
+import { isAuthenticated } from '../../utils/auth'
 
 const Header = _ => {
 
     // Verificando se o usuário esta autentificado 
-    const authorization = localStorage.getItem('authorization')
+    const authorization = isAuthenticated()
 
     return (
         <header className="header-container">

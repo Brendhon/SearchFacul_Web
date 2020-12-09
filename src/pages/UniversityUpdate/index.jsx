@@ -15,11 +15,12 @@ import Modal from '../../components/Modal/Modal'
 import api from '../../services/api'
 
 import { removeEmptyData, getError } from '../../utils/utils'
+import { isAuthenticated } from '../../utils/auth'
 
 const UniversityUpdate = props => {
 
     // Instanciando e iniciando constantes
-    const authorization = localStorage.getItem('authorization')
+    const authorization = isAuthenticated() // Verificando se o usuário esta autentificado 
     const university = props.location.state // Pegando o objeto enviado via navegação
     const history = useHistory()
 

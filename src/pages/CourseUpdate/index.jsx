@@ -9,13 +9,14 @@ import CourseForm from '../../components/Form/Course'
 import Alert from '../../components/Alert/Alert'
 
 import { getError, removeEmptyData } from '../../utils/utils'
+import { isAuthenticated } from '../../utils/auth'
 
 import api from '../../services/api'
 
 const CourseUpdate = props => {
 
     // Instanciando e iniciando constantes
-    const authorization = localStorage.getItem('authorization') // Pegando o token no storage do navegador
+    const authorization = isAuthenticated() // Verificando se o usuário esta autentificado 
     const { id } = useParams() // Pegando o ID 
     const course = props.location.state // Pegando o objeto enviado via navegação
     const history = useHistory() // Permite fazer a navegação por JS
