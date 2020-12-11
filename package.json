@@ -154,7 +154,5 @@
       "react-app"
     ]
   },
-  "devDependencies": {
-    "axios-mock-adapter": "^1.19.0"
-  }
+  "devDependencies": {}
 }
