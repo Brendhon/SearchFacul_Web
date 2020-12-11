@@ -4,6 +4,7 @@
 <h1 align="center">
     <img align="center" src="src\assets\img\logo2.svg" width="300px;" alt="logo"/>
 </h1>
+<h3 align="center">✅ Concluído ✅</h3>
 
 ## 🎓 Sobre o projeto
 
@@ -140,4 +141,6 @@ $ npm test
 
 ---
 ## 📝 License
-**[MIT](https://choosealicense.com/licenses/mit/)**
+[![License](https://img.shields.io/apm/l/vim-mode?color=blue)](http://badges.mit-license.org)
+
+- **[MIT license](https://choosealicense.com/licenses/mit/)**
