@@ -62,24 +62,24 @@ As seguintes bibliotecas foram usadas na construção do projeto:
 
 <p align="center" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
     <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-    <img alt="NextLevelWeek" style="margin-right: 10px"
+    <img alt="search page" style="margin-right: 10px"
     src="src\assets\screenshots\search.png" width="200px">
-    <img alt="NextLevelWeek" style="margin-right: 10px" src="src\assets\screenshots\result.png" width="200px">
-    <img alt="NextLevelWeek" 
+    <img alt="result page" style="margin-right: 10px" src="src\assets\screenshots\result.png" width="200px">
+    <img alt="infoCard page" 
     src="src\assets\screenshots\infoCard.png" width="200px">
     </p>
     <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-    <img alt="NextLevelWeek" style="margin-right: 10px" src="src\assets\screenshots\universityRegister.png" width="200px">
-    <img alt="NextLevelWeek" style="margin-right: 10px"
+    <img alt="university register page" style="margin-right: 10px" src="src\assets\screenshots\universityRegister.png" width="200px">
+    <img alt="login page" style="margin-right: 10px"
     src="src\assets\screenshots\login.png" width="200px">
-    <img alt="NextLevelWeek"
+    <img alt="profile page"
     src="src\assets\screenshots\profile.png" width="200px">
     </p>
     <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-    <img alt="NextLevelWeek" style="margin-right: 10px" 
+    <img alt="course register page" style="margin-right: 10px; border-radius: 20%;" 
     src="src\assets\screenshots\courseRegister.png" width="200px">
-    <img alt="NextLevelWeek" style="margin-right: 10px" src="src\assets\screenshots\courseUpdate.png" width="200px">
-    <img alt="NextLevelWeek" 
+    <img alt="course update page" style="margin-right: 10px" src="src\assets\screenshots\courseUpdate.png" width="200px">
+    <img alt="university update page" 
     src="src\assets\screenshots\universityUpdate.png" width="200px">
     </p>
 </p>
