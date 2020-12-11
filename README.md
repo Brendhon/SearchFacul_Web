@@ -5,8 +5,6 @@
     <img align="center" src="src\assets\img\logo2.svg" width="300px;" alt="logo"/>
 </h1>
 
----
-
 ## 🎓 Sobre o projeto
 
 O Search Facul é uma plataforma que tem como propósito facilitar a busca de informações sobre faculdades e cursos. O estudante pode em uma única plataforma: 
@@ -18,7 +16,7 @@ Este é o site do projeto **[Search Facul](https://github.com/Brendhon/SearchFac
 
 ---
 
-## ⚙️ Funcionalidades
+## 🎯 Funcionalidades
 
 - Universidades:
   - [x] Cadastrar
@@ -33,20 +31,25 @@ Este é o site do projeto **[Search Facul](https://github.com/Brendhon/SearchFac
   - [x] Deletar
 ---
 
-## 🛠 Tecnologias
+## ⚒️ Ferramentas
 
 As seguintes ferramentas foram utilizadas na construção do projeto:
 
- - **[React](https://pt-br.reactjs.org/)**
  - **[React Icons](https://react-icons.github.io/react-icons/)**
- - **[React Router](https://reactrouter.com/)**
- - **[Material UI](https://material-ui.com/pt/)**
- - **[Formik](https://formik.org/)**
  - **[Yup](https://github.com/jquense/yup)**
  - **[Axios](https://github.com/axios/axios)**
  - **[Jest](https://jestjs.io/)**
  - **[Test Renderer](https://www.npmjs.com/package/react-test-renderer)**
  - **[Travis CI](https://travis-ci.com/)**
+
+## 📚 Bibliotecas
+
+As seguintes bibliotecas foram usadas na construção do projeto:
+
+- **[React](https://pt-br.reactjs.org/)**
+- **[React Router](https://reactrouter.com/)**
+- **[Material UI](https://material-ui.com/pt/)**
+- **[Formik](https://formik.org/)**
 
 > Veja o arquivo  **[package.json](https://github.com/Brendhon/SearchFacul_Web/blob/main/package.json)**
 
@@ -59,31 +62,31 @@ As seguintes ferramentas foram utilizadas na construção do projeto:
 <p align="center" style="display: flex; flex-direction: column; align-items: flex-start; justify-content: center;">
     <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
     <img alt="NextLevelWeek" style="margin-right: 10px"
-    src="src\assets\screenshots\search.png" width="250px">
-    <img alt="NextLevelWeek" style="margin-right: 10px" src="src\assets\screenshots\result.png" width="250px">
+    src="src\assets\screenshots\search.png" width="200px">
+    <img alt="NextLevelWeek" style="margin-right: 10px" src="src\assets\screenshots\result.png" width="200px">
     <img alt="NextLevelWeek" 
-    src="src\assets\screenshots\infoCard.png" width="250px">
+    src="src\assets\screenshots\infoCard.png" width="200px">
     </p>
     <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-    <img alt="NextLevelWeek" style="margin-right: 10px" src="src\assets\screenshots\universityRegister.png" width="250px">
+    <img alt="NextLevelWeek" style="margin-right: 10px" src="src\assets\screenshots\universityRegister.png" width="200px">
     <img alt="NextLevelWeek" style="margin-right: 10px"
-    src="src\assets\screenshots\login.png" width="250px">
+    src="src\assets\screenshots\login.png" width="200px">
     <img alt="NextLevelWeek"
-    src="src\assets\screenshots\profile.png" width="250px">
+    src="src\assets\screenshots\profile.png" width="200px">
     </p>
     <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
     <img alt="NextLevelWeek" style="margin-right: 10px" 
-    src="src\assets\screenshots\courseRegister.png" width="250px">
-    <img alt="NextLevelWeek" style="margin-right: 10px" src="src\assets\screenshots\courseUpdate.png" width="250px">
+    src="src\assets\screenshots\courseRegister.png" width="200px">
+    <img alt="NextLevelWeek" style="margin-right: 10px" src="src\assets\screenshots\courseUpdate.png" width="200px">
     <img alt="NextLevelWeek" 
-    src="src\assets\screenshots\universityUpdate.png" width="250px">
+    src="src\assets\screenshots\universityUpdate.png" width="200px">
     </p>
 </p>
 
 ---
-## Como executar o projeto
+## ⚙️ Como executar o projeto
 
-#### 💡Pré-requisitos
+### 💡 Pré-requisitos
 
 Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 **[Git](https://git-scm.com)** e **[Node.js](https://nodejs.org/en/)**.<br> 
@@ -103,7 +106,7 @@ $ git clone https://github.com/Brendhon/SearchFacul_Web.git
 $ npm install
 
 ```
-#### ⚽ Rodando no modo desenvolvedor
+### ⚽ Rodando no modo desenvolvedor
 
 ```bash
 
@@ -114,7 +117,7 @@ $ npm run dev
 
 ```
 
-#### 🤖 Rodando os testes automatizados
+### 🤖 Rodando os testes automatizados
 
 ```bash
 
