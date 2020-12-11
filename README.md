@@ -76,7 +76,7 @@ As seguintes bibliotecas foram usadas na construção do projeto:
     src="src\assets\screenshots\profile.png" width="200px">
     </p>
     <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-    <img alt="course register page" style="margin-right: 10px; border-radius: 20%;" 
+    <img alt="course register page" style="margin-right: 10px" 
     src="src\assets\screenshots\courseRegister.png" width="200px">
     <img alt="course update page" style="margin-right: 10px" src="src\assets\screenshots\courseUpdate.png" width="200px">
     <img alt="university update page" 
