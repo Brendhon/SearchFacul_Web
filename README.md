@@ -139,5 +139,5 @@ $ npm test
 [![Gmail Badge](https://img.shields.io/badge/-brendhon.e.c.m@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:brendhon.e.c.m@gmail.com)](mailto:brendhon.e.c.m@gmail.com)
 
 ---
-## License
+## 📝 License
 **[MIT](https://choosealicense.com/licenses/mit/)**
