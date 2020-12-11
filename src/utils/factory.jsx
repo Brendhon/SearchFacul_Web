@@ -1,26 +1,32 @@
 const courseFactory = data => {
-    return {
-        name: data.name || "",
-        description: data.description || "",
-        duration: data.duration || "",
-        titration: data.titration || "",
-        modality: data.modality || "",
-        period: data.period || "",
-        score: data.score || ""
-    }
+
+    let course = {}
+
+    course.name = data.name || ""
+    course.description = data.description || ""
+    course.duration = data.duration || ""
+    course.titration = data.titration || ""
+    course.modality = data.modality || ""
+    course.period = data.period || ""
+    course.score = data.score || ""
+
+    return course
 }
 
 const universityFactory = data => {
-    return {
-        ies: data.ies || "",
-        telephone: data.telephone  || "",
-        email: data.email || "",
-        uf: data.uf || "",
-        city: data.city || "",
-        address: data.address || "",
-        category: data.category || "",
-        site: data.site || ""
-    }
+
+    let university = {}
+
+    university.ies =  data.ies || ""
+    university.telephone =  data.telephone || ""
+    university.email =  data.email || ""
+    university.uf =  data.uf || ""
+    university.city =  data.city || ""
+    university.address =  data.address || ""
+    university.category =  data.category || ""
+    university.site =  data.site || ""
+
+    return university
 }
 
 export { courseFactory, universityFactory }
