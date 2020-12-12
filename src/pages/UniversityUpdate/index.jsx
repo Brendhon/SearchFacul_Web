@@ -4,7 +4,6 @@ import './styles.css'
 import imgBye from '../../assets/img/bye.gif'
 
 import { useHistory } from 'react-router-dom'
-import Fade from '@material-ui/core/Fade'
 
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
@@ -84,7 +83,7 @@ const UniversityUpdate = props => {
             errorAlertEnabled(getError(error)) // Mostrando um alert para o usuário de fracasso
 
         }
-        
+
     }
 
     return (
@@ -113,13 +112,11 @@ const UniversityUpdate = props => {
             <Modal open={modal} onClose={modalClose}>
 
                 {bye ?
-                    <Fade in={bye}>
-                        <div className="container-column box"
-                            style={{ backgroundColor: "white", padding: 15, width: 340 }}>
-                            <h1>Bye</h1>
-                            <img src={imgBye} width="300" alt="Adeus" />
-                        </div>
-                    </Fade>
+                    <div className="container-column box fadeIn"
+                        style={{ backgroundColor: "white", padding: 15, width: 340 }}>
+                        <h1>Bye</h1>
+                        <img src={imgBye} width="300" alt="Adeus" />
+                    </div>
 
                     :
 
