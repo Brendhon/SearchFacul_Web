@@ -13,8 +13,7 @@ O Search Facul é uma plataforma que tem como propósito facilitar a busca de in
  - Buscar por informações de um curso específico;
  - Buscar por cursos em uma faculdade específica.
 
-Este é o site do projeto **[Search Facul](https://github.com/Brendhon/SearchFacul_API)** que tem como objetivo colocar em prática os conhecimentos adquiridos na disciplina de **C214** (Engenharia de Software) durante a graduação em Engenharia de Computação pelo **[Inatel](https://inatel.br/home/)** e dos conhecimentos adquiridos sobre desenvolvimento Web nos cursos disponibilizados pela **[COD3R](https://www.cod3r.com.br/)**.
-
+Este é o site do projeto **[Search Facul](https://github.com/Brendhon/SearchFacul_API)** que tem como objetivo colocar em prática os conhecimentos adquiridos durante a graduação em Engenharia de Computação pelo **[INATEL](https://inatel.br/home/)**, dos conhecimentos adquiridos sobre desenvolvimento web e mobile nos cursos da **[COD3R](https://www.cod3r.com.br/)** e eventos disponibilizados pela **[Rocketseat](https://rocketseat.com.br/)** e pela **[Alura](https://www.alura.com.br/)**.
 ---
 
 ## 🎯 Funcionalidades
