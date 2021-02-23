@@ -69,7 +69,7 @@ const Search = _ => {
                 </Formik>
 
 
-                <img className="search-img" src={student} alt="student"></img>
+                <img className="search-img" src={student} alt="student" width="300px" ></img>
             </div>
 
             <Footer />
