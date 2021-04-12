@@ -22,7 +22,7 @@ const courseExample = {
 
 const universityAndCourseData = {
     
-    ies: "Unifei",
+    ies: "UNIFEI",
     telephone: "34546789",
     email: "guilherme@hotmail.com",
     password: "456",
